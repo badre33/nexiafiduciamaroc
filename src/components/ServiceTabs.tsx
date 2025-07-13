@@ -3,45 +3,65 @@ import { ExternalLink } from "lucide-react";
 // import taxService from "@/assets/tax-service.jpg";
 // import advisoryService from "@/assets/advisory-service.jpg";
 
-const services = [
+const expertiseDomains = [
   {
-    title: "Audit",
-    image: "/lovable-uploads/70705004-8cef-46fe-9378-b9ad705aaf93.png",
+    title: "Audit et Commissariat aux Comptes",
+    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
     href: "/services#audit"
   },
   {
-    title: "Tax",
-    image: "/lovable-uploads/cd1d5d63-1fdb-4d40-9016-a19aaeb69709.png",
-    href: "/services#tax"
+    title: "Conseil financier & optimisation",
+    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    href: "/services#conseil-financier"
   },
   {
-    title: "Advisory",
-    image: "/lovable-uploads/647024ca-f003-489a-ac52-215419944dc7.png",
-    href: "/services#advisory"
+    title: "Inspection, Investigation & Fraude",
+    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    href: "/services#investigation"
+  },
+  {
+    title: "Fiscalité & Tax Management",
+    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    href: "/services#fiscalite"
+  },
+  {
+    title: "Analyses financières et évaluation d'entreprises",
+    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    href: "/services#analyses-financieres"
+  },
+  {
+    title: "Consolidation selon les normes Marocaines & IFRS",
+    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    href: "/services#consolidation"
+  },
+  {
+    title: "Conseils et accompagnement stratégique",
+    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    href: "/services#conseil-strategique"
   }
 ];
 
 export default function ServiceTabs() {
   return (
     <section className="nexia-section-padding bg-white">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {services.map((service, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {expertiseDomains.map((domain, index) => (
           <div
             key={index}
             className="relative group cursor-pointer overflow-hidden"
           >
             <div className="relative">
               <img
-                src={service.image}
-                alt={service.title}
-                className="nexia-card-rounded w-full h-[550px] object-cover"
+                src={domain.image}
+                alt={domain.title}
+                className="nexia-card-rounded w-full h-[400px] object-cover"
               />
               
               {/* Content Overlay */}
               <div className="absolute bottom-[5%] left-[5%] right-[5%] flex items-center justify-between">
                 <div className="text-white">
-                  <p className="text-[35px] font-bold font-poppins mb-0">
-                    {service.title}
+                  <p className="text-[24px] font-bold font-poppins mb-0 leading-tight">
+                    {domain.title}
                   </p>
                 </div>
                 <div className="w-11 h-11 flex items-center justify-center">
