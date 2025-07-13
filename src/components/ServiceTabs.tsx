@@ -6,7 +6,7 @@ import { ExternalLink } from "lucide-react";
 const expertiseDomains = [
   {
     title: "Audit et Commissariat aux Comptes",
-    image: "/lovable-uploads/3bafe85d-dea9-4e9b-9b8b-ec6a9c22e835.png",
+    image: "/lovable-uploads/01471ff8-a45a-4917-9e88-21cc4de0456d.png",
     href: "/services#audit"
   },
   {
@@ -16,7 +16,7 @@ const expertiseDomains = [
   },
   {
     title: "Inspection, Investigation & Fraude",
-    image: "/lovable-uploads/fe2e6862-f779-46c5-ab11-0a94616f3a26.png",
+    image: "/lovable-uploads/a7f22a1b-43e9-4c44-a47d-df43bbab5901.png",
     href: "/services#investigation"
   },
   {
@@ -26,7 +26,7 @@ const expertiseDomains = [
   },
   {
     title: "Analyses financières et évaluation d'entreprises",
-    image: "/lovable-uploads/90c692ff-0c2e-41b6-a3c4-151e62062ea2.png",
+    image: "/lovable-uploads/4bed1dd7-b5f8-4423-abf2-a25ceac03f9d.png",
     href: "/services#analyses-financieres"
   },
   {
