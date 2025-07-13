@@ -1,0 +1,19 @@
+<svg width="342" height="69" viewBox="0 0 342 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="nexia-logo">
+<!-- Main NEXIA text -->
+<text x="0" y="45" font-family="Poppins, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">
+NEXIA
+</text>
+<!-- Member text -->
+<text x="120" y="30" font-family="Poppins, sans-serif" font-size="14" font-weight="400" fill="#00B9B9">
+Member Firm
+</text>
+<!-- Tagline -->
+<text x="120" y="50" font-family="Poppins, sans-serif" font-size="12" font-weight="300" fill="#FFFFFF">
+Professional Services
+</text>
+<!-- Geometric accent -->
+<rect x="260" y="20" width="30" height="30" rx="15" fill="#00B9B9"/>
+<rect x="300" y="20" width="30" height="30" rx="4" fill="#FBC311"/>
+</g>
+</svg>

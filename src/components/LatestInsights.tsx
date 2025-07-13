@@ -25,52 +25,50 @@ const insights = [
 
 export default function LatestInsights() {
   return (
-    <section className="py-16 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Left Column - Content */}
-          <div className="lg:col-span-1 space-y-6">
-            <h3 className="text-3xl font-bold text-nexia-primary">
-              Latest Insights
-            </h3>
-            <p className="text-nexia-primary leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            </p>
-            <Button asChild variant="professional" size="lg">
-              <Link to="/about">Explore more Insights</Link>
+    <section className="nexia-section-padding bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        {/* Left Column - Content */}
+        <div className="lg:col-span-1 space-y-6 relative min-h-[300px] lg:min-h-0">
+          <h3 className="text-[42px] font-bold text-nexia-primary font-poppins">
+            Latest Insights
+          </h3>
+          <p className="text-nexia-primary font-poppins leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </p>
+          <Button asChild className="nexia-button-outline font-poppins font-medium px-10">
+            <Link to="/about">Explore more Insights</Link>
+          </Button>
+          
+          {/* Navigation Controls */}
+          <div className="flex gap-2 absolute bottom-0 left-0 lg:relative lg:bottom-auto lg:left-auto pt-4 cursor-pointer">
+            <Button variant="ghost" size="icon" className="text-nexia-primary hover:text-nexia-secondary p-0 h-auto w-auto hover:bg-transparent">
+              <ChevronLeft className="h-11 w-11" />
             </Button>
-            
-            {/* Navigation Controls */}
-            <div className="flex space-x-2 pt-4">
-              <Button variant="ghost" size="icon" className="text-nexia-primary hover:text-nexia-secondary">
-                <ChevronLeft className="h-6 w-6" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-nexia-primary hover:text-nexia-secondary">
-                <ChevronRight className="h-6 w-6" />
-              </Button>
-            </div>
+            <Button variant="ghost" size="icon" className="text-nexia-primary hover:text-nexia-secondary p-0 h-auto w-auto hover:bg-transparent">
+              <ChevronRight className="h-11 w-11" />
+            </Button>
           </div>
+        </div>
 
-          {/* Right Columns - Insights */}
-          <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {insights.map((insight, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className="aspect-[4/5] overflow-hidden rounded-lg mb-4">
-                  <img
-                    src={insight.image}
-                    alt={`Insight ${index + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h4 className="text-nexia-primary font-semibold mb-2 leading-tight group-hover:text-nexia-secondary transition-colors duration-200">
-                  {insight.title}
-                </h4>
-                <p className="text-nexia-primary/70 text-sm">
-                  {insight.date}
-                </p>
+        {/* Right Columns - Insights */}
+        <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 lg:pt-0">
+          {insights.map((insight, index) => (
+            <div key={index} className="group cursor-pointer">
+              <div className="overflow-hidden mb-5">
+                <img
+                  src={insight.image}
+                  alt={`Insight ${index + 1}`}
+                  className="nexia-card-rounded w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-            ))}
-          </div>
+              <h4 className="bolder text-nexia-primary font-poppins mb-2 leading-tight group-hover:text-nexia-secondary transition-colors duration-200">
+                {insight.title}
+              </h4>
+              <p className="text-nexia-primary font-poppins text-lg">
+                {insight.date}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
