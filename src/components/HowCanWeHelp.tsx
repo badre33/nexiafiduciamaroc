@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import helpImage from "@/assets/help-section.jpg";
+// import helpImage from "@/assets/help-section.jpg";
 
 export default function HowCanWeHelp() {
   return (
@@ -9,7 +9,7 @@ export default function HowCanWeHelp() {
         {/* Image Column */}
         <div className="flex-1 h-full">
           <img
-            src={helpImage}
+            src="/lovable-uploads/d94f1f3b-e519-4e70-ac5b-aa9ce953e580.png"
             alt="How we can help you"
             className="w-full h-full object-cover"
           />

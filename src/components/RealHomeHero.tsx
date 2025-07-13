@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import heroBackground from "@/assets/hero-background.jpg";
+// import heroBackground from "@/assets/hero-background.jpg";
 
 export default function RealHomeHero() {
   return (
@@ -9,7 +9,7 @@ export default function RealHomeHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroBackground}
+          src="/lovable-uploads/622c05eb-5be8-4d65-8337-8b1100601dbb.png"
           alt="Nexia professional background"
           className="w-full h-full object-cover"
         />
