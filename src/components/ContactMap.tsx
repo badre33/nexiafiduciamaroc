@@ -1,0 +1,17 @@
+import contactMap from "@/assets/contact-map.png";
+
+export default function ContactMap() {
+  return (
+    <section className="py-16 bg-muted/30">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="rounded-lg overflow-hidden shadow-professional">
+          <img
+            src={contactMap}
+            alt="Office location map"
+            className="w-full h-[400px] object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
