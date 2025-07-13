@@ -17,7 +17,7 @@ export default function AboutSection() {
         {/* Video Placeholder */}
         <div className="relative rounded-lg overflow-hidden shadow-professional hover:shadow-hover transition-shadow duration-300">
           <img
-            src={aboutVideoThumbnail}
+            src="/lovable-uploads/bf723659-3212-4039-9767-782fdff18f85.png"
             alt="About video thumbnail"
             className="w-full h-[400px] lg:h-[500px] object-cover"
           />
