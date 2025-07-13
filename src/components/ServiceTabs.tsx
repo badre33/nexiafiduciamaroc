@@ -31,12 +31,12 @@ const expertiseDomains = [
   },
   {
     title: "Consolidation selon les normes Marocaines & IFRS",
-    image: "/lovable-uploads/d5b72a0a-8893-420c-a386-98201f09ba68.png",
+    image: "/lovable-uploads/360a023f-90b9-44bd-a356-aa15e34c698b.png",
     href: "/services#consolidation"
   },
   {
     title: "Conseils et accompagnement stratégique",
-    image: "/lovable-uploads/622c05eb-5be8-4d65-8337-8b1100601dbb.png",
+    image: "/lovable-uploads/9fdca7e5-5c98-461b-a65f-56d402484fe3.png",
     href: "/services#conseil-strategique"
   }
 ];
