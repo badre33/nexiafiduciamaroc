@@ -65,7 +65,11 @@ export default function ServiceTabs() {
               <img
                 src={domain.image}
                 alt={domain.title}
-                className="w-full h-full object-cover"
+                className={`w-full h-full ${
+                  domain.title.includes("Consolidation") || domain.title.includes("accompagnement stratégique") 
+                    ? "object-contain" 
+                    : "object-cover"
+                }`}
               />
               
               {/* Gradient Overlay */}
