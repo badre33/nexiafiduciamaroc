@@ -6,37 +6,37 @@ import { ExternalLink } from "lucide-react";
 const expertiseDomains = [
   {
     title: "Audit et Commissariat aux Comptes",
-    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    image: "/lovable-uploads/3bafe85d-dea9-4e9b-9b8b-ec6a9c22e835.png",
     href: "/services#audit"
   },
   {
     title: "Conseil financier & optimisation",
-    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    image: "/lovable-uploads/8c894aa9-9338-4bb3-bea0-2df5eee6fcee.png",
     href: "/services#conseil-financier"
   },
   {
     title: "Inspection, Investigation & Fraude",
-    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    image: "/lovable-uploads/fe2e6862-f779-46c5-ab11-0a94616f3a26.png",
     href: "/services#investigation"
   },
   {
     title: "Fiscalité & Tax Management",
-    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    image: "/lovable-uploads/4c28863e-d429-476b-ab43-4c6a6e22bdf9.png",
     href: "/services#fiscalite"
   },
   {
     title: "Analyses financières et évaluation d'entreprises",
-    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    image: "/lovable-uploads/90c692ff-0c2e-41b6-a3c4-151e62062ea2.png",
     href: "/services#analyses-financieres"
   },
   {
     title: "Consolidation selon les normes Marocaines & IFRS",
-    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    image: "/lovable-uploads/d5b72a0a-8893-420c-a386-98201f09ba68.png",
     href: "/services#consolidation"
   },
   {
     title: "Conseils et accompagnement stratégique",
-    image: "/lovable-uploads/ae4b3ada-ab5f-4b1c-ab7f-32b8bf6df87c.png",
+    image: "/lovable-uploads/622c05eb-5be8-4d65-8337-8b1100601dbb.png",
     href: "/services#conseil-strategique"
   }
 ];
