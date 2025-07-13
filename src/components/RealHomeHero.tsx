@@ -9,7 +9,7 @@ export default function RealHomeHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/lovable-uploads/3bafe85d-dea9-4e9b-9b8b-ec6a9c22e835.png"
+          src="/lovable-uploads/622c05eb-5be8-4d65-8337-8b1100601dbb.png"
           alt="Nexia professional background"
           className="w-full h-full object-cover"
         />
