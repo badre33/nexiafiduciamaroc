@@ -150,15 +150,17 @@ export default function OurServicesMenu() {
     const hash = location.hash.replace('#', '');
     if (hash && expertiseDomains.some(domain => domain.id === hash)) {
       setActiveTab(hash);
-      // Scroll vers la section après un petit délai pour permettre le rendu
+      
+      // D'abord, aller en haut de la page
+      window.scrollTo(0, 0);
+      
+      // Ensuite, après un délai, scroll vers la section
       setTimeout(() => {
         const element = document.getElementById('our-services-menu');
         if (element) {
-          // Calculer la position exacte
           const elementPosition = element.offsetTop;
-          const offsetPosition = elementPosition - 100; // Ajuster selon la hauteur du header
+          const offsetPosition = elementPosition - 100;
           
-          // Scroll smooth depuis la position actuelle
           window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth'
@@ -167,6 +169,34 @@ export default function OurServicesMenu() {
       }, 100);
     }
   }, [location.hash]);
+
+  // Écouter les changements d'état du navigateur
+  useEffect(() => {
+    const handlePopState = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && expertiseDomains.some(domain => domain.id === hash)) {
+        setActiveTab(hash);
+        
+        window.scrollTo(0, 0);
+        
+        setTimeout(() => {
+          const element = document.getElementById('our-services-menu');
+          if (element) {
+            const elementPosition = element.offsetTop;
+            const offsetPosition = elementPosition - 100;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }, 100);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   return (
     <section id="our-services-menu" className="nexia-section-padding bg-nexia-light">

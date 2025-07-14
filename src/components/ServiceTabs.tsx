@@ -53,6 +53,20 @@ const expertiseDomains = [
 ];
 
 export default function ServiceTabs() {
+  const handleDomainClick = (e: React.MouseEvent, href: string) => {
+    e.preventDefault();
+    const [path, hash] = href.split('#');
+    
+    // Naviguer vers la page sans l'ancre d'abord
+    window.history.pushState(null, '', path);
+    
+    // Ensuite naviguer avec l'ancre pour déclencher notre useEffect
+    setTimeout(() => {
+      window.history.pushState(null, '', href);
+      window.dispatchEvent(new PopStateEvent('popstate'));
+    }, 50);
+  };
+
   return (
     <section className="nexia-section-padding bg-white">
       {/* Section Title */}
@@ -71,6 +85,7 @@ export default function ServiceTabs() {
           <Link
             key={index}
             to={domain.href}
+            onClick={(e) => handleDomainClick(e, domain.href)}
             className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 block"
           >
             <div className="relative h-80">
