@@ -1,11 +1,11 @@
-import { Facebook, Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 const footerLinks = [
-  "Disclaimer",
-  "Member firm Disclaimer",
-  "Privacy Policy",
-  "Cookie Policy",
-  "Email Disclaimer",
+  "Clause de non-responsabilité",
+  "Clause de non-responsabilité du cabinet membre",
+  "Politique de confidentialité",
+  "Politique des cookies",
+  "Clause de non-responsabilité des e-mails",
 ];
 
 export default function Footer() {
@@ -27,15 +27,14 @@ export default function Footer() {
         {/* Disclaimer */}
         <div className="mb-12">
           <p className="text-white/80 leading-relaxed max-w-4xl">
-            [Insert member firm name] is a member of Nexia, a leading, global network of independent 
-            accounting and consulting firms. Please see the "
+            Nexia Fiducia Maroc est membre de Nexia, un réseau mondial de premier plan de cabinets indépendants de comptabilité et de conseil. Veuillez consulter la "
             <a 
               href="#" 
               className="text-nexia-secondary hover:text-white transition-colors duration-200 underline"
             >
-              Member firm disclaimer
+              Clause de non-responsabilité du cabinet membre
             </a>
-            " for further details.
+            " pour plus de détails.
           </p>
         </div>
 
@@ -59,22 +58,12 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex space-x-4 lg:justify-end">
             <a
-              href="#"
-              className="w-10 h-10 bg-white/10 hover:bg-nexia-secondary rounded-full flex items-center justify-center transition-colors duration-200"
-            >
-              <Twitter className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
+              href="https://www.linkedin.com/company/nexia-fiducia-maroc/?viewAsMember=true"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 bg-white/10 hover:bg-nexia-secondary rounded-full flex items-center justify-center transition-colors duration-200"
             >
               <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-white/10 hover:bg-nexia-secondary rounded-full flex items-center justify-center transition-colors duration-200"
-            >
-              <Facebook className="h-5 w-5" />
             </a>
           </div>
         </div>
