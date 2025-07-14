@@ -19,13 +19,13 @@ export default function HowCanWeHelp() {
         <div className="flex-1 flex items-center justify-center px-8 lg:px-12 py-16">
           <div className="space-y-6 pr-0 lg:pr-[20%] pl-0 lg:pl-12">
             <p className="bolder text-nexia-primary font-poppins text-lg">
-              How Can We Help You
+              Comment pouvons-nous vous aider ?
             </p>
             <p className="text-nexia-primary font-poppins text-[28px] leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Nos équipes sont à votre écoute pour construire avec vous des solutions sur-mesure, efficaces et conformes aux meilleures pratiques.
             </p>
             <Button asChild className="nexia-button-primary font-poppins font-medium px-10">
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact">Contactez-nous</Link>
             </Button>
           </div>
         </div>
