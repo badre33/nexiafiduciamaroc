@@ -33,7 +33,7 @@ export default function LatestInsights() {
         {/* Left Column - Content */}
         <div className="lg:col-span-1 space-y-6 relative min-h-[300px] lg:min-h-0">
           <h3 className="text-[42px] font-bold text-nexia-primary font-poppins">
-            Latest Insights
+            Perspectives Mondiales
           </h3>
           <p className="text-nexia-primary font-poppins leading-relaxed">
             Découvrez nos dernières analyses d'experts sur les tendances qui façonnent 
