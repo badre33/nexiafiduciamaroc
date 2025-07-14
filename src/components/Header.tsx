@@ -7,6 +7,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Nos domaines d'expertise", href: "/services" },
   { name: "Équipe dirigeante", href: "/equipe-dirigeante" },
+  { name: "Perspectives mondiales", href: "/perspectives-mondiales" },
   { name: "About", href: "/about" },
   { name: "Contact Us", href: "/contact" },
 ];
