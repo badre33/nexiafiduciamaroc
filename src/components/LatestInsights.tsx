@@ -7,19 +7,22 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const insights = [
   {
-    image: "/lovable-uploads/39143591-1dc1-4223-a2f1-480dd592d440.png",
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    date: "17 January"
+    image: "/lovable-uploads/31bfa1ea-3054-4d56-967c-b20714ac5574.png",
+    title: "Nouvelles réglementations fiscales internationales 2024",
+    description: "Analyse des dernières évolutions fiscales mondiales et leur impact sur les entreprises marocaines opérant à l'international.",
+    date: "15 Mars"
   },
   {
-    image: "/lovable-uploads/683558d0-ea3d-4016-81a3-c31382efa76b.png",
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    date: "17 January"
+    image: "/lovable-uploads/360a023f-90b9-44bd-a356-aa15e34c698b.png",
+    title: "Transformation digitale de l'audit : enjeux et opportunités",
+    description: "Comment les nouvelles technologies transforment les pratiques d'audit et améliorent la qualité des missions.",
+    date: "10 Mars"
   },
   {
-    image: "/lovable-uploads/36d7db3b-24d7-4f04-aaed-d9f2509146f0.png",
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    date: "17 January"
+    image: "/lovable-uploads/4884c761-427d-4a89-af8c-99f6ba0325aa.png",
+    title: "Stratégies de financement pour les PME marocaines",
+    description: "Guide complet des options de financement disponibles pour accompagner la croissance des entreprises marocaines.",
+    date: "5 Mars"
   }
 ];
 
@@ -33,10 +36,11 @@ export default function LatestInsights() {
             Latest Insights
           </h3>
           <p className="text-nexia-primary font-poppins leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            Découvrez nos dernières analyses d'experts sur les tendances qui façonnent 
+            l'avenir des entreprises au Maroc et à l'international.
           </p>
           <Button asChild className="nexia-button-outline font-poppins font-medium px-10">
-            <Link to="/about">Explore more Insights</Link>
+            <Link to="/perspectives-mondiales">Explore more Insights</Link>
           </Button>
           
           {/* Navigation Controls */}
@@ -61,7 +65,7 @@ export default function LatestInsights() {
                   className="nexia-card-rounded w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h4 className="bolder text-nexia-primary font-poppins mb-2 leading-tight group-hover:text-nexia-secondary transition-colors duration-200">
+              <h4 className="bolder text-nexia-primary font-poppins mb-2 leading-tight group-hover:text-nexia-secondary transition-colors duration-200 line-clamp-2">
                 {insight.title}
               </h4>
               <p className="text-nexia-primary font-poppins text-lg">
