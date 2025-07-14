@@ -1,11 +1,10 @@
 import { Linkedin } from "lucide-react";
 
 const footerLinks = [
-  "Clause de non-responsabilité",
-  "Clause de non-responsabilité du cabinet membre",
-  "Politique de confidentialité",
-  "Politique des cookies",
-  "Clause de non-responsabilité des e-mails",
+  { text: "Member firm disclaimer", url: "https://nexia.com/member-firm-disclaimer/" },
+  { text: "Privacy policy", url: "https://nexia.com/privacy-policy/" },
+  { text: "Cookie Policy", url: "https://nexia.com/cookie-policy/" },
+  { text: "Email disclaimer", url: "https://nexia.com/email-disclaimer/" },
 ];
 
 export default function Footer() {
@@ -27,14 +26,16 @@ export default function Footer() {
         {/* Disclaimer */}
         <div className="mb-12">
           <p className="text-white/80 leading-relaxed max-w-4xl">
-            Nexia Fiducia Maroc est membre de Nexia, un réseau mondial de premier plan de cabinets indépendants de comptabilité et de conseil. Veuillez consulter la "
+            Nexia Fiducia Maroc est membre de{" "}
             <a 
-              href="#" 
+              href="https://nexia.com/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-nexia-secondary hover:text-white transition-colors duration-200 underline"
             >
-              Clause de non-responsabilité du cabinet membre
+              Nexia
             </a>
-            " pour plus de détails.
+            , un réseau mondial de premier plan de cabinets indépendants de comptabilité et de conseil.
           </p>
         </div>
 
@@ -46,10 +47,12 @@ export default function Footer() {
               {footerLinks.map((link, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white/80 hover:text-nexia-secondary transition-colors duration-200"
                 >
-                  {link}
+                  {link.text}
                 </a>
               ))}
             </div>
