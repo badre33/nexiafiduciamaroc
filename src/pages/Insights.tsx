@@ -19,7 +19,7 @@ const insightCategories = [
 ];
 
 const globalInsights = [
-  // Articles récupérés du site Nexia International
+  // Page 1 - Articles récupérés du site Nexia International
   {
     id: 1,
     title: "Nexia welcomes a new member firm in Uzbekistan",
@@ -70,68 +70,259 @@ const globalInsights = [
   },
   {
     id: 5,
-    title: "Nouvelles réglementations fiscales internationales 2024",
-    description: "Analyse des dernières évolutions fiscales mondiales et leur impact sur les entreprises marocaines opérant à l'international.",
-    category: "Fiscalité internationale",
-    author: "Ahmed Benali",
-    date: "15 Mars 2024",
-    readTime: "8 min",
-    image: "/lovable-uploads/31bfa1ea-3054-4d56-967c-b20714ac5574.png",
-    featured: false
-  },
-  {
-    id: 6,
-    title: "Transformation digitale de l'audit : enjeux et opportunités",
-    description: "Comment les nouvelles technologies transforment les pratiques d'audit et améliorent la qualité des missions.",
-    category: "Audit & conformité",
-    author: "Fatima Zahra Alami",
-    date: "10 Mars 2024",
-    readTime: "6 min",
+    title: "The future of Accounting: Exploring the impact of artificial intelligence and automation",
+    description: "Exploration approfondie de l'impact de l'intelligence artificielle et de l'automatisation sur l'avenir de la comptabilité et des services financiers.",
+    category: "Innovation technologique",
+    author: "Nexia Research",
+    date: "Décembre 2023",
+    readTime: "12 min",
     image: "/lovable-uploads/360a023f-90b9-44bd-a356-aa15e34c698b.png",
     featured: false
   },
   {
+    id: 6,
+    title: "Recording: European E-Invoicing Trends: Insights for Financial Executives",
+    description: "Tendances européennes de la facturation électronique et insights essentiels pour les dirigeants financiers dans un environnement réglementaire en évolution.",
+    category: "Transformation digitale",
+    author: "Nexia Europe",
+    date: "Novembre 2023",
+    readTime: "9 min",
+    image: "/lovable-uploads/4884c761-427d-4a89-af8c-99f6ba0325aa.png",
+    featured: false
+  },
+  {
     id: 7,
-    title: "Stratégies de financement pour les PME marocaines",
-    description: "Guide complet des options de financement disponibles pour accompagner la croissance des entreprises marocaines.",
-    category: "Corporate Finance",
-    author: "Youssef Kettani",
-    date: "5 Mars 2024",
+    title: "France is implementing an attractive tax credit for investments in favour of green industry (C3IV)",
+    description: "Analyse détaillée du nouveau crédit d'impôt français pour les investissements dans l'industrie verte et ses implications pour les entreprises.",
+    category: "Fiscalité environnementale",
+    author: "Nexia France",
+    date: "Novembre 2023",
+    readTime: "7 min",
+    image: "/lovable-uploads/683558d0-ea3d-4016-81a3-c31382efa76b.png",
+    featured: false
+  },
+  {
+    id: 8,
+    title: "The Global Shift to E-Invoicing: Key takeaways from Mexico, Hungary and Poland",
+    description: "Leçons clés de la transition vers la facturation électronique au Mexique, en Hongrie et en Pologne, et implications pour d'autres marchés.",
+    category: "Transformation digitale",
+    author: "Nexia Global",
+    date: "Mai 2024",
+    readTime: "11 min",
+    image: "/lovable-uploads/31bfa1ea-3054-4d56-967c-b20714ac5574.png",
+    featured: false
+  },
+  {
+    id: 9,
+    title: "Singapore budget highlights 2024",
+    description: "Points saillants du budget singapourien 2024 et ses implications pour les entreprises opérant dans la région Asie-Pacifique.",
+    category: "Politique fiscale",
+    author: "Nexia Singapour",
+    date: "Mars 2024",
+    readTime: "8 min",
+    image: "/lovable-uploads/622c05eb-5be8-4d65-8337-8b1100601dbb.png",
+    featured: false
+  },
+  
+  // Page 2 - Articles supplémentaires
+  {
+    id: 10,
+    title: "Sleepless in the C-suite: What matters keep CFOs / CEOs up at night?",
+    description: "Enquête approfondie sur les préoccupations principales des dirigeants financiers et exécutifs dans l'environnement économique actuel.",
+    category: "Leadership exécutif",
+    author: "Nexia Leadership",
+    date: "Mars 2024",
+    readTime: "10 min",
+    image: "/lovable-uploads/8c894aa9-9338-4bb3-bea0-2df5eee6fcee.png",
+    featured: false
+  },
+  {
+    id: 11,
+    title: "ESG Reporting Standards: Global Convergence and Local Challenges",
+    description: "Analyse de la convergence mondiale des normes de reporting ESG et des défis spécifiques aux juridictions locales.",
+    category: "Réglementation ESG",
+    author: "Nexia Sustainability",
+    date: "Avril 2024",
+    readTime: "13 min",
+    image: "/lovable-uploads/4884c761-427d-4a89-af8c-99f6ba0325aa.png",
+    featured: false
+  },
+  {
+    id: 12,
+    title: "Digital Asset Taxation: Navigating the Regulatory Landscape",
+    description: "Guide complet sur la fiscalité des actifs numériques et crypto-monnaies dans différentes juridictions mondiales.",
+    category: "Fiscalité digitale",
+    author: "Nexia Digital",
+    date: "Février 2024",
+    readTime: "15 min",
+    image: "/lovable-uploads/360a023f-90b9-44bd-a356-aa15e34c698b.png",
+    featured: false
+  },
+  {
+    id: 13,
+    title: "Supply Chain Resilience: Post-Pandemic Strategic Considerations",
+    description: "Stratégies pour renforcer la résilience de la chaîne d'approvisionnement dans l'ère post-pandémique.",
+    category: "Stratégie opérationnelle",
+    author: "Nexia Supply Chain",
+    date: "Janvier 2024",
+    readTime: "9 min",
+    image: "/lovable-uploads/683558d0-ea3d-4016-81a3-c31382efa76b.png",
+    featured: false
+  },
+  {
+    id: 14,
+    title: "Cross-Border M&A: Tax Planning in a Complex Global Environment",
+    description: "Stratégies de planification fiscale pour les fusions-acquisitions transfrontalières dans un environnement réglementaire complexe.",
+    category: "Fiscalité internationale",
+    author: "Nexia M&A",
+    date: "Décembre 2023",
+    readTime: "12 min",
+    image: "/lovable-uploads/31bfa1ea-3054-4d56-967c-b20714ac5574.png",
+    featured: false
+  },
+  {
+    id: 15,
+    title: "Cybersecurity for Financial Services: Emerging Threats and Solutions",
+    description: "Menaces cybersécuritaires émergentes dans les services financiers et solutions innovantes pour la protection des données.",
+    category: "Sécurité financière",
+    author: "Nexia Cyber",
+    date: "Novembre 2023",
+    readTime: "8 min",
+    image: "/lovable-uploads/622c05eb-5be8-4d65-8337-8b1100601dbb.png",
+    featured: false
+  },
+  {
+    id: 16,
+    title: "Sustainable Finance: Green Bonds and Impact Investment Trends",
+    description: "Tendances des obligations vertes et investissements à impact dans le paysage financier durable.",
+    category: "Finance durable",
+    author: "Nexia Green Finance",
+    date: "Octobre 2023",
+    readTime: "11 min",
+    image: "/lovable-uploads/8c894aa9-9338-4bb3-bea0-2df5eee6fcee.png",
+    featured: false
+  },
+  {
+    id: 17,
+    title: "International Transfer Pricing: OECD Guidelines Update 2024",
+    description: "Mise à jour des directives OCDE sur les prix de transfert international et implications pour les entreprises multinationales.",
+    category: "Prix de transfert",
+    author: "Nexia Transfer Pricing",
+    date: "Septembre 2023",
+    readTime: "14 min",
+    image: "/lovable-uploads/4884c761-427d-4a89-af8c-99f6ba0325aa.png",
+    featured: false
+  },
+  {
+    id: 18,
+    title: "Family Office Governance: Best Practices for Wealth Management",
+    description: "Meilleures pratiques de gouvernance pour les family offices et gestion patrimoniale de haute qualité.",
+    category: "Gestion patrimoniale",
+    author: "Nexia Wealth",
+    date: "Août 2023",
+    readTime: "10 min",
+    image: "/lovable-uploads/360a023f-90b9-44bd-a356-aa15e34c698b.png",
+    featured: false
+  },
+
+  // Page 3 - Articles supplémentaires
+  {
+    id: 19,
+    title: "Real Estate Investment Trusts: Global Market Analysis 2024",
+    description: "Analyse complète du marché mondial des REIT et opportunités d'investissement dans l'immobilier commercial.",
+    category: "Investissement immobilier",
+    author: "Nexia Real Estate",
+    date: "Juillet 2023",
+    readTime: "12 min",
+    image: "/lovable-uploads/683558d0-ea3d-4016-81a3-c31382efa76b.png",
+    featured: false
+  },
+  {
+    id: 20,
+    title: "Artificial Intelligence in Audit: Transforming Risk Assessment",
+    description: "Transformation de l'évaluation des risques d'audit grâce à l'intelligence artificielle et aux technologies émergentes.",
+    category: "Audit & conformité",
+    author: "Nexia Audit Tech",
+    date: "Juin 2023",
+    readTime: "9 min",
+    image: "/lovable-uploads/31bfa1ea-3054-4d56-967c-b20714ac5574.png",
+    featured: false
+  },
+  {
+    id: 21,
+    title: "Corporate Governance in Emerging Markets: Key Challenges",
+    description: "Défis principaux de la gouvernance d'entreprise dans les marchés émergents et solutions adaptées.",
+    category: "Gouvernance d'entreprise",
+    author: "Nexia Emerging Markets",
+    date: "Mai 2023",
+    readTime: "11 min",
+    image: "/lovable-uploads/622c05eb-5be8-4d65-8337-8b1100601dbb.png",
+    featured: false
+  },
+  {
+    id: 22,
+    title: "Private Equity Fund Structures: Optimizing Tax Efficiency",
+    description: "Structures de fonds de private equity et optimisation de l'efficacité fiscale dans différentes juridictions.",
+    category: "Private Equity",
+    author: "Nexia Private Capital",
+    date: "Avril 2023",
+    readTime: "13 min",
+    image: "/lovable-uploads/8c894aa9-9338-4bb3-bea0-2df5eee6fcee.png",
+    featured: false
+  },
+  {
+    id: 23,
+    title: "Blockchain Technology in Financial Reporting: Future Prospects",
+    description: "Perspectives d'avenir de la technologie blockchain dans le reporting financier et la transparence comptable.",
+    category: "Innovation technologique",
+    author: "Nexia Blockchain",
+    date: "Mars 2023",
     readTime: "10 min",
     image: "/lovable-uploads/4884c761-427d-4a89-af8c-99f6ba0325aa.png",
     featured: false
   },
   {
-    id: 8,
-    title: "ESG et reporting durable : nouvelles exigences",
-    description: "Les nouvelles obligations en matière de reporting ESG et leur impact sur les entreprises marocaines.",
-    category: "Réglementation",
-    author: "Laila Benkirane",
-    date: "28 Février 2024",
-    readTime: "7 min",
-    image: "/lovable-uploads/622c05eb-5be8-4d65-8337-8b1100601dbb.png",
+    id: 24,
+    title: "International Banking Regulations: Basel IV Implementation",
+    description: "Implémentation de Bâle IV et implications pour les institutions bancaires internationales.",
+    category: "Réglementation bancaire",
+    author: "Nexia Banking",
+    date: "Février 2023",
+    readTime: "15 min",
+    image: "/lovable-uploads/360a023f-90b9-44bd-a356-aa15e34c698b.png",
     featured: false
   },
   {
-    id: 9,
-    title: "Intelligence artificielle dans les services financiers",
-    description: "L'impact de l'IA sur les métiers de l'audit, du conseil et de la finance, et les opportunités d'innovation.",
-    category: "Stratégie d'entreprise",
-    author: "Omar Fassi",
-    date: "20 Février 2024",
-    readTime: "9 min",
+    id: 25,
+    title: "Climate Risk Disclosure: Regulatory Requirements Worldwide",
+    description: "Exigences réglementaires mondiales pour la divulgation des risques climatiques et meilleures pratiques.",
+    category: "Risque climatique",
+    author: "Nexia Climate Risk",
+    date: "Janvier 2023",
+    readTime: "8 min",
     image: "/lovable-uploads/683558d0-ea3d-4016-81a3-c31382efa76b.png",
-    featured: true
+    featured: false
   },
   {
-    id: 10,
-    title: "Optimisation fiscale internationale post-BEPS",
-    description: "Stratégies d'optimisation fiscale conformes aux nouvelles règles BEPS de l'OCDE.",
-    category: "Fiscalité internationale",
-    author: "Rachid Tazi",
-    date: "15 Février 2024",
+    id: 26,
+    title: "Fintech Innovation: Regulatory Sandboxes and Market Entry",
+    description: "Innovation fintech, bacs à sable réglementaires et stratégies d'entrée sur le marché pour les nouvelles technologies.",
+    category: "Innovation financière",
+    author: "Nexia Fintech",
+    date: "Décembre 2022",
     readTime: "12 min",
-    image: "/lovable-uploads/8c894aa9-9338-4bb3-bea0-2df5eee6fcee.png",
+    image: "/lovable-uploads/31bfa1ea-3054-4d56-967c-b20714ac5574.png",
+    featured: false
+  },
+  {
+    id: 27,
+    title: "Global Economic Outlook 2024: Opportunities and Challenges",
+    description: "Perspectives économiques mondiales 2024 avec analyse des opportunités et défis pour les entreprises internationales.",
+    category: "Économie mondiale",
+    author: "Nexia Economics",
+    date: "Novembre 2022",
+    readTime: "16 min",
+    image: "/lovable-uploads/622c05eb-5be8-4d65-8337-8b1100601dbb.png",
     featured: false
   }
 ];
