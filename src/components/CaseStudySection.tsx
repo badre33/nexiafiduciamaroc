@@ -10,13 +10,13 @@ export default function CaseStudySection() {
           {/* Content */}
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-nexia-primary">
-              Case Study
+              Études de cas
             </h3>
             <p className="text-nexia-primary text-lg leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex sem, dictum vitae imperdiet ac, finibus quis libero. Phasellus imperdiet nec sem et facilisis. Morbi in pellentesque mauris, quis hendrerit tortor.
+              Découvrez comment nous accompagnons nos clients dans leurs défis les plus complexes à travers des missions concrètes et des résultats mesurables. Transformation digitale, restructuration fiscale, accompagnement IPO... nos études de cas illustrent notre expertise en action.
             </p>
             <Button asChild variant="professional" size="lg">
-              <Link to="/domaines-expertise">Read more</Link>
+              <Link to="/etudes-de-cas">Découvrir nos études de cas</Link>
             </Button>
           </div>
 
