@@ -16,12 +16,15 @@ export default function ServicesHero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="bg-white p-8 lg:p-12 max-w-3xl">
-          <p className="text-nexia-primary font-bold text-lg mb-4">
-            Services
+          <p className="text-nexia-secondary font-bold text-lg mb-4">
+            Nos domaines d'expertise
           </p>
-          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-nexia-primary leading-tight">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-nexia-primary leading-tight mb-6">
+            Un accompagnement global, une expertise locale et internationale
           </h1>
+          <p className="text-lg text-nexia-primary leading-relaxed">
+            Chez Nexia Fiducia Maroc, nous offrons une palette complète de services conçus pour accompagner les entreprises à chaque étape de leur développement. Nos domaines d'expertise couvrent l'ensemble des enjeux stratégiques, financiers, fiscaux, réglementaires et organisationnels de nos clients.
+          </p>
         </div>
       </div>
     </section>

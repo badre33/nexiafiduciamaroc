@@ -1,13 +1,19 @@
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
 export default function OurCapabilities() {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-nexia-primary font-bold text-lg mb-6">
-          Our Capabilities
+    <section className="nexia-section-padding bg-white">
+      <div className="text-center max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-nexia-primary mb-6 font-poppins">
+          Vous avez un projet ou une problématique spécifique ?
+        </h2>
+        <p className="text-lg text-nexia-primary mb-8 leading-relaxed font-poppins">
+          Nos équipes sont à votre écoute pour construire avec vous des solutions sur-mesure, efficaces et conformes aux meilleures pratiques.
         </p>
-        <p className="text-nexia-primary text-lg leading-relaxed max-w-4xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <Button asChild className="nexia-button font-poppins font-medium px-10 text-lg">
+          <Link to="/contact">Contactez-nous</Link>
+        </Button>
       </div>
     </section>
   );
