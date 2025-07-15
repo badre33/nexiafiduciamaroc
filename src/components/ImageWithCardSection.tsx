@@ -43,11 +43,11 @@ export default function ImageWithCardSection() {
       {/* Background Image */}
       <div className="relative h-[600px] overflow-hidden">
         <img
-          src="/lovable-uploads/70705004-8cef-46fe-9378-b9ad705aaf93.png"
-          alt="Professional forest background"
+          src="/lovable-uploads/06eb7b25-b3c4-4644-98e3-2e17f8aedcc7.png"
+          alt="Professional team celebrating success"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30"></div>
       </div>
 
       {/* Overlaid Card */}
