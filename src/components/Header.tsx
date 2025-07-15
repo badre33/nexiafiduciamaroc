@@ -39,14 +39,11 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="block">
-              <div className="flex flex-col items-center">
-                <img 
-                  src="/lovable-uploads/a0ccc744-ddac-47fb-b5e6-9c9de7196981.png" 
-                  alt="Nexia" 
-                  className="h-10 w-auto opacity-50"
-                />
-                <span className="text-white text-sm font-medium mt-1">Fiducia Maroc</span>
-              </div>
+              <img 
+                src="/images/nexia-fiducia-maroc-logo.svg" 
+                alt="Nexia Fiducia Maroc" 
+                className="h-[60px] w-auto"
+              />
             </Link>
           </div>
 
