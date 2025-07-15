@@ -220,18 +220,16 @@ export default function ContactForm() {
                 <div className="flex h-10 md:h-12">
                   <div className="relative w-[80px] md:w-[100px]">
                     <Select onValueChange={handleCountryCodeChange} value={formData.countryCode}>
-                      <SelectTrigger className="w-full h-full border border-gray-300 rounded-l-md border-r-0 focus:border-nexia-secondary focus:ring-1 focus:ring-nexia-secondary bg-gray-50">
-                        <div className="flex items-center justify-center w-full h-full">
-                          {(() => {
-                            const selectedCountry = countryCodes.find(c => c.code === formData.countryCode);
-                            return (
-                              <div className="flex items-center gap-1">
-                                <span className="text-lg">{selectedCountry?.flag || "🇲🇦"}</span>
-                                <span className="font-medium text-sm">{formData.countryCode}</span>
-                              </div>
-                            );
-                          })()}
-                        </div>
+                      <SelectTrigger className="w-full h-full border border-gray-300 rounded-l-md border-r-0 focus:border-nexia-secondary focus:ring-1 focus:ring-nexia-secondary bg-gray-50 flex items-center justify-center px-2">
+                        {(() => {
+                          const selectedCountry = countryCodes.find(c => c.code === formData.countryCode);
+                          return (
+                            <div className="flex items-center gap-1">
+                              <span className="text-lg">{selectedCountry?.flag || "🇲🇦"}</span>
+                              <span className="font-medium text-sm">{formData.countryCode}</span>
+                            </div>
+                          );
+                        })()}
                       </SelectTrigger>
                       <SelectContent className="bg-white border border-gray-200 shadow-lg z-[100] max-h-[300px] overflow-y-auto">
                         {countryCodes.map((country) => (
