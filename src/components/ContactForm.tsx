@@ -217,19 +217,24 @@ export default function ContactForm() {
                   <Phone className="w-4 h-4" />
                   Téléphone *
                 </Label>
-                <div className="flex h-12 w-full">
-                  <div className="w-20 md:w-24">
+                <div className="flex h-12 w-full border border-gray-300 rounded-md focus-within:border-nexia-secondary focus-within:ring-1 focus-within:ring-nexia-secondary overflow-hidden">
+                  <div className="w-20 md:w-24 bg-gray-50 border-r border-gray-300 flex items-center justify-center px-2">
                     <Select onValueChange={handleCountryCodeChange} value={formData.countryCode}>
-                      <SelectTrigger className="h-full w-full border border-gray-300 rounded-l-md border-r-0 focus:border-nexia-secondary focus:ring-1 focus:ring-nexia-secondary bg-gray-50 px-2 flex items-center justify-center text-sm font-medium">
-                        {(() => {
-                          const selectedCountry = countryCodes.find(c => c.code === formData.countryCode);
-                          return (
-                            <div className="flex items-center gap-1">
-                              <span className="text-base">{selectedCountry?.flag || "🇲🇦"}</span>
-                              <span className="text-sm font-medium">{formData.countryCode}</span>
-                            </div>
-                          );
-                        })()}
+                      <SelectTrigger 
+                        className="w-full h-auto border-0 shadow-none bg-transparent p-0 focus:ring-0 flex items-center justify-center min-h-0"
+                        style={{ height: 'auto', minHeight: 'unset', paddingTop: 0, paddingBottom: 0 }}
+                      >
+                        <div className="flex items-center gap-1" style={{ alignItems: 'center' }}>
+                          {(() => {
+                            const selectedCountry = countryCodes.find(c => c.code === formData.countryCode);
+                            return (
+                              <>
+                                <span className="text-base leading-none">{selectedCountry?.flag || "🇲🇦"}</span>
+                                <span className="text-sm font-medium leading-none">{formData.countryCode}</span>
+                              </>
+                            );
+                          })()}
+                        </div>
                       </SelectTrigger>
                       <SelectContent className="bg-white border border-gray-200 shadow-lg z-[100] max-h-[300px] overflow-y-auto">
                         {countryCodes.map((country) => (
@@ -254,8 +259,9 @@ export default function ContactForm() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className={`flex-1 h-full border border-gray-300 rounded-r-md border-l-0 focus:border-nexia-secondary focus:ring-1 focus:ring-nexia-secondary bg-white px-3 text-sm ${errors.phone ? 'border-red-500' : ''}`}
+                    className={`flex-1 h-full border-0 focus:ring-0 bg-white px-3 text-sm leading-none ${errors.phone ? 'border-red-500' : ''}`}
                     placeholder="XX XX XX XX"
+                    style={{ outline: 'none', boxShadow: 'none' }}
                   />
                 </div>
                 {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
