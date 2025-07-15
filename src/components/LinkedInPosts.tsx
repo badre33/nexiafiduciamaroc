@@ -80,7 +80,9 @@ export default function LinkedInPosts() {
         {/* CTA pour voir plus */}
         <div className="text-center mt-12">
           <a
-            href="/publications-nexia-international"
+            href="https://www.linkedin.com/company/nexia-fiducia-maroc/?viewAsMember=true"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-nexia-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-nexia-primary transition-colors duration-200"
           >
             Voir toutes les publications Nexia International
