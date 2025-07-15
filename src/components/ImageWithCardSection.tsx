@@ -5,19 +5,19 @@ import { ChevronLeft, ChevronRight, Download } from "lucide-react";
 const documents = [
   {
     id: 1,
+    category: "PRÉSENTATION",
+    title: "Nexia Fiducia Maroc 2025",
+    description: "Notre présentation institutionnelle détaillant nos services, notre expertise et notre vision pour accompagner votre croissance.",
+    downloadUrl: "https://fltpndxdtovgjuqarfsh.supabase.co/storage/v1/object/public/nexia-files//Presentation%20Nexia%202025.pdf",
+    buttonText: "Télécharger la présentation"
+  },
+  {
+    id: 2,
     category: "ADHÉSION",
     title: "Brochure d'Adhésion Nexia 2025",
     description: "Découvrez les avantages de rejoindre le réseau international Nexia et comment notre adhésion peut bénéficier à votre organisation.",
     downloadUrl: "https://fltpndxdtovgjuqarfsh.supabase.co/storage/v1/object/public/nexia-files//Nexia-Membership-Brochure-2025.pdf",
     buttonText: "Télécharger la brochure"
-  },
-  {
-    id: 2,
-    category: "PRÉSENTATION",
-    title: "Présentation Nexia 2025",
-    description: "Notre présentation institutionnelle détaillant nos services, notre expertise et notre vision pour accompagner votre croissance.",
-    downloadUrl: "https://fltpndxdtovgjuqarfsh.supabase.co/storage/v1/object/public/nexia-files//Presentation%20Nexia%202025.pdf",
-    buttonText: "Télécharger la présentation"
   }
 ];
 
