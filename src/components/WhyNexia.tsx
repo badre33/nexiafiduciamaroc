@@ -24,7 +24,7 @@ export default function WhyNexia() {
           <div className="text-center lg:text-left">
             <div className="mb-6">
               <img 
-                src="/lovable-uploads/b69b11f7-b22d-4f2a-960a-c7c614e1eb3b.png" 
+                src="/lovable-uploads/59726acf-0a45-496a-88e6-79f58a0fb51d.png" 
                 alt="Nexia Logo" 
                 className="h-16 w-auto object-contain"
               />
