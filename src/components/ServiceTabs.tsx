@@ -47,7 +47,7 @@ const expertiseDomains = [
   },
   {
     title: "Conseil en stratégie & développement",
-    image: "/lovable-uploads/4c28863e-d429-476b-ab43-4c6a6e22bdf9.png",
+    image: "/lovable-uploads/90493dfc-c495-4692-97e9-4d6c1478d8e1.png",
     href: "/domaines-expertise#strategie"
   }
 ];

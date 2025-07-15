@@ -18,7 +18,6 @@ const navigation = [
     href: "#",
     dropdown: [
       { name: "Perspectives Mondiales", href: "/perspectives-mondiales" },
-      { name: "Publications Nexia International", href: "/publications-nexia-international" },
       { name: "Études de cas", href: "/etudes-de-cas" }
     ]
   },

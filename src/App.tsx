@@ -10,7 +10,7 @@ import Contact from "./pages/Contact";
 import EquipeDirecteante from "./pages/EquipeDirecteante";
 import EtudesDeCas from "./pages/EtudesDeCas";
 import Insights from "./pages/Insights";
-import PublicationsNexiaInternational from "./pages/PublicationsNexiaInternational";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,7 +29,7 @@ const App = () => (
           <Route path="/a-propos" element={<About />} />
           <Route path="/equipe-dirigeante" element={<EquipeDirecteante />} />
           <Route path="/perspectives-mondiales" element={<Insights />} />
-          <Route path="/publications-nexia-international" element={<PublicationsNexiaInternational />} />
+          
           <Route path="/etudes-de-cas" element={<EtudesDeCas />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

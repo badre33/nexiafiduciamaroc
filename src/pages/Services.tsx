@@ -4,7 +4,7 @@ import OurCapabilities from "@/components/OurCapabilities";
 import OurServicesMenu from "@/components/OurServicesMenu";
 import CaseStudySection from "@/components/CaseStudySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import LatestInsights from "@/components/LatestInsights";
+import ServicesInsights from "@/components/ServicesInsights";
 import HowCanWeHelp from "@/components/HowCanWeHelp";
 import Footer from "@/components/Footer";
 
@@ -18,7 +18,7 @@ const Services = () => {
         <OurServicesMenu />
         <CaseStudySection />
         <TestimonialsSection />
-        <LatestInsights />
+        <ServicesInsights />
         <HowCanWeHelp />
       </main>
       <Footer />
