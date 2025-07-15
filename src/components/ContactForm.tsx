@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, User, Building2, MessageSquare, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, User, Building2, MessageSquare, Send, CheckCircle, ChevronDown } from "lucide-react";
 
 export default function ContactForm() {
   const { toast } = useToast();
@@ -22,6 +22,7 @@ export default function ContactForm() {
   });
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [showCountryDropdown, setShowCountryDropdown] = useState(false);
 
   const validateForm = () => {
     const newErrors: { [key: string]: string } = {};
@@ -44,7 +45,6 @@ export default function ContactForm() {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: "" }));
     }
@@ -57,11 +57,7 @@ export default function ContactForm() {
     }
   };
 
-  const handleCountryCodeChange = (value: string) => {
-    setFormData(prev => ({ ...prev, countryCode: value }));
-  };
-
-  // Liste des indicatifs de pays
+  // Liste simplifiée des indicatifs de pays
   const countryCodes = [
     { code: "+212", country: "Maroc", flag: "🇲🇦" },
     { code: "+33", country: "France", flag: "🇫🇷" },
@@ -73,43 +69,9 @@ export default function ContactForm() {
     { code: "+41", country: "Suisse", flag: "🇨🇭" },
     { code: "+32", country: "Belgique", flag: "🇧🇪" },
     { code: "+31", country: "Pays-Bas", flag: "🇳🇱" },
-    { code: "+216", country: "Tunisie", flag: "🇹🇳" },
-    { code: "+213", country: "Algérie", flag: "🇩🇿" },
-    { code: "+20", country: "Égypte", flag: "🇪🇬" },
-    { code: "+966", country: "Arabie Saoudite", flag: "🇸🇦" },
-    { code: "+971", country: "Émirats Arabes Unis", flag: "🇦🇪" },
-    { code: "+974", country: "Qatar", flag: "🇶🇦" },
-    { code: "+965", country: "Koweït", flag: "🇰🇼" },
-    { code: "+961", country: "Liban", flag: "🇱🇧" },
-    { code: "+962", country: "Jordanie", flag: "🇯🇴" },
-    { code: "+90", country: "Turquie", flag: "🇹🇷" },
-    { code: "+7", country: "Russie", flag: "🇷🇺" },
-    { code: "+86", country: "Chine", flag: "🇨🇳" },
-    { code: "+81", country: "Japon", flag: "🇯🇵" },
-    { code: "+82", country: "Corée du Sud", flag: "🇰🇷" },
-    { code: "+91", country: "Inde", flag: "🇮🇳" },
-    { code: "+92", country: "Pakistan", flag: "🇵🇰" },
-    { code: "+93", country: "Afghanistan", flag: "🇦🇫" },
-    { code: "+880", country: "Bangladesh", flag: "🇧🇩" },
-    { code: "+66", country: "Thaïlande", flag: "🇹🇭" },
-    { code: "+65", country: "Singapour", flag: "🇸🇬" },
-    { code: "+60", country: "Malaisie", flag: "🇲🇾" },
-    { code: "+62", country: "Indonésie", flag: "🇮🇩" },
-    { code: "+63", country: "Philippines", flag: "🇵🇭" },
-    { code: "+84", country: "Vietnam", flag: "🇻🇳" },
-    { code: "+61", country: "Australie", flag: "🇦🇺" },
-    { code: "+64", country: "Nouvelle-Zélande", flag: "🇳🇿" },
-    { code: "+27", country: "Afrique du Sud", flag: "🇿🇦" },
-    { code: "+234", country: "Nigeria", flag: "🇳🇬" },
-    { code: "+254", country: "Kenya", flag: "🇰🇪" },
-    { code: "+233", country: "Ghana", flag: "🇬🇭" },
-    { code: "+55", country: "Brésil", flag: "🇧🇷" },
-    { code: "+54", country: "Argentine", flag: "🇦🇷" },
-    { code: "+56", country: "Chili", flag: "🇨🇱" },
-    { code: "+57", country: "Colombie", flag: "🇨🇴" },
-    { code: "+52", country: "Mexique", flag: "🇲🇽" },
-    { code: "+51", country: "Pérou", flag: "🇵🇪" },
   ];
+
+  const selectedCountry = countryCodes.find(c => c.code === formData.countryCode) || countryCodes[0];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -142,7 +104,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-8 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 md:mb-12">
@@ -155,8 +117,8 @@ export default function ContactForm() {
         </div>
 
         {/* Form */}
-        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 lg:p-12">
-          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+        <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 lg:p-12">
+          <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div className="space-y-2">
@@ -170,7 +132,7 @@ export default function ContactForm() {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  className={`h-10 md:h-12 ${errors.firstName ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
+                  className={`h-12 ${errors.firstName ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
                   placeholder="Votre prénom"
                 />
                 {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
@@ -186,7 +148,7 @@ export default function ContactForm() {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className={`h-10 md:h-12 ${errors.lastName ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
+                  className={`h-12 ${errors.lastName ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
                   placeholder="Votre nom"
                 />
                 {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
@@ -206,7 +168,7 @@ export default function ContactForm() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`h-10 md:h-12 ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
+                  className={`h-12 ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
                   placeholder="votre.email@exemple.com"
                 />
                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -217,52 +179,53 @@ export default function ContactForm() {
                   <Phone className="w-4 h-4" />
                   Téléphone *
                 </Label>
-                <div className="flex h-12 w-full border border-gray-300 rounded-md focus-within:border-nexia-secondary focus-within:ring-1 focus-within:ring-nexia-secondary overflow-hidden">
-                  <div className="w-20 md:w-24 bg-gray-50 border-r border-gray-300 flex items-center justify-center px-2">
-                    <Select onValueChange={handleCountryCodeChange} value={formData.countryCode}>
-                      <SelectTrigger 
-                        className="w-full h-auto border-0 shadow-none bg-transparent p-0 focus:ring-0 flex items-center justify-center min-h-0"
-                        style={{ height: 'auto', minHeight: 'unset', paddingTop: 0, paddingBottom: 0 }}
-                      >
-                        <div className="flex items-center gap-1" style={{ alignItems: 'center' }}>
-                          {(() => {
-                            const selectedCountry = countryCodes.find(c => c.code === formData.countryCode);
-                            return (
-                              <>
-                                <span className="text-base leading-none">{selectedCountry?.flag || "🇲🇦"}</span>
-                                <span className="text-sm font-medium leading-none">{formData.countryCode}</span>
-                              </>
-                            );
-                          })()}
-                        </div>
-                      </SelectTrigger>
-                      <SelectContent className="bg-white border border-gray-200 shadow-lg z-[100] max-h-[300px] overflow-y-auto">
-                        {countryCodes.map((country) => (
-                          <SelectItem 
-                            key={country.code} 
-                            value={country.code}
-                            className="hover:bg-gray-100 cursor-pointer"
-                          >
-                            <div className="flex items-center gap-2">
-                              <span className="text-lg">{country.flag}</span>
-                              <span className="font-medium">{country.code}</span>
-                              <span className="text-sm text-gray-500">{country.country}</span>
-                            </div>
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                <div className="relative">
+                  <div className="flex h-12 border border-gray-300 rounded-md focus-within:border-nexia-secondary focus-within:ring-1 focus-within:ring-nexia-secondary">
+                    {/* Country Code Button */}
+                    <button
+                      type="button"
+                      onClick={() => setShowCountryDropdown(!showCountryDropdown)}
+                      className="flex items-center justify-center w-20 sm:w-24 px-2 bg-gray-50 border-r border-gray-300 rounded-l-md hover:bg-gray-100 transition-colors"
+                    >
+                      <div className="flex items-center gap-1">
+                        <span className="text-base">{selectedCountry.flag}</span>
+                        <span className="text-sm font-medium">{formData.countryCode}</span>
+                        <ChevronDown className="w-3 h-3 text-gray-500" />
+                      </div>
+                    </button>
+                    
+                    {/* Phone Input */}
+                    <Input
+                      id="phone"
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className={`flex-1 h-full border-0 focus:ring-0 rounded-l-none bg-white ${errors.phone ? 'border-red-500' : ''}`}
+                      placeholder="XX XX XX XX"
+                    />
                   </div>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className={`flex-1 h-full border-0 focus:ring-0 bg-white px-3 text-sm leading-none ${errors.phone ? 'border-red-500' : ''}`}
-                    placeholder="XX XX XX XX"
-                    style={{ outline: 'none', boxShadow: 'none' }}
-                  />
+                  
+                  {/* Country Dropdown */}
+                  {showCountryDropdown && (
+                    <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-50 max-h-60 overflow-y-auto">
+                      {countryCodes.map((country) => (
+                        <button
+                          key={country.code}
+                          type="button"
+                          onClick={() => {
+                            setFormData(prev => ({ ...prev, countryCode: country.code }));
+                            setShowCountryDropdown(false);
+                          }}
+                          className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-gray-100 transition-colors"
+                        >
+                          <span className="text-lg">{country.flag}</span>
+                          <span className="font-medium">{country.code}</span>
+                          <span className="text-sm text-gray-600">{country.country}</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
               </div>
@@ -281,7 +244,7 @@ export default function ContactForm() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="h-10 md:h-12 border-gray-300 focus:border-nexia-secondary"
+                  className="h-12 border-gray-300 focus:border-nexia-secondary"
                   placeholder="Nom de votre entreprise"
                 />
               </div>
@@ -291,7 +254,7 @@ export default function ContactForm() {
                   Service souhaité
                 </Label>
                 <Select onValueChange={handleSelectChange} value={formData.service}>
-                  <SelectTrigger className="h-10 md:h-12 border-gray-300 focus:border-nexia-secondary">
+                  <SelectTrigger className="h-12 border-gray-300 focus:border-nexia-secondary">
                     <SelectValue placeholder="Sélectionnez un service" />
                   </SelectTrigger>
                   <SelectContent>
@@ -327,7 +290,7 @@ export default function ContactForm() {
             {/* Information Note */}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-blue-800">
                   <p className="font-medium mb-1">Confidentialité garantie</p>
                   <p>Vos informations sont traitées en toute confidentialité. Nous nous engageons à vous répondre dans un délai de 24h ouvrées.</p>
@@ -340,7 +303,7 @@ export default function ContactForm() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-nexia-primary hover:bg-nexia-primary/90 text-white px-8 py-3 h-auto text-lg font-medium rounded-lg transition-all duration-200 flex items-center gap-2 min-w-[180px]"
+                className="bg-nexia-primary hover:bg-nexia-primary/90 text-white px-6 sm:px-8 py-3 h-auto text-base sm:text-lg font-medium rounded-lg transition-all duration-200 flex items-center gap-2 min-w-[160px] sm:min-w-[180px]"
               >
                 {isSubmitting ? (
                   <>
