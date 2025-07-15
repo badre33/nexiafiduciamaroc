@@ -217,9 +217,9 @@ export default function ContactForm() {
                   <Phone className="w-4 h-4" />
                   Téléphone *
                 </Label>
-                <div className="flex gap-2">
+                <div className="flex">
                   <Select onValueChange={handleCountryCodeChange} value={formData.countryCode}>
-                    <SelectTrigger className="w-[140px] h-12 border-gray-300 focus:border-nexia-secondary bg-white z-50">
+                    <SelectTrigger className="w-[100px] h-12 border-gray-300 focus:border-nexia-secondary bg-white z-50 rounded-r-none border-r-0">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="bg-white border border-gray-200 shadow-lg z-[100] max-h-[300px] overflow-y-auto">
@@ -232,7 +232,6 @@ export default function ContactForm() {
                           <div className="flex items-center gap-2">
                             <span className="text-lg">{country.flag}</span>
                             <span className="font-medium">{country.code}</span>
-                            <span className="text-sm text-gray-500 hidden sm:inline">{country.country}</span>
                           </div>
                         </SelectItem>
                       ))}
@@ -244,7 +243,7 @@ export default function ContactForm() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className={`flex-1 h-12 ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
+                    className={`flex-1 h-12 ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary rounded-l-none`}
                     placeholder="XX XX XX XX"
                   />
                 </div>

@@ -40,7 +40,7 @@ export default function ServicesInsights() {
             l'avenir des entreprises au Maroc et à l'international.
           </p>
           <Button asChild className="nexia-button-outline font-poppins font-medium px-10">
-            <Link to="/perspectives-mondiales">Explore more Insights</Link>
+            <Link to="/perspectives-mondiales" onClick={() => window.scrollTo(0, 0)}>Voir plus d'insights</Link>
           </Button>
           
           {/* Navigation Controls */}
