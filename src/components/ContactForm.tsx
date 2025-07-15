@@ -217,9 +217,9 @@ export default function ContactForm() {
                   <Phone className="w-4 h-4" />
                   Téléphone *
                 </Label>
-                <div className="flex">
+                <div className="flex border border-gray-300 rounded-md focus-within:border-nexia-secondary focus-within:ring-1 focus-within:ring-nexia-secondary">
                   <Select onValueChange={handleCountryCodeChange} value={formData.countryCode}>
-                    <SelectTrigger className="w-[100px] h-12 border-gray-300 focus:border-nexia-secondary bg-white z-50 rounded-r-none border-r-0">
+                    <SelectTrigger className="w-[120px] h-12 border-0 focus:ring-0 bg-gray-50 rounded-r-none">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="bg-white border border-gray-200 shadow-lg z-[100] max-h-[300px] overflow-y-auto">
@@ -237,13 +237,14 @@ export default function ContactForm() {
                       ))}
                     </SelectContent>
                   </Select>
+                  <div className="w-px bg-gray-300"></div>
                   <Input
                     id="phone"
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className={`flex-1 h-12 ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary rounded-l-none`}
+                    className={`flex-1 h-12 border-0 focus:ring-0 rounded-l-none ${errors.phone ? 'border-red-500' : ''}`}
                     placeholder="XX XX XX XX"
                   />
                 </div>
