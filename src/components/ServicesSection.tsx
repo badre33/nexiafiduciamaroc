@@ -1,39 +1,6 @@
 const publications = [
   {
     id: 1,
-    title: "Tax Guide for Ukraine 2024",
-    description: "Guide fiscal complet pour l'Ukraine en 2024, incluant les dernières réglementations et opportunités d'investissement.",
-    category: "Publication",
-    author: "Nexia International",
-    date: "February 2024",
-    readTime: "15 min",
-    image: "https://s3-eu-west-1.amazonaws.com/nexiawebsite/wp-media-folder-global-network-of-accounting-consultant-firms-nexia/wp-content/uploads/2024/02/ukraine-tax-guide-2024.jpg",
-    excerpt: "Un guide complet sur la fiscalité ukrainienne pour les entreprises internationales en 2024..."
-  },
-  {
-    id: 2,
-    title: "EMEA Holding Company Analysis Update 2023",
-    description: "Analyse mise à jour des structures de holding en région EMEA pour l'année 2023.",
-    category: "Publication",
-    author: "Nexia International",
-    date: "June 2023",
-    readTime: "12 min",
-    image: "https://s3-eu-west-1.amazonaws.com/nexiawebsite/wp-media-folder-global-network-of-accounting-consultant-firms-nexia/wp-content/uploads/2023/06/emea-holding-analysis-2023.jpg",
-    excerpt: "Découvrez les dernières tendances et évolutions des structures de holding en EMEA..."
-  },
-  {
-    id: 3,
-    title: "Turnaround Restructuring Insolvency – Service brochure",
-    description: "Brochure de services spécialisés en restructuration et insolvabilité d'entreprises.",
-    category: "Publication",
-    author: "Nexia International",
-    date: "June 2021",
-    readTime: "10 min",
-    image: "https://s3-eu-west-1.amazonaws.com/nexiawebsite/wp-media-folder-global-network-of-accounting-consultant-firms-nexia/wp-content/uploads/2021/06/turnaround-restructuring-brochure.jpg",
-    excerpt: "Nos services spécialisés pour accompagner les entreprises en difficulté..."
-  },
-  {
-    id: 4,
     title: "Doing business in the Netherlands",
     description: "Guide pratique pour établir et développer son activité aux Pays-Bas.",
     category: "Publication",
@@ -41,10 +8,11 @@ const publications = [
     date: "May 2025",
     readTime: "18 min",
     image: "https://s3-eu-west-1.amazonaws.com/nexiawebsite/wp-media-folder-global-network-of-accounting-consultant-firms-nexia/wp-content/uploads/2025/05/doing-business-netherlands.jpg",
-    excerpt: "Tout ce qu'il faut savoir pour réussir son implantation aux Pays-Bas..."
+    excerpt: "Tout ce qu'il faut savoir pour réussir son implantation aux Pays-Bas...",
+    link: "https://nexia.com/insights/doing-business-in-the-netherlands/"
   },
   {
-    id: 5,
+    id: 2,
     title: "Investing in Germany",
     description: "Guide complet pour les investissements et opportunités d'affaires en Allemagne.",
     category: "Publication",
@@ -52,7 +20,32 @@ const publications = [
     date: "April 2025",
     readTime: "16 min",
     image: "https://s3-eu-west-1.amazonaws.com/nexiawebsite/wp-media-folder-global-network-of-accounting-consultant-firms-nexia/wp-content/uploads/2025/04/investing-in-germany.jpg",
-    excerpt: "Découvrez les opportunités d'investissement et le climat des affaires en Allemagne..."
+    excerpt: "Découvrez les opportunités d'investissement et le climat des affaires en Allemagne...",
+    link: "https://nexia.com/insights/investing-in-germany/"
+  },
+  {
+    id: 3,
+    title: "Doing business and investing in Albania 2024 edition",
+    description: "Guide complet pour faire des affaires et investir en Albanie édition 2024.",
+    category: "Publication",
+    author: "Nexia International",
+    date: "March 2024",
+    readTime: "14 min",
+    image: "https://s3-eu-west-1.amazonaws.com/nexiawebsite/wp-media-folder-global-network-of-accounting-consultant-firms-nexia/wp-content/uploads/2024/03/albania-business-guide-2024.jpg",
+    excerpt: "Découvrez les opportunités d'affaires et d'investissement en Albanie...",
+    link: "https://nexia.com/insights/doing-business-and-investing-in-albania-2024-edition/"
+  },
+  {
+    id: 4,
+    title: "Tax Guide for Ukraine 2024",
+    description: "Guide fiscal complet pour l'Ukraine en 2024, incluant les dernières réglementations et opportunités d'investissement.",
+    category: "Publication",
+    author: "Nexia International",
+    date: "February 2024",
+    readTime: "15 min",
+    image: "https://s3-eu-west-1.amazonaws.com/nexiawebsite/wp-media-folder-global-network-of-accounting-consultant-firms-nexia/wp-content/uploads/2024/02/ukraine-tax-guide-2024.jpg",
+    excerpt: "Un guide complet sur la fiscalité ukrainienne pour les entreprises internationales en 2024...",
+    link: "https://nexia.com/insights/tax-guide-for-ukraine-2024/"
   },
 ];
 
@@ -86,9 +79,12 @@ export default function ServicesSection() {
           }} />
           <div className="flex gap-6 overflow-x-auto pb-4 scroll-container">
             {publications.map((publication, index) => (
-              <div
+              <a
                 key={publication.id}
-                className="flex-none w-80 bg-white rounded-lg shadow-professional hover:shadow-hover transition-all duration-300 overflow-hidden"
+                href={publication.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-none w-80 bg-white rounded-lg shadow-professional hover:shadow-hover transition-all duration-300 overflow-hidden cursor-pointer"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -120,7 +116,7 @@ export default function ServicesSection() {
                     <span>{publication.date}</span>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -128,7 +124,9 @@ export default function ServicesSection() {
         {/* CTA pour voir toutes les publications */}
         <div className="text-center mt-12">
           <a
-            href="/publications-nexia-international"
+            href="https://nexia.com/insights/?_sft_insight_type=publication#insightLoop"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-nexia-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-nexia-primary transition-colors duration-200"
           >
             Voir toutes les publications Nexia International
