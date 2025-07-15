@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, User, ArrowRight, Filter } from "lucide-react";
 import { useState } from "react";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
 const insightCategories = [
   "Tous",
@@ -328,18 +329,35 @@ const globalInsights = [
 ];
 
 export default function Insights() {
-  const [selectedCategory, setSelectedCategory] = useState("Tous");
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("Tous");
+  const [currentPage, setCurrentPage] = useState(1);
+  const articlesPerPage = 9;
 
   const filteredInsights = globalInsights.filter(insight => {
-    const matchesCategory = selectedCategory === "Tous" || insight.category === selectedCategory;
     const matchesSearch = insight.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          insight.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
+    const matchesCategory = selectedCategory === "Tous" || insight.category === selectedCategory;
+    return matchesSearch && matchesCategory;
   });
 
   const featuredInsight = filteredInsights.find(insight => insight.featured);
-  const regularInsights = filteredInsights.filter(insight => !insight.featured);
+  const allRegularInsights = filteredInsights.filter(insight => !insight.featured);
+  
+  // Pagination logic
+  const totalPages = Math.ceil(allRegularInsights.length / articlesPerPage);
+  const startIndex = (currentPage - 1) * articlesPerPage;
+  const regularInsights = allRegularInsights.slice(startIndex, startIndex + articlesPerPage);
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1); // Reset to first page when changing category
+  };
+
+  const handleSearchChange = (term: string) => {
+    setSearchTerm(term);
+    setCurrentPage(1); // Reset to first page when searching
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -370,7 +388,7 @@ export default function Insights() {
                 type="text"
                 placeholder="Rechercher un article..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => handleSearchChange(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-nexia-primary focus:border-transparent"
               />
             </div>
@@ -382,7 +400,7 @@ export default function Insights() {
                   key={category}
                   variant={selectedCategory === category ? "default" : "outline"}
                   size="sm"
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => handleCategoryChange(category)}
                   className={selectedCategory === category ? "bg-nexia-primary hover:bg-nexia-primary/90" : ""}
                 >
                   {category}
@@ -451,7 +469,7 @@ export default function Insights() {
       <section className="py-12">
         <div className="mx-auto max-w-[1350px] px-6 lg:px-8 xl:px-0">
           <h2 className="text-2xl font-bold text-nexia-primary mb-8">
-            Toutes les perspectives ({filteredInsights.length})
+            Toutes les perspectives ({allRegularInsights.length})
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -504,18 +522,55 @@ export default function Insights() {
             ))}
           </div>
 
-          {filteredInsights.length === 0 && (
+          {allRegularInsights.length === 0 && (
             <div className="text-center py-12">
               <p className="text-gray-500 text-lg">Aucun article trouvé pour cette recherche.</p>
             </div>
           )}
 
-          {/* Load More Button */}
-          {filteredInsights.length > 0 && (
-            <div className="text-center mt-12">
-              <Button variant="outline" size="lg">
-                Charger plus d'articles
-              </Button>
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex justify-center mt-12">
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious 
+                      href="#" 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (currentPage > 1) setCurrentPage(currentPage - 1);
+                      }}
+                      className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
+                    />
+                  </PaginationItem>
+                  
+                  {[...Array(totalPages)].map((_, index) => (
+                    <PaginationItem key={index + 1}>
+                      <PaginationLink
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setCurrentPage(index + 1);
+                        }}
+                        isActive={currentPage === index + 1}
+                      >
+                        {index + 1}
+                      </PaginationLink>
+                    </PaginationItem>
+                  ))}
+                  
+                  <PaginationItem>
+                    <PaginationNext 
+                      href="#" 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+                      }}
+                      className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
+                    />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
             </div>
           )}
         </div>
