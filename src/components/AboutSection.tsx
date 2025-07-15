@@ -7,24 +7,30 @@ export default function AboutSection() {
         {/* About Us Text */}
         <div className="text-center mb-16">
           <p className="text-nexia-primary font-semibold text-sm uppercase tracking-wide mb-4">
-            About Us
+            À PROPOS DE NOUS
           </p>
-          <p className="text-nexia-primary text-lg max-w-3xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <h2 className="text-3xl md:text-4xl font-bold text-nexia-primary mb-6">
+            Nexia Fiducia Maroc, votre partenaire de confiance
+          </h2>
+          <p className="text-nexia-primary text-lg max-w-4xl mx-auto leading-relaxed">
+            Nexia Fiducia Maroc est né de la fusion entre le cabinet Advisoris et Nexia Maroc en 2022, 
+            créant ainsi un acteur majeur de l'audit, du commissariat aux comptes et du conseil au Maroc. 
+            Forts de notre expertise reconnue et de notre appartenance au réseau international Nexia, 
+            nous accompagnons nos clients dans leur développement avec une approche personnalisée et des solutions innovantes.
           </p>
         </div>
 
-        {/* Video Placeholder */}
+        {/* YouTube Video */}
         <div className="relative rounded-lg overflow-hidden shadow-professional hover:shadow-hover transition-shadow duration-300">
-          <img
-            src="/lovable-uploads/bf723659-3212-4039-9767-782fdff18f85.png"
-            alt="About video thumbnail"
-            className="w-full h-[400px] lg:h-[500px] object-cover"
-          />
-          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-            <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors duration-200 cursor-pointer">
-              <div className="w-0 h-0 border-l-8 border-l-nexia-primary border-t-6 border-t-transparent border-b-6 border-b-transparent ml-1"></div>
-            </div>
+          <div className="aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/eMQr3TObNcU"
+              title="Présentation Nexia Fiducia Maroc"
+              className="w-full h-full"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </div>
