@@ -218,9 +218,9 @@ export default function ContactForm() {
                   Téléphone *
                 </Label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 flex items-center">
+                  <div className="absolute inset-y-0 left-0 flex items-center z-10">
                     <Select onValueChange={handleCountryCodeChange} value={formData.countryCode}>
-                      <SelectTrigger className="w-[100px] h-12 border-0 focus:ring-0 bg-transparent">
+                      <SelectTrigger className="w-[100px] h-12 border-0 focus:ring-0 bg-transparent flex items-center justify-center">
                         <div className="flex items-center gap-1">
                           <span className="text-lg">🇲🇦</span>
                           <span className="font-medium text-sm">{formData.countryCode}</span>
