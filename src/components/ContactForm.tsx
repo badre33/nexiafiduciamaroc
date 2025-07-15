@@ -142,23 +142,23 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-4xl mx-auto px-6 lg:px-8">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-nexia-primary mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-nexia-primary mb-4">
             Contactez nos experts
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Parlez-nous de votre projet. Notre équipe d'experts vous accompagnera dans toutes vos démarches comptables et fiscales.
           </p>
         </div>
 
         {/* Form */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 lg:p-12">
+          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
             {/* Name Fields */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div className="space-y-2">
                 <Label htmlFor="firstName" className="text-sm font-medium text-gray-700 flex items-center gap-2">
                   <User className="w-4 h-4" />
@@ -170,7 +170,7 @@ export default function ContactForm() {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  className={`h-12 ${errors.firstName ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
+                  className={`h-10 md:h-12 ${errors.firstName ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
                   placeholder="Votre prénom"
                 />
                 {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
@@ -186,7 +186,7 @@ export default function ContactForm() {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className={`h-12 ${errors.lastName ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
+                  className={`h-10 md:h-12 ${errors.lastName ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
                   placeholder="Votre nom"
                 />
                 {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
@@ -194,7 +194,7 @@ export default function ContactForm() {
             </div>
 
             {/* Contact Fields */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-sm font-medium text-gray-700 flex items-center gap-2">
                   <Mail className="w-4 h-4" />
@@ -206,7 +206,7 @@ export default function ContactForm() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`h-12 ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
+                  className={`h-10 md:h-12 ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:border-nexia-secondary`}
                   placeholder="votre.email@exemple.com"
                 />
                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -217,14 +217,16 @@ export default function ContactForm() {
                   <Phone className="w-4 h-4" />
                   Téléphone *
                 </Label>
-                <div className="flex h-12 border border-gray-300 rounded-md focus-within:border-nexia-secondary focus-within:ring-1 focus-within:ring-nexia-secondary">
-                  <div className="flex items-center justify-center w-[100px] bg-gray-50 border-r border-gray-300">
+                <div className="flex h-10 md:h-12 border border-gray-300 rounded-md focus-within:border-nexia-secondary focus-within:ring-1 focus-within:ring-nexia-secondary">
+                  <div className="flex items-center justify-center w-[80px] md:w-[100px] bg-gray-50 border-r border-gray-300" style={{ alignItems: 'center', justifyContent: 'center' }}>
                     <Select onValueChange={handleCountryCodeChange} value={formData.countryCode}>
-                      <SelectTrigger className="w-full h-full border-0 focus:ring-0 bg-transparent shadow-none">
-                        <div className="flex items-center gap-1">
-                          <span className="text-lg">🇲🇦</span>
-                          <span className="font-medium text-sm">{formData.countryCode}</span>
-                        </div>
+                      <SelectTrigger className="w-full h-full border-0 focus:ring-0 bg-transparent shadow-none" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                        <SelectValue>
+                          <div className="flex items-center gap-1" style={{ alignItems: 'center' }}>
+                            <span className="text-lg">🇲🇦</span>
+                            <span className="font-medium text-sm">{formData.countryCode}</span>
+                          </div>
+                        </SelectValue>
                       </SelectTrigger>
                       <SelectContent className="bg-white border border-gray-200 shadow-lg z-[100] max-h-[300px] overflow-y-auto">
                         {countryCodes.map((country) => (
@@ -258,7 +260,7 @@ export default function ContactForm() {
             </div>
 
             {/* Company and Service */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div className="space-y-2">
                 <Label htmlFor="company" className="text-sm font-medium text-gray-700 flex items-center gap-2">
                   <Building2 className="w-4 h-4" />
@@ -270,7 +272,7 @@ export default function ContactForm() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="h-12 border-gray-300 focus:border-nexia-secondary"
+                  className="h-10 md:h-12 border-gray-300 focus:border-nexia-secondary"
                   placeholder="Nom de votre entreprise"
                 />
               </div>
@@ -280,7 +282,7 @@ export default function ContactForm() {
                   Service souhaité
                 </Label>
                 <Select onValueChange={handleSelectChange} value={formData.service}>
-                  <SelectTrigger className="h-12 border-gray-300 focus:border-nexia-secondary">
+                  <SelectTrigger className="h-10 md:h-12 border-gray-300 focus:border-nexia-secondary">
                     <SelectValue placeholder="Sélectionnez un service" />
                   </SelectTrigger>
                   <SelectContent>

@@ -29,50 +29,50 @@ const insights = [
 export default function ServicesInsights() {
   return (
     <section className="nexia-section-padding bg-white">
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
         {/* Left Column - Content */}
-        <div className="lg:col-span-1 space-y-6 relative min-h-[300px] lg:min-h-0">
-          <h3 className="text-[42px] font-bold text-nexia-primary font-poppins">
+        <div className="lg:col-span-1 space-y-4 lg:space-y-6 relative min-h-[250px] lg:min-h-0">
+          <h3 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-nexia-primary font-poppins">
             Perspectives Mondiales
           </h3>
-          <p className="text-nexia-primary font-poppins leading-relaxed">
+          <p className="text-nexia-primary font-poppins leading-relaxed text-sm md:text-base">
             Découvrez nos dernières analyses d'experts sur les tendances qui façonnent 
             l'avenir des entreprises au Maroc et à l'international.
           </p>
-          <Button asChild className="nexia-button-outline font-poppins font-medium px-10">
+          <Button asChild className="nexia-button-outline font-poppins font-medium px-6 lg:px-10 text-sm md:text-base">
             <Link to="/perspectives-mondiales" onClick={() => window.scrollTo(0, 0)}>Voir plus d'insights</Link>
           </Button>
           
           {/* Navigation Controls */}
           <div className="flex gap-2 absolute bottom-0 left-0 lg:relative lg:bottom-auto lg:left-auto pt-4 cursor-pointer">
             <Button variant="ghost" size="icon" className="text-nexia-primary hover:text-nexia-secondary p-0 h-auto w-auto hover:bg-transparent">
-              <ChevronLeft className="h-11 w-11" />
+              <ChevronLeft className="h-8 w-8 lg:h-11 lg:w-11" />
             </Button>
             <Button variant="ghost" size="icon" className="text-nexia-primary hover:text-nexia-secondary p-0 h-auto w-auto hover:bg-transparent">
-              <ChevronRight className="h-11 w-11" />
+              <ChevronRight className="h-8 w-8 lg:h-11 lg:w-11" />
             </Button>
           </div>
         </div>
 
         {/* Right Columns - Insights */}
-        <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 lg:pt-0">
+        <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 pt-6 lg:pt-0">
           {insights.map((insight, index) => (
             <div 
               key={index} 
               className="group cursor-pointer"
               onClick={() => window.open(insight.source, '_blank')}
             >
-              <div className="overflow-hidden mb-5">
+              <div className="overflow-hidden mb-3 lg:mb-5">
                 <img
                   src={insight.image}
                   alt={`Insight ${index + 1}`}
-                  className="nexia-card-rounded w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="nexia-card-rounded w-full h-[250px] md:h-[300px] lg:h-[350px] object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h4 className="bolder text-nexia-primary font-poppins mb-2 leading-tight group-hover:text-nexia-secondary transition-colors duration-200 line-clamp-2">
+              <h4 className="bolder text-nexia-primary font-poppins mb-2 leading-tight group-hover:text-nexia-secondary transition-colors duration-200 line-clamp-2 text-sm md:text-base lg:text-lg">
                 {insight.title}
               </h4>
-              <p className="text-nexia-primary font-poppins text-lg">
+              <p className="text-nexia-primary font-poppins text-sm md:text-base lg:text-lg">
                 {insight.date}
               </p>
             </div>

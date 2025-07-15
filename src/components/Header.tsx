@@ -34,8 +34,8 @@ export default function Header() {
   return (
     <header className="bg-nexia-primary border-none">
       {/* Desktop Header */}
-      <div className="mx-auto max-w-[1350px] px-6 lg:px-8 xl:px-0">
-        <div className="flex items-end justify-between py-[30px] border-none">
+      <div className="mx-auto max-w-[1350px] px-4 sm:px-6 lg:px-8 xl:px-0">
+        <div className="flex items-end justify-between py-4 md:py-6 lg:py-[30px] border-none">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="block">
@@ -43,20 +43,20 @@ export default function Header() {
                 <img 
                   src="/lovable-uploads/02c5e586-5b91-4d8e-a8d2-237890777f70.png" 
                   alt="Nexia" 
-                  className="h-8 w-auto"
+                  className="h-6 md:h-8 w-auto"
                 />
-                <span className="text-white text-sm font-bold mt-1">Fiducia Maroc</span>
+                <span className="text-white text-xs md:text-sm font-bold mt-1">Fiducia Maroc</span>
               </div>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navigation.map((item) => {
               if (item.dropdown) {
                 return (
                   <DropdownMenu key={item.name}>
-                    <DropdownMenuTrigger className={`flex items-center gap-1 text-white font-poppins font-medium pb-1 border-b-4 transition-colors duration-300 hover:border-nexia-secondary ${
+                    <DropdownMenuTrigger className={`flex items-center gap-1 text-white font-poppins font-medium pb-1 border-b-4 transition-colors duration-300 hover:border-nexia-secondary text-sm xl:text-base ${
                       isInsightsActive ? "border-nexia-secondary" : "border-transparent"
                     }`}>
                       {item.name}
@@ -82,7 +82,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-white font-poppins font-medium pb-1 border-b-4 transition-colors duration-300 ${
+                  className={`text-white font-poppins font-medium pb-1 border-b-4 transition-colors duration-300 text-sm xl:text-base ${
                     location.pathname === item.href
                       ? "border-nexia-secondary"
                       : "border-transparent hover:border-nexia-secondary"
@@ -110,8 +110,8 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-nexia-primary">
-          <div className="px-6 py-4 space-y-2">
+        <div className="lg:hidden bg-nexia-primary border-t border-white/10">
+          <div className="px-4 sm:px-6 py-4 space-y-2">
             {navigation.map((item) => {
               if (item.dropdown) {
                 return (
