@@ -41,7 +41,7 @@ export default function Header() {
             <Link to="/" className="block">
               <div className="flex flex-col items-center">
                 <img 
-                  src="/lovable-uploads/16a023dc-d825-4bef-aedd-3f1f732ce8fb.png" 
+                  src="/lovable-uploads/0e78872c-ed1e-47da-9905-a37dc9334fe2.png" 
                   alt="Nexia" 
                   className="h-10 w-auto"
                   style={{ mixBlendMode: 'screen' }}
