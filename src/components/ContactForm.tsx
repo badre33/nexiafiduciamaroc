@@ -383,9 +383,9 @@ export default function ContactForm() {
                         onClick={() => setShowCountryDropdown(!showCountryDropdown)}
                         className="flex items-center justify-center h-full px-3 bg-gray-50 border-r border-gray-300 rounded-l-md hover:bg-gray-100 transition-colors focus:outline-none focus:bg-gray-100 min-w-[100px]"
                       >
-                        <div className="flex items-center justify-center gap-2" style={{ marginTop: '1px' }}>
-                          <span className="text-lg leading-none" style={{ marginTop: '-1px' }}>{selectedCountry?.flag}</span>
-                          <span className="text-sm font-medium text-gray-700 leading-none" style={{ marginTop: '1px' }}>{formData.countryCode}</span>
+                        <div className="flex items-center justify-center gap-2" style={{ paddingTop: '4px' }}>
+                          <span className="text-lg leading-none">{selectedCountry?.flag}</span>
+                          <span className="text-sm font-medium text-gray-700 leading-none">{formData.countryCode}</span>
                           <ChevronDown className="w-3 h-3 text-gray-500" />
                         </div>
                       </button>
@@ -459,10 +459,17 @@ export default function ContactForm() {
                   </SelectTrigger>
                   <SelectContent className="bg-white border border-gray-200 shadow-xl">
                     <SelectItem value="audit" className="hover:bg-nexia-secondary/10">Audit et Assurance</SelectItem>
-                    <SelectItem value="conseil" className="hover:bg-nexia-secondary/10">Conseil Fiscal</SelectItem>
-                    <SelectItem value="comptabilite" className="hover:bg-nexia-secondary/10">Expertise Comptable</SelectItem>
-                    <SelectItem value="social" className="hover:bg-nexia-secondary/10">Social et Paie</SelectItem>
-                    <SelectItem value="juridique" className="hover:bg-nexia-secondary/10">Conseil Juridique</SelectItem>
+                    <SelectItem value="expertise-comptable" className="hover:bg-nexia-secondary/10">Expertise Comptable</SelectItem>
+                    <SelectItem value="conseil-fiscal" className="hover:bg-nexia-secondary/10">Conseil Fiscal</SelectItem>
+                    <SelectItem value="conseil-juridique" className="hover:bg-nexia-secondary/10">Conseil Juridique</SelectItem>
+                    <SelectItem value="social-paie" className="hover:bg-nexia-secondary/10">Social et Paie</SelectItem>
+                    <SelectItem value="conseil-gestion" className="hover:bg-nexia-secondary/10">Conseil en Gestion</SelectItem>
+                    <SelectItem value="due-diligence" className="hover:bg-nexia-secondary/10">Due Diligence</SelectItem>
+                    <SelectItem value="evaluation" className="hover:bg-nexia-secondary/10">Évaluation d'Entreprises</SelectItem>
+                    <SelectItem value="restructuration" className="hover:bg-nexia-secondary/10">Restructuration</SelectItem>
+                    <SelectItem value="consolidation" className="hover:bg-nexia-secondary/10">Consolidation</SelectItem>
+                    <SelectItem value="ifrs" className="hover:bg-nexia-secondary/10">Normes IFRS</SelectItem>
+                    <SelectItem value="formation" className="hover:bg-nexia-secondary/10">Formation</SelectItem>
                     <SelectItem value="autre" className="hover:bg-nexia-secondary/10">Autre</SelectItem>
                   </SelectContent>
                 </Select>
