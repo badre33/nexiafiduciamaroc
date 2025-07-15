@@ -6,43 +6,23 @@ import { Mail, Phone, Linkedin } from "lucide-react";
 const teamMembers = [
   {
     id: 1,
-    name: "Mohamed ALAMI",
-    title: "Associé Fondateur",
-    specialties: ["Audit & Commissariat aux comptes", "Corporate Finance & M&A"],
-    description: "Expert-comptable et commissaire aux comptes avec plus de 20 ans d'expérience dans l'audit et le conseil financier.",
-    image: "/lovable-uploads/01471ff8-a45a-4917-9e88-21cc4de0456d.png",
-    email: "m.alami@nexiafiducia.ma",
-    phone: "+212 522 XX XX XX"
+    name: "M. Yassine EL MAGUIRI",
+    title: "Président",
+    specialties: ["Audit & Commissariat aux comptes", "Expertise comptable", "Présidence de l'ordre des Experts-Comptables"],
+    description: "Une longue carrière à son actif, depuis 1998, chez ORSIA Finance, KPMG International puis DARLY & CO AUDITING. Yassine EL MAGUIRI est expert comptable – commissaire aux comptes, mais également le Président de l'ordre des Experts-Comptables, Conseil Région de Casablanca et Sud. Yassine est l'associé-fondateur du cabinet Advisoris à Casablanca, avant l'opération de regroupement avec NEXIA, donnant naissance à un nouveau géant marocain du métier de l'audit, commissariat aux comptes et du conseil.",
+    image: "/lovable-uploads/0e997ed8-ef54-4573-a7e6-0b1be1b3bb22.png",
+    email: "y.elmaguiri@nexiafiducia.ma",
+    phone: "+212 (0) 661 909 901"
   },
   {
     id: 2,
-    name: "Fatima BENALI",
-    title: "Associée",
-    specialties: ["Fiscalité & Optimisation fiscale", "Accompagnement juridique & social"],
-    description: "Spécialiste en droit fiscal et social, accompagne les entreprises dans leurs stratégies d'optimisation fiscale.",
-    image: "/lovable-uploads/0506b088-dd85-416f-a9a3-bc15fac33d20.png",
-    email: "f.benali@nexiafiducia.ma",
-    phone: "+212 522 XX XX XX"
-  },
-  {
-    id: 3,
-    name: "Ahmed TAZI",
-    title: "Associé",
-    specialties: ["Expertise comptable & Conseil", "Digitalisation et systèmes d'information"],
-    description: "Expert en transformation digitale et systèmes d'information, pilote la modernisation des processus comptables.",
-    image: "/lovable-uploads/205e24d0-c46d-47e0-95e8-f94cd3c806a7.png",
-    email: "a.tazi@nexiafiducia.ma",
-    phone: "+212 522 XX XX XX"
-  },
-  {
-    id: 4,
-    name: "Khadija OUALI",
-    title: "Associée",
-    specialties: ["Support aux investisseurs étrangers", "Conseil en stratégie & développement"],
-    description: "Accompagne les investisseurs étrangers dans leurs projets d'implantation et de développement au Maroc.",
-    image: "/lovable-uploads/31bfa1ea-3054-4d56-967c-b20714ac5574.png",
-    email: "k.ouali@nexiafiducia.ma",
-    phone: "+212 522 XX XX XX"
+    name: "M. Jalal BENSAID",
+    title: "Directeur Général",
+    specialties: ["Expertise comptable", "Commissariat aux comptes", "Analyses économiques et financières", "Gestion déléguée"],
+    description: "Ancien directeur de mission au sein de AETD Paris, et directeur du bureau d'AETD au Maroc, Jalal BENSAID est expert-comptable – commissaire aux comptes diplômé, titulaire d'un DESCF à l'ISEM Montpellier. Il possède une expertise dans la distribution, l'industrie, la gestion déléguée, les études de marché ainsi que les analyses économiques et financières. Jalal est l'associé historique dans le cabinet NEXIA, avant le regroupement avec ADVISORIS en 2022, où il a pu pérenniser la firme, et renforcer progressivement sa présence sur le marché marocain.",
+    image: "/lovable-uploads/340c2c11-0db9-4dda-8759-2bbe8cc749c7.png",
+    email: "J.bensaid@nexiafiducia.ma",
+    phone: "+212 (0) 662 188 875"
   }
 ];
 
