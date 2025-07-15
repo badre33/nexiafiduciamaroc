@@ -381,11 +381,11 @@ export default function ContactForm() {
                       <button
                         type="button"
                         onClick={() => setShowCountryDropdown(!showCountryDropdown)}
-                        className="flex items-center justify-center h-full px-3 bg-gray-50 border-r border-gray-300 rounded-l-md hover:bg-gray-100 transition-colors focus:outline-none focus:bg-gray-100 min-w-[100px]"
+                        className="h-12 px-3 bg-gray-50 border-r border-gray-300 rounded-l-md hover:bg-gray-100 transition-colors focus:outline-none focus:bg-gray-100 min-w-[100px] flex items-center justify-center"
                       >
-                        <div className="flex items-center justify-center gap-2" style={{ paddingTop: '4px' }}>
-                          <span className="text-lg leading-none">{selectedCountry?.flag}</span>
-                          <span className="text-sm font-medium text-gray-700 leading-none">{formData.countryCode}</span>
+                        <div className="flex items-center justify-center gap-2">
+                          <span className="text-lg">{selectedCountry?.flag}</span>
+                          <span className="text-sm font-medium text-gray-700">{formData.countryCode}</span>
                           <ChevronDown className="w-3 h-3 text-gray-500" />
                         </div>
                       </button>
@@ -421,9 +421,8 @@ export default function ContactForm() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="flex-1 h-full border-0 focus:ring-0 rounded-l-none bg-white text-sm"
+                      className="flex-1 h-12 border-0 focus:ring-0 rounded-l-none bg-white text-sm"
                       placeholder="XX XX XX XX"
-                      style={{ lineHeight: '1.5' }}
                     />
                   </div>
                   {errors.phone && <p className="text-red-500 text-sm font-medium mt-1">{errors.phone}</p>}
