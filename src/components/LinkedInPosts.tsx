@@ -15,6 +15,16 @@ export default function LinkedInPosts() {
       type: "share", 
       height: 532,
     },
+    {
+      id: "7308097941490024450",
+      type: "activity",
+      height: 600,
+    },
+    {
+      id: "7293563000186155009",
+      type: "activity", 
+      height: 580,
+    },
   ];
 
   return (
@@ -31,38 +41,49 @@ export default function LinkedInPosts() {
           </p>
         </div>
 
-        {/* Posts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post, index) => (
-            <div
-              key={post.id}
-              className="bg-white rounded-lg shadow-professional hover:shadow-hover transition-all duration-300 overflow-hidden"
-            >
-              <div className="relative">
-                <iframe
-                  src={`https://www.linkedin.com/embed/feed/update/urn:li:${post.type}:${post.id}?collapsed=1`}
-                  height={Math.min(post.height, 600)} // Limite la hauteur pour uniformiser
-                  width="100%"
-                  frameBorder="0"
-                  allowFullScreen
-                  title={`Publication LinkedIn ${index + 1}`}
-                  className="w-full"
-                  loading="lazy"
-                />
+        {/* Posts Grid avec scroll horizontal */}
+        <div className="relative">
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              .scroll-container::-webkit-scrollbar {
+                display: none;
+              }
+              .scroll-container {
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+              }
+            `
+          }} />
+          <div className="flex gap-6 overflow-x-auto pb-4 scroll-container">
+            {posts.map((post, index) => (
+              <div
+                key={post.id}
+                className="flex-none w-80 bg-white rounded-lg shadow-professional hover:shadow-hover transition-all duration-300 overflow-hidden"
+              >
+                <div className="relative">
+                  <iframe
+                    src={`https://www.linkedin.com/embed/feed/update/urn:li:${post.type}:${post.id}?collapsed=1`}
+                    height={Math.min(post.height, 500)} // Hauteur réduite pour le scroll
+                    width="100%"
+                    frameBorder="0"
+                    allowFullScreen
+                    title={`Publication LinkedIn ${index + 1}`}
+                    className="w-full"
+                    loading="lazy"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* CTA pour voir plus */}
         <div className="text-center mt-12">
           <a
-            href="https://www.linkedin.com/company/nexia-fiducia-maroc/posts/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/publications-nexia-international"
             className="inline-flex items-center gap-2 bg-nexia-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-nexia-primary transition-colors duration-200"
           >
-            Voir toutes nos publications
+            Voir toutes les publications Nexia International
             <svg
               className="w-4 h-4"
               fill="none"
