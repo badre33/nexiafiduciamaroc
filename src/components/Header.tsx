@@ -41,7 +41,7 @@ export default function Header() {
             <Link to="/" className="block">
               <div className="flex flex-col items-center">
                 <img 
-                  src="/lovable-uploads/9dfb6dc5-f2c8-4956-b9b0-439c0a49d44b.png" 
+                  src="/lovable-uploads/02c5e586-5b91-4d8e-a8d2-237890777f70.png" 
                   alt="Nexia" 
                   className="h-8 w-auto"
                 />
