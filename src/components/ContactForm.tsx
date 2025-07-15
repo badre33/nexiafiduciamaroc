@@ -182,28 +182,29 @@ export default function ContactForm() {
                 <div className="relative">
                   <div className="flex h-12 border border-gray-300 rounded-md focus-within:border-nexia-secondary focus-within:ring-1 focus-within:ring-nexia-secondary">
                     {/* Country Code Button */}
-                    <button
-                      type="button"
-                      onClick={() => setShowCountryDropdown(!showCountryDropdown)}
-                      className="flex items-center justify-center w-20 sm:w-24 px-2 bg-gray-50 border-r border-gray-300 rounded-l-md hover:bg-gray-100 transition-colors"
-                    >
-                      <div className="flex items-center gap-1">
-                        <span className="text-base">{selectedCountry.flag}</span>
-                        <span className="text-sm font-medium">{formData.countryCode}</span>
-                        <ChevronDown className="w-3 h-3 text-gray-500" />
-                      </div>
-                    </button>
+                     <button
+                       type="button"
+                       onClick={() => setShowCountryDropdown(!showCountryDropdown)}
+                       className="flex items-center justify-center w-20 sm:w-24 px-3 bg-gray-50 border-r border-gray-300 rounded-l-md hover:bg-gray-100 transition-colors h-full"
+                     >
+                       <div className="flex items-center gap-1 h-full" style={{ alignItems: 'center' }}>
+                         <span className="text-base leading-none">{selectedCountry.flag}</span>
+                         <span className="text-sm font-medium leading-none" style={{ lineHeight: '1' }}>{formData.countryCode}</span>
+                         <ChevronDown className="w-3 h-3 text-gray-500" />
+                       </div>
+                     </button>
                     
                     {/* Phone Input */}
-                    <Input
-                      id="phone"
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className={`flex-1 h-full border-0 focus:ring-0 rounded-l-none bg-white ${errors.phone ? 'border-red-500' : ''}`}
-                      placeholder="XX XX XX XX"
-                    />
+                     <Input
+                       id="phone"
+                       type="tel"
+                       name="phone"
+                       value={formData.phone}
+                       onChange={handleChange}
+                       className={`flex-1 h-full border-0 focus:ring-0 rounded-l-none bg-white px-3 text-sm ${errors.phone ? 'border-red-500' : ''}`}
+                       placeholder="XX XX XX XX"
+                       style={{ lineHeight: '1.5' }}
+                     />
                   </div>
                   
                   {/* Country Dropdown */}
