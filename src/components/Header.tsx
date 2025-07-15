@@ -41,12 +41,11 @@ export default function Header() {
             <Link to="/" className="block">
               <div className="flex flex-col items-center">
                 <img 
-                  src="/lovable-uploads/00dc60d8-3119-44d4-827c-b12f9455cdb4.png" 
-                  alt="Nexia" 
-                  className="h-10 w-auto"
-                  style={{ mixBlendMode: 'screen' }}
+                  src="/lovable-uploads/88ec29ce-efb7-4a4d-bd75-c6390f1f572c.png" 
+                  alt="Nexia Fiducia Maroc" 
+                  className="h-12 w-auto"
                 />
-                <span className="text-white text-sm font-medium mt-1">Fiducia Maroc</span>
+                
               </div>
             </Link>
           </div>
