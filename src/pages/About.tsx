@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ImageWithCardSection from "@/components/ImageWithCardSection";
 import FactsSection from "@/components/FactsSection";
 import GovernanceSection from "@/components/GovernanceSection";
+import LinkedInPosts from "@/components/LinkedInPosts";
 import Footer from "@/components/Footer";
 
 const About = () => {
@@ -17,6 +18,7 @@ const About = () => {
         <ServicesSection />
         <ImageWithCardSection />
         <FactsSection />
+        <LinkedInPosts />
         <GovernanceSection />
       </main>
       <Footer />
