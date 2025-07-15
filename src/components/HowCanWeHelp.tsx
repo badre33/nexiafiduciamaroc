@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 export default function HowCanWeHelp() {
   return (
-    <section className="w-full bg-nexia-secondary h-[700px]">
+    <section className="w-full bg-nexia-secondary min-h-[500px] lg:h-[700px]">
       <div className="h-full flex flex-col lg:flex-row gap-0">
         {/* Image Column */}
-        <div className="flex-1 h-full">
+        <div className="flex-1 h-[300px] lg:h-full">
           <img
             src="/lovable-uploads/d94f1f3b-e519-4e70-ac5b-aa9ce953e580.png"
             alt="How we can help you"
@@ -16,15 +16,15 @@ export default function HowCanWeHelp() {
         </div>
 
         {/* Content Column */}
-        <div className="flex-1 flex items-center justify-center px-8 lg:px-12 py-16">
-          <div className="space-y-6 pr-0 lg:pr-[20%] pl-0 lg:pl-12">
-            <p className="bolder text-nexia-primary font-poppins text-lg">
+        <div className="flex-1 flex items-center justify-center px-6 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16">
+          <div className="space-y-4 md:space-y-6 pr-0 lg:pr-[20%] pl-0 lg:pl-12 text-center lg:text-left">
+            <p className="bolder text-nexia-primary font-poppins text-base md:text-lg">
               Comment pouvons-nous vous aider ?
             </p>
-            <p className="text-nexia-primary font-poppins text-[28px] leading-relaxed">
+            <p className="text-nexia-primary font-poppins text-xl md:text-2xl lg:text-[28px] leading-relaxed">
               Nos équipes sont à votre écoute pour construire avec vous des solutions sur-mesure, efficaces et conformes aux meilleures pratiques.
             </p>
-            <Button asChild className="nexia-button-primary font-poppins font-medium px-10">
+            <Button asChild className="nexia-button-primary font-poppins font-medium px-6 md:px-10">
               <Link to="/contact">Contactez-nous</Link>
             </Button>
           </div>
