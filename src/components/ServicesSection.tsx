@@ -7,7 +7,7 @@ const publications = [
     author: "Nexia International",
     date: "May 2025",
     readTime: "18 min",
-    image: "https://s3-eu-west-1.amazonaws.com/nexiawebsite/wp-media-folder-global-network-of-accounting-consultant-firms-nexia/wp-content/uploads/2025/05/doing-business-netherlands.jpg",
+    image: "/lovable-uploads/442433af-b60b-4c8b-adf1-f0247180f25a.png",
     excerpt: "Tout ce qu'il faut savoir pour réussir son implantation aux Pays-Bas...",
     link: "https://nexia.com/insights/doing-business-in-the-netherlands/"
   },
@@ -19,7 +19,7 @@ const publications = [
     author: "Nexia International",
     date: "April 2025",
     readTime: "16 min",
-    image: "https://s3-eu-west-1.amazonaws.com/nexiawebsite/wp-media-folder-global-network-of-accounting-consultant-firms-nexia/wp-content/uploads/2025/04/investing-in-germany.jpg",
+    image: "/lovable-uploads/fa6c42de-4300-4bf8-a271-71b40df7cf91.png",
     excerpt: "Découvrez les opportunités d'investissement et le climat des affaires en Allemagne...",
     link: "https://nexia.com/insights/investing-in-germany/"
   },
@@ -31,7 +31,7 @@ const publications = [
     author: "Nexia International",
     date: "March 2024",
     readTime: "14 min",
-    image: "https://s3-eu-west-1.amazonaws.com/nexiawebsite/wp-media-folder-global-network-of-accounting-consultant-firms-nexia/wp-content/uploads/2024/03/albania-business-guide-2024.jpg",
+    image: "/lovable-uploads/426bc007-ebb3-4cf3-8991-d229001ea6f1.png",
     excerpt: "Découvrez les opportunités d'affaires et d'investissement en Albanie...",
     link: "https://nexia.com/insights/doing-business-and-investing-in-albania-2024-edition/"
   },
@@ -43,7 +43,7 @@ const publications = [
     author: "Nexia International",
     date: "February 2024",
     readTime: "15 min",
-    image: "https://s3-eu-west-1.amazonaws.com/nexiawebsite/wp-media-folder-global-network-of-accounting-consultant-firms-nexia/wp-content/uploads/2024/02/ukraine-tax-guide-2024.jpg",
+    image: "/lovable-uploads/83429b5e-b956-4053-9d8c-a6e88013b91a.png",
     excerpt: "Un guide complet sur la fiscalité ukrainienne pour les entreprises internationales en 2024...",
     link: "https://nexia.com/insights/tax-guide-for-ukraine-2024/"
   },
