@@ -5,43 +5,116 @@ import HowCanWeHelp from "@/components/HowCanWeHelp";
 const EtudesDeCas = () => {
   const caseStudies = [
     {
-      title: "Transformation digitale d'un groupe industriel marocain",
-      description: "Accompagnement complet dans la digitalisation des processus financiers et comptables d'un leader de l'industrie manufacturière.",
-      sector: "Industrie",
-      services: ["Audit", "Conseil digital", "Optimisation"],
-      image: "/lovable-uploads/39143591-1dc1-4223-a2f1-480dd592d440.png",
-      duration: "12 mois",
+      title: "Due diligence financière et fiscale pour une fusion stratégique dans la santé",
+      description: "Accompagnement complet dans la fusion stratégique entre PHL Group et Malling Health, incluant due diligence financière et fiscale approfondie.",
+      sector: "Santé",
+      services: ["Due diligence", "Fiscalité", "Fusion-acquisition"],
+      image: "/lovable-uploads/f9a9ffbc-dfd6-41ee-8f0a-4b081a69b3f6.png",
+      duration: "6 mois",
       results: [
-        "Réduction de 40% du temps de traitement",
-        "Amélioration de la traçabilité financière",
-        "Mise en conformité IFRS"
-      ]
+        "Fusion réussie de deux groupes de santé",
+        "Optimisation fiscale de l'opération",
+        "Structuration juridique optimale"
+      ],
+      source: "https://nexia.com/insights/uk-financial-and-tax-due-diligence-for-a-strategic-healthcare-merger-between-phl-group-and-malling-health/"
     },
     {
-      title: "Restructuration fiscale internationale",
-      description: "Optimisation de la structure fiscale d'un groupe multinational présent au Maroc et en Europe.",
+      title: "Conseil fiscal et conformité pour un prêteur spécialisé néo-zélandais",
+      description: "Services de conseil fiscal et de conformité pour un prêteur spécialisé non-bancaire et fournisseur d'investissements en Nouvelle-Zélande.",
       sector: "Services financiers",
-      services: ["Fiscalité internationale", "Corporate Finance", "Due diligence"],
-      image: "/lovable-uploads/683558d0-ea3d-4016-81a3-c31382efa76b.png",
-      duration: "8 mois",
+      services: ["Fiscalité", "Conformité", "Conseil stratégique"],
+      image: "/lovable-uploads/bd99796a-f609-4596-9da6-b52d88335565.png",
+      duration: "Ongoing",
       results: [
-        "Économie fiscale de 25%",
-        "Simplification de la structure holding",
-        "Conformité réglementaire assurée"
-      ]
+        "Conformité réglementaire assurée",
+        "Optimisation de la structure fiscale",
+        "Support continu pour la croissance"
+      ],
+      source: "https://nexia.com/insights/new-zealand-tax-advisory-and-compliance-services-for-a-specialist-non-bank-lender-and-investment-provider/"
     },
     {
-      title: "Accompagnement IPO d'une entreprise technologique",
-      description: "Support complet pour l'introduction en bourse d'une startup tech marocaine en forte croissance.",
-      sector: "Technologie",
-      services: ["Audit", "Évaluation", "Conseil stratégique"],
-      image: "/lovable-uploads/36d7db3b-24d7-4f04-aaed-d9f2509146f0.png",
+      title: "Services globaux pour une société minière canadienne",
+      description: "Accompagnement complet d'une société minière domiciliée au Canada dans ses opérations internationales et sa structure fiscale.",
+      sector: "Mines et ressources",
+      services: ["Fiscalité internationale", "Audit", "Conseil stratégique"],
+      image: "/lovable-uploads/62424296-4463-4444-8768-830bed080c2c.png",
       duration: "18 mois",
       results: [
-        "Levée de fonds réussie de 50M MAD",
-        "Certification des comptes",
-        "Mise en place de la gouvernance"
-      ]
+        "Structuration fiscale internationale",
+        "Optimisation des opérations globales",
+        "Conformité multi-juridictionnelle"
+      ],
+      source: "https://nexia.com/insights/global-services-to-a-canadian-domiciled-mining-company/"
+    },
+    {
+      title: "Conseil TVA polonaise pour un fabricant britannique de fours industriels",
+      description: "Expertise en TVA polonaise pour un fabricant britannique de fours industriels et équipements de chauffage spécialisés.",
+      sector: "Industrie",
+      services: ["TVA internationale", "Conformité", "Conseil fiscal"],
+      image: "/lovable-uploads/4f1c034e-ed7b-4fc6-b4fe-3ce249ccb763.png",
+      duration: "4 mois",
+      results: [
+        "Conformité TVA polonaise",
+        "Optimisation des flux commerciaux",
+        "Réduction des risques fiscaux"
+      ],
+      source: "https://nexia.com/insights/poland-polish-vat-advice-for-uk-based-industrial-oven-and-furnace-manufacturer/"
+    },
+    {
+      title: "Conseil d'expert pour une société de production d'événements argentine",
+      description: "Accompagnement d'une société de divertissement et de production d'événements basée en Argentine dans sa structuration et développement.",
+      sector: "Divertissement",
+      services: ["Structuration", "Conseil stratégique", "Fiscalité"],
+      image: "/lovable-uploads/73661ed9-5340-4b07-b8a6-5234fe52dcbb.png",
+      duration: "8 mois",
+      results: [
+        "Structuration optimisée",
+        "Développement international",
+        "Conformité réglementaire"
+      ],
+      source: "https://nexia.com/insights/expert-advice-for-an-argentinian-entertainment-and-event-production-company/"
+    },
+    {
+      title: "Accompagnement d'un fabricant international d'équipements de golf américain",
+      description: "Support complet pour un fabricant d'équipements de golf incorporé aux États-Unis avec des opérations internationales.",
+      sector: "Sport et loisirs",
+      services: ["Fiscalité internationale", "Audit", "Conseil stratégique"],
+      image: "/lovable-uploads/823f190c-49d7-43a4-9359-54d2406a61eb.png",
+      duration: "12 mois",
+      results: [
+        "Optimisation fiscale internationale",
+        "Amélioration de la rentabilité",
+        "Expansion géographique facilitée"
+      ],
+      source: "https://nexia.com/insights/u-s-incorporated-international-golf-equipment-manufacturer/"
+    },
+    {
+      title: "Accompagnement d'une entreprise d'ingénierie globale britannique",
+      description: "Services complets pour une entreprise d'ingénierie domiciliée au Royaume-Uni avec des opérations mondiales.",
+      sector: "Ingénierie",
+      services: ["Audit", "Fiscalité", "Conseil opérationnel"],
+      image: "/lovable-uploads/e942bb5a-c552-4079-b062-2bedfd6c4efd.png",
+      duration: "Ongoing",
+      results: [
+        "Optimisation des opérations globales",
+        "Amélioration de la gouvernance",
+        "Croissance internationale soutenue"
+      ],
+      source: "https://nexia.com/insights/uk-domiciled-global-engineering-business/"
+    },
+    {
+      title: "Due diligence fiscale pour l'acquisition d'une société espagnole agroalimentaire",
+      description: "Due diligence fiscale approfondie dans le cadre de l'acquisition d'une société espagnole du secteur agroalimentaire.",
+      sector: "Agroalimentaire",
+      services: ["Due diligence", "Fiscalité", "Fusion-acquisition"],
+      image: "/lovable-uploads/90ae2755-c626-4fca-9dab-c7c8b88e7a97.png",
+      duration: "5 mois",
+      results: [
+        "Acquisition réussie",
+        "Identification des risques fiscaux",
+        "Structuration optimale de l'opération"
+      ],
+      source: "https://nexia.com/insights/tax-due-diligence-for-an-acquisition-of-a-spanish-company-in-the-food-sector/"
     }
   ];
 
@@ -103,7 +176,7 @@ const EtudesDeCas = () => {
                     </div>
                   </div>
                   
-                  <div>
+                  <div className="mb-4">
                     <h4 className="text-sm font-semibold text-nexia-primary mb-2">Résultats clés :</h4>
                     <ul className="space-y-1">
                       {study.results.map((result, idx) => (
@@ -113,6 +186,20 @@ const EtudesDeCas = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                  
+                  <div className="pt-4 border-t">
+                    <a
+                      href={study.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-nexia-primary hover:text-nexia-secondary transition-colors duration-200 font-medium"
+                    >
+                      <span>Lire l'article complet</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
