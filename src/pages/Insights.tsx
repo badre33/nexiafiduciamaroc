@@ -28,7 +28,7 @@ const globalInsights = [
     author: "Christina Lee, Nick Carofano, Harold Grunfeld",
     date: "Juillet 2025",
     readTime: "8 min",
-    image: "/public/lovable-uploads/e819835e-38b7-425e-917b-276faa067599.png",
+    image: "/lovable-uploads/e819835e-38b7-425e-917b-276faa067599.png",
     featured: true,
     source: "https://nexia.com/insights/nexia-experts-discuss-the-current-global-tariffs-from-the-usa/"
   },
@@ -40,7 +40,7 @@ const globalInsights = [
     author: "Experts Nexia Suisse",
     date: "Juin 2025",
     readTime: "6 min",
-    image: "/public/lovable-uploads/3ee486b2-8d9a-4f08-b3a6-37819c7f9273.png",
+    image: "/lovable-uploads/3ee486b2-8d9a-4f08-b3a6-37819c7f9273.png",
     featured: false,
     source: "https://nexia.com/insights/switzerland-commercial-investment-trading/"
   },
@@ -52,7 +52,7 @@ const globalInsights = [
     author: "Experts Nexia International",
     date: "Mai 2025",
     readTime: "45 min",
-    image: "/public/lovable-uploads/ed4ab84d-ff57-4a60-983a-ae7fe9a6254a.png",
+    image: "/lovable-uploads/ed4ab84d-ff57-4a60-983a-ae7fe9a6254a.png",
     featured: false,
     source: "https://nexia.com/insights/diversity-equity-and-inclusion-focused-webinars/"
   },
@@ -64,7 +64,7 @@ const globalInsights = [
     author: "Glen Wei",
     date: "Mai 2025",
     readTime: "15 min",
-    image: "/public/lovable-uploads/6b84a4c9-de19-45d9-9cae-7d14878afd56.png",
+    image: "/lovable-uploads/6b84a4c9-de19-45d9-9cae-7d14878afd56.png",
     featured: false,
     source: "https://nexia.com/insights/compilation-of-tax-laws-and-regulations-in-china-as-of-30-april-2025/"
   },
@@ -76,7 +76,7 @@ const globalInsights = [
     author: "Experts Nexia International",
     date: "Mai 2025",
     readTime: "12 min",
-    image: "/public/lovable-uploads/6b743136-5ea7-43a5-959d-0cdcee6f4b63.png",
+    image: "/lovable-uploads/6b743136-5ea7-43a5-959d-0cdcee6f4b63.png",
     featured: false,
     source: "https://nexia.com/insights/mining-and-the-future-strategic-perspectives-on-global-resource-management/"
   },
@@ -88,7 +88,7 @@ const globalInsights = [
     author: "Michael Felber",
     date: "Avril 2025",
     readTime: "8 min",
-    image: "/public/lovable-uploads/3ee486b2-8d9a-4f08-b3a6-37819c7f9273.png",
+    image: "/lovable-uploads/3ee486b2-8d9a-4f08-b3a6-37819c7f9273.png",
     featured: false,
     source: "https://nexia.com/insights/capital-contribution-principle-leading-decision-of-the-federal-supreme-court-of-21-march-2025/"
   },
@@ -100,7 +100,7 @@ const globalInsights = [
     author: "Experts Nexia International",
     date: "Mars 2025",
     readTime: "10 min",
-    image: "/public/lovable-uploads/bc52453e-7581-4a37-b09c-62f1f38dd695.png",
+    image: "/lovable-uploads/bc52453e-7581-4a37-b09c-62f1f38dd695.png",
     featured: false,
     source: "https://nexia.com/insights/communicating-your-esg-story-to-stakeholders/"
   },
@@ -112,7 +112,7 @@ const globalInsights = [
     author: "Experts Nexia International",
     date: "Février 2025",
     readTime: "9 min",
-    image: "/public/lovable-uploads/0b2291f3-b8ee-4ac8-bb4b-ca08457d1215.png",
+    image: "/lovable-uploads/0b2291f3-b8ee-4ac8-bb4b-ca08457d1215.png",
     featured: false,
     source: "https://nexia.com/insights/implementing-esg-best-practices-in-your-supply-chain/"
   }
