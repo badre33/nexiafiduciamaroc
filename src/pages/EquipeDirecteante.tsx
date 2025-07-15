@@ -56,57 +56,95 @@ const EquipeDirecteante = () => {
       </section>
 
       {/* Team Members Grid */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {teamMembers.map((member) => (
-              <Card key={member.id} className="nexia-card-rounded overflow-hidden hover:shadow-xl transition-all duration-300 bg-card border-border">
-                <CardContent className="p-8">
-                  <div className="flex flex-col items-center mb-6">
-                    <div className="w-32 h-32 rounded-full overflow-hidden mb-4 ring-4 ring-primary/20 shadow-lg">
-                      <img 
-                        src={member.image} 
-                        alt={member.name}
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                      />
+      <section className="py-20 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <div className="absolute top-20 left-10 w-20 h-20 bg-primary rounded-full blur-xl"></div>
+          <div className="absolute bottom-20 right-10 w-32 h-32 bg-primary rounded-full blur-xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Nos Associés
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/60 mx-auto mb-6"></div>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Une expertise reconnue au service de votre succès
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            {teamMembers.map((member, index) => (
+              <Card 
+                key={member.id} 
+                className="group nexia-card-rounded overflow-hidden bg-gradient-to-br from-card to-card/90 border-border/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <CardContent className="p-0">
+                  {/* Header with gradient */}
+                  <div className="bg-gradient-to-r from-primary to-primary/80 p-8 text-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-white/10 opacity-20"></div>
+                    
+                    <div className="relative z-10">
+                      <div className="w-28 h-28 mx-auto mb-4 relative">
+                        <div className="w-full h-full rounded-full overflow-hidden ring-4 ring-white/30 shadow-xl group-hover:ring-white/50 transition-all duration-300">
+                          <img 
+                            src={member.image} 
+                            alt={member.name}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                        </div>
+                        {/* Decorative ring */}
+                        <div className="absolute -inset-2 rounded-full border-2 border-white/20 group-hover:border-white/40 transition-all duration-300"></div>
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {member.name}
+                      </h3>
+                      <p className="text-white/90 font-semibold text-lg">
+                        {member.title}
+                      </p>
                     </div>
                   </div>
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">
-                      {member.name}
-                    </h3>
-                    <p className="text-primary font-semibold mb-4">
-                      {member.title}
-                    </p>
+                  
+                  {/* Content */}
+                  <div className="p-8">
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-foreground mb-4 text-center">
+                        <span className="bg-primary/10 px-3 py-1 rounded-full text-primary">
+                          Domaines d'expertise
+                        </span>
+                      </h4>
+                      <div className="flex flex-wrap justify-center gap-2">
+                        {member.specialties.map((specialty, index) => (
+                          <span 
+                            key={index}
+                            className="bg-gradient-to-r from-primary/10 to-primary/5 text-primary px-4 py-2 rounded-full text-sm font-medium border border-primary/20 hover:border-primary/40 transition-colors duration-200"
+                          >
+                            {specialty}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                     
-                     <div className="mb-6">
-                       <h4 className="font-semibold text-foreground mb-3">Domaines d'expertise :</h4>
-                       <div className="flex flex-wrap justify-center gap-2">
-                         {member.specialties.map((specialty, index) => (
-                           <span 
-                             key={index}
-                             className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
-                           >
-                             {specialty}
-                           </span>
-                         ))}
-                       </div>
-                     </div>
-                     
-                     <p className="text-muted-foreground mb-6 leading-relaxed text-justify">
-                       {member.description}
-                     </p>
-                     
-                     <div className="flex flex-col space-y-3 pt-4 border-t border-border">
-                       <div className="flex items-center justify-center space-x-3 text-muted-foreground">
-                         <Mail className="h-4 w-4 text-primary" />
-                         <span className="text-sm">{member.email}</span>
-                       </div>
-                       <div className="flex items-center justify-center space-x-3 text-muted-foreground">
-                         <Phone className="h-4 w-4 text-primary" />
-                         <span className="text-sm">{member.phone}</span>
-                       </div>
-                     </div>
+                    <div className="bg-gradient-to-br from-muted/50 to-muted/30 p-6 rounded-xl mb-6">
+                      <p className="text-muted-foreground leading-relaxed text-justify text-sm">
+                        {member.description}
+                      </p>
+                    </div>
+                    
+                    {/* Contact Info */}
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-center space-x-3 p-3 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors duration-200 group">
+                        <Mail className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-200" />
+                        <span className="text-sm font-medium text-foreground">{member.email}</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-3 p-3 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors duration-200 group">
+                        <Phone className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-200" />
+                        <span className="text-sm font-medium text-foreground">{member.phone}</span>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
