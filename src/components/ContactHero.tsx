@@ -25,9 +25,9 @@ export default function ContactHero() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Bureau Principal */}
+            {/* Bureau 1 */}
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-nexia-primary mb-4">Bureau Principal</h3>
+              <h3 className="text-xl font-bold text-nexia-primary mb-4">Bureau 1</h3>
               <div className="space-y-2">
                 <p className="text-nexia-primary">3, Rue Bab El Mansour</p>
                 <p className="text-nexia-primary">Résidence Imrane - RDC Bureau n°15</p>
@@ -39,9 +39,9 @@ export default function ContactHero() {
               </div>
             </div>
 
-            {/* Bureau Secondaire */}
+            {/* Bureau 2 */}
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-nexia-primary mb-4">Bureau Secondaire</h3>
+              <h3 className="text-xl font-bold text-nexia-primary mb-4">Bureau 2</h3>
               <div className="space-y-2">
                 <p className="text-nexia-primary">Rue des Pléaides</p>
                 <p className="text-nexia-primary">Quartier des Hôpitaux</p>

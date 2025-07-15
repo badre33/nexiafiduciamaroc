@@ -9,7 +9,7 @@ export default function ContactMap() {
         
         <div className="rounded-lg overflow-hidden shadow-professional">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26583.78884989789!2d-7.6398!3d33.5916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzI5LjgiTiA3wrAzNyc0Ny4yIlc!5e0!3m2!1sfr!2sma!4v1642765432198!5m2!1sfr!2sma"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4148.3!2d-7.6298!3d33.5890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0x8f5b0e85b6a9b9a9!2s3%20Rue%20Bab%20El%20Mansour%2C%20Casablanca%2C%20Morocco!5e0!3m2!1sfr!2sma!4v1642765432198!5m2!1sfr!2sma"
             width="100%"
             height="450"
             style={{ border: 0 }}
@@ -25,12 +25,10 @@ export default function ContactMap() {
           <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-nexia-primary">
             <div className="flex items-start">
               <div className="w-12 h-12 bg-nexia-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
+                <span className="text-white text-lg font-bold">1</span>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-nexia-primary mb-2">Bureau Principal</h3>
+                <h3 className="text-lg font-bold text-nexia-primary mb-2">Bureau 1</h3>
                 <p className="text-gray-600 text-sm mb-1">3, Rue Bab El Mansour</p>
                 <p className="text-gray-600 text-sm mb-1">Résidence Imrane - RDC Bureau n°15</p>
                 <p className="text-gray-600 text-sm mb-1">Espace Porte d'Anfa</p>
@@ -59,12 +57,10 @@ export default function ContactMap() {
           <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-nexia-secondary">
             <div className="flex items-start">
               <div className="w-12 h-12 bg-nexia-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
+                <span className="text-white text-lg font-bold">2</span>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-nexia-primary mb-2">Bureau Secondaire</h3>
+                <h3 className="text-lg font-bold text-nexia-primary mb-2">Bureau 2</h3>
                 <p className="text-gray-600 text-sm mb-1">Rue des Pléaides</p>
                 <p className="text-gray-600 text-sm mb-1">Quartier des Hôpitaux</p>
                 <p className="text-gray-600 text-sm mb-3">Casablanca - Maroc</p>
@@ -88,6 +84,13 @@ export default function ContactMap() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Légende pour aider l'utilisateur */}
+        <div className="mt-6 text-center">
+          <p className="text-sm text-gray-600">
+            Pour voir les deux bureaux sur la carte, utilisez les liens individuels ci-dessus ou recherchez directement les adresses.
+          </p>
         </div>
       </div>
     </section>
