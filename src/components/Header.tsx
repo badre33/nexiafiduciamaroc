@@ -10,7 +10,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "/" },
+  { name: "Accueil", href: "/" },
   { name: "Nos domaines d'expertise", href: "/domaines-expertise" },
   { name: "Équipe dirigeante", href: "/equipe-dirigeante" },
   { 
@@ -21,8 +21,8 @@ const navigation = [
       { name: "Études de cas", href: "/etudes-de-cas" }
     ]
   },
-  { name: "About", href: "/about" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "À propos", href: "/about" },
+  { name: "Contactez-nous", href: "/contact" },
 ];
 
 export default function Header() {
