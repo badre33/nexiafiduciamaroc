@@ -1,6 +1,18 @@
 const publications = [
   {
     id: 1,
+    title: "Présentation Nexia Fiducia Maroc 2025",
+    description: "Découvrez notre cabinet, nos services et notre expertise à travers cette présentation complète.",
+    category: "Présentation",
+    author: "Nexia Fiducia Maroc",
+    date: "2025",
+    readTime: "10 min",
+    image: "/lovable-uploads/nexia-fiducia-maroc-logo.png",
+    excerpt: "Présentation officielle de Nexia Fiducia Maroc pour l'année 2025...",
+    link: "https://fltpndxdtovgjuqarfsh.supabase.co/storage/v1/object/public/nexia-files//Presentation%20Nexia%202025.pdf"
+  },
+  {
+    id: 2,
     title: "Doing business in the Netherlands",
     description: "Guide pratique pour établir et développer son activité aux Pays-Bas.",
     category: "Publication",
@@ -12,7 +24,7 @@ const publications = [
     link: "https://nexia.com/insights/doing-business-in-the-netherlands/"
   },
   {
-    id: 2,
+    id: 3,
     title: "Investing in Germany",
     description: "Guide complet pour les investissements et opportunités d'affaires en Allemagne.",
     category: "Publication",
@@ -24,7 +36,7 @@ const publications = [
     link: "https://nexia.com/insights/investing-in-germany/"
   },
   {
-    id: 3,
+    id: 4,
     title: "Doing business and investing in Albania 2024 edition",
     description: "Guide complet pour faire des affaires et investir en Albanie édition 2024.",
     category: "Publication",
@@ -36,7 +48,7 @@ const publications = [
     link: "https://nexia.com/insights/doing-business-and-investing-in-albania-2024-edition/"
   },
   {
-    id: 4,
+    id: 5,
     title: "Tax Guide for Ukraine 2024",
     description: "Guide fiscal complet pour l'Ukraine en 2024, incluant les dernières réglementations et opportunités d'investissement.",
     category: "Publication",
