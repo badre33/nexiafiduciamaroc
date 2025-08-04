@@ -13,11 +13,11 @@ const documents = [
   },
   {
     id: 2,
-    category: "ADHÉSION",
-    title: "Brochure d'Adhésion Nexia 2025",
-    description: "Découvrez les avantages de rejoindre le réseau international Nexia et comment notre adhésion peut bénéficier à votre organisation.",
-    downloadUrl: "https://fltpndxdtovgjuqarfsh.supabase.co/storage/v1/object/public/nexia-files//Nexia-Membership-Brochure-2025.pdf",
-    buttonText: "Télécharger la brochure"
+    category: "PRÉSENTATION",
+    title: "Nexia Fiducia Maroc 2025 (English Version)",
+    description: "Our institutional presentation in English detailing our services, expertise and vision to support your growth internationally.",
+    downloadUrl: "https://fltpndxdtovgjuqarfsh.supabase.co/storage/v1/object/public/nexia-files//Nexia%202025%20Presentation%20(English%20Version).pdf",
+    buttonText: "Download presentation"
   }
 ];
 
