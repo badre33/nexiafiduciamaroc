@@ -9,6 +9,7 @@ import { Pagination, PaginationContent, PaginationItem, PaginationLink, Paginati
 
 const insightCategories = [
   "Tous",
+  "Santé publique",
   "Réseau international",
   "Commerce international", 
   "Investissement international",
@@ -22,6 +23,58 @@ const insightCategories = [
 const globalInsights = [
   {
     id: 1,
+    title: "Le coût des médicaments au Maroc : un enjeu économique et stratégique qui persiste",
+    description: "Plus de deux ans après l'annonce de mesures visant à réduire les prix des médicaments, la question reste d'une brûlante actualité. Ce décalage n'est pas uniquement une problématique budgétaire pour les ménages. Il s'agit d'un enjeu systémique qui concerne la souveraineté sanitaire du Maroc, la compétitivité de son industrie pharmaceutique et la soutenabilité des politiques publiques de santé.",
+    category: "Santé publique",
+    author: "Nexia Fiducia Maroc",
+    date: "Août 2025",
+    readTime: "12 min",
+    image: "/lovable-uploads/cef4902e-b1e7-4925-9e79-9a625447ce65.png",
+    featured: true,
+    content: `Casablanca, 28 août 2025 – Plus de deux ans après l'annonce de mesures visant à réduire les prix des médicaments, la question reste d'une brûlante actualité. Malgré certains ajustements réglementaires et l'introduction progressive de génériques, les prix de nombreux traitements demeurent élevés, parfois trois à quatre fois supérieurs à ceux pratiqués dans des pays comparables.
+
+Ce décalage n'est pas uniquement une problématique budgétaire pour les ménages. Il s'agit d'un enjeu systémique qui concerne la souveraineté sanitaire du Maroc, la compétitivité de son industrie pharmaceutique et la soutenabilité des politiques publiques de santé.
+
+Un constat partagé, des causes multiples
+
+Les avancées récentes, notamment la mise en place d'un cadre incitatif pour les génériques et quelques initiatives de production locale, n'ont pas suffi à modifier en profondeur la structure des coûts. Plusieurs facteurs continuent de peser sur le marché :
+
+Une forte dépendance aux importations : près de 80 % des matières premières pharmaceutiques utilisées sont importées. Les fluctuations du change et les tensions sur les chaînes logistiques internationales se répercutent directement sur les prix.
+
+Des capacités industrielles encore limitées : bien que des investissements aient été réalisés, la production nationale ne couvre pas l'ensemble des besoins, en particulier sur les segments stratégiques comme l'oncologie ou les biotechnologies.
+
+Un cadre fiscal et réglementaire contraignant : la structure des marges et la fiscalité appliquée aux produits pharmaceutiques continuent d'alourdir le coût pour le consommateur final.
+
+Une pénétration insuffisante des génériques : malgré des campagnes de sensibilisation, la confiance du grand public et des prescripteurs reste faible, limitant leur part de marché.
+
+Des réformes nécessaires pour une industrie compétitive
+
+La question du prix des médicaments dépasse la seule équation économique. Elle interroge la capacité du Maroc à se doter d'une véritable stratégie industrielle et sanitaire, capable de garantir un accès équitable aux soins tout en renforçant l'attractivité du pays pour les investisseurs.
+
+Plusieurs pistes se dessinent :
+
+consolider les investissements dans la production locale, notamment à travers des partenariats public-privé,
+
+favoriser la montée en gamme vers les biotechnologies et la recherche clinique,
+
+réviser la structure fiscale et les marges de distribution afin de rendre le marché plus compétitif,
+
+renforcer la pédagogie et la confiance autour des génériques.
+
+L'accompagnement de Nexia Fiducia Maroc
+
+Face à ces défis, Nexia Fiducia Maroc accompagne les acteurs du secteur – industriels, investisseurs, décideurs publics – dans la conception et la mise en œuvre de solutions adaptées. Notre expertise couvre l'optimisation de la chaîne d'approvisionnement, la structuration de projets d'investissement, la mise en place de stratégies fiscales et réglementaires, ainsi que le développement de modèles de financement innovants.
+
+Notre rôle est d'apporter une vision claire et opérationnelle, en alliant analyse stratégique et accompagnement concret, afin de contribuer à l'émergence d'un secteur pharmaceutique marocain plus compétitif, durable et accessible.
+
+Une opportunité à saisir
+
+Le Maroc dispose d'atouts considérables : une position géographique stratégique, un marché en croissance et une volonté politique affirmée de renforcer la souveraineté sanitaire. Mais pour transformer ce potentiel en résultats tangibles, il est indispensable d'adopter une approche cohérente et intégrée, où l'ensemble des parties prenantes travaillent de concert.
+
+Le coût des médicaments est à la fois un symptôme et un révélateur. Derrière lui se joue une question essentielle : celle de la place du Maroc dans la nouvelle cartographie mondiale de l'industrie pharmaceutique. C'est à ce défi que nous contribuons chaque jour, en plaçant l'expertise et l'innovation au service d'un objectif commun : rendre les soins plus accessibles et renforcer la compétitivité du pays.`
+  },
+  {
+    id: 2,
     title: "Nexia Experts discuss the current Global Tariffs from the USA",
     description: "Dans ce podcast, nous abordons l'importance pour les entreprises de se tenir au courant des changements fréquents de tarifs dans le monde. Nous examinons les récents changements tarifaires américains et leur impact sur différentes industries, ainsi que les tactiques que les entreprises peuvent utiliser pour réduire le fardeau tarifaire.",
     category: "Commerce international",
@@ -29,11 +82,11 @@ const globalInsights = [
     date: "Juillet 2025",
     readTime: "8 min",
     image: "/lovable-uploads/e819835e-38b7-425e-917b-276faa067599.png",
-    featured: true,
+    featured: false,
     source: "https://nexia.com/insights/nexia-experts-discuss-the-current-global-tariffs-from-the-usa/"
   },
   {
-    id: 2,
+    id: 3,
     title: "Switzerland – Commercial investment trading",
     description: "En Suisse, les gains en capital réalisés par un particulier sur des biens mobiliers ne sont généralement pas soumis à l'impôt sur le revenu. Cependant, ces gains en capital sont imposés si l'actif vendu est classé comme actif commercial. Deux récents jugements du Tribunal fédéral illustrent les critères décisifs pour une telle classification.",
     category: "Fiscalité internationale",
@@ -45,7 +98,7 @@ const globalInsights = [
     source: "https://nexia.com/insights/switzerland-commercial-investment-trading/"
   },
   {
-    id: 3,
+    id: 4,
     title: "Diversity, Equity and Inclusion focused webinars",
     description: "Série de webinaires axés sur la diversité, l'équité et l'inclusion dans le milieu professionnel, abordant les meilleures pratiques et stratégies d'implémentation pour créer des environnements de travail plus inclusifs.",
     category: "Ressources humaines",
@@ -57,7 +110,7 @@ const globalInsights = [
     source: "https://nexia.com/insights/diversity-equity-and-inclusion-focused-webinars/"
   },
   {
-    id: 4,
+    id: 5,
     title: "Compilation of tax laws and regulations in China as of 30 April, 2025",
     description: "Ce document est une traduction anglaise non officielle préparée par l'équipe fiscale de Glen Wei du Chung Rui Tax Group, en Chine, et est fournie à des fins d'information uniquement. Il vise à fournir aux lecteurs anglophones une compréhension générale des principes et réglementations fiscaux chinois.",
     category: "Fiscalité internationale",
@@ -69,7 +122,7 @@ const globalInsights = [
     source: "https://nexia.com/insights/compilation-of-tax-laws-and-regulations-in-china-as-of-30-april-2025/"
   },
   {
-    id: 5,
+    id: 6,
     title: "Mining and the future: Strategic perspectives on global resource management",
     description: "À une époque de transformation rapide, le secteur minier mondial fait face à un examen intensifié, à des réglementations en évolution et à des attentes croissantes en matière de transparence, de durabilité et de résilience. Cette publication rassemble des perspectives d'experts de professionnels Nexia du monde entier.",
     category: "Secteur minier",
@@ -81,7 +134,7 @@ const globalInsights = [
     source: "https://nexia.com/insights/mining-and-the-future-strategic-perspectives-on-global-resource-management/"
   },
   {
-    id: 6,
+    id: 7,
     title: "Capital contribution principle – Leading decision of the Federal Supreme Court of 21 March 2025",
     description: "Dans une décision historique datée du 21 mars 2025, la Cour suprême fédérale suisse a clarifié des aspects clés du principe de contribution de capital selon l'Art. 5 para. 1bis VStG. Cette décision marque un changement significatif par rapport à la pratique administrative précédente.",
     category: "Droit des sociétés",
@@ -93,7 +146,7 @@ const globalInsights = [
     source: "https://nexia.com/insights/capital-contribution-principle-leading-decision-of-the-federal-supreme-court-of-21-march-2025/"
   },
   {
-    id: 7,
+    id: 8,
     title: "Communicating your ESG story to stakeholders",
     description: "Les facteurs environnementaux, sociaux et de gouvernance (ESG) sont devenus critiques pour évaluer la durabilité à long terme et l'impact sociétal des pratiques commerciales. Les organisations doivent considérer comment communiquer leur histoire ESG d'une manière qui mettra en valeur leurs valeurs fondamentales, leur culture et leur vision.",
     category: "ESG",
@@ -105,7 +158,7 @@ const globalInsights = [
     source: "https://nexia.com/insights/communicating-your-esg-story-to-stakeholders/"
   },
   {
-    id: 8,
+    id: 9,
     title: "Implementing ESG best practices in your supply chain",
     description: "Les chaînes d'approvisionnement restent un point focal critique pour les organisations engagées dans les objectifs environnementaux, sociaux et de gouvernance (ESG). Implémenter les meilleures pratiques ESG dans la chaîne d'approvisionnement n'est plus une activité optionnelle — c'est une nécessité pour les entreprises engagées dans le succès et la résilience à long terme.",
     category: "ESG",
