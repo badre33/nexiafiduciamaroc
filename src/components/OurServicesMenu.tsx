@@ -17,166 +17,166 @@ import {
 } from "lucide-react";
 import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
 
-const expertiseDomains = [
+const getExpertiseDomains = (t: (key: string) => string) => [
     {
       id: "audit",
-      title: "Audit & Commissariat aux comptes",
+      title: t('expertise.audit.title'),
       icon: ShieldCheck,
       color: "text-nexia-blue bg-blue-50",
       stats: { years: "25+", clients: "200+", certification: "IFRS" },
-      badge: "Certification ISA",
-      description: "Parce que la transparence financière est aujourd'hui un levier stratégique de confiance, nous réalisons vos audits avec une rigueur absolue et une méthodologie conforme aux normes internationales (IFRS, ISA). Notre approche combine exigence technique, indépendance professionnelle et compréhension sectorielle, pour garantir la fiabilité de vos états financiers et renforcer votre crédibilité auprès des investisseurs, partenaires et régulateurs.",
+      badge: t('expertise.audit.badge'),
+      description: t('expertise.audit.description'),
       services: [
-        "Audit légal et contractuel",
-        "Commissariat aux comptes",
-        "Audit d'acquisition et due diligence",
-        "Audit interne et contrôle permanent",
-        "Audit des systèmes d'information"
+        t('expertise.audit.service1'),
+        t('expertise.audit.service2'),
+        t('expertise.audit.service3'),
+        t('expertise.audit.service4'),
+        t('expertise.audit.service5')
       ]
     },
     {
       id: "comptable",
-      title: "Expertise comptable & Conseil opérationnel",
+      title: t('expertise.comptable.title'),
       icon: BookOpen,
       color: "text-nexia-yellow bg-yellow-50",
       stats: { years: "20+", clients: "300+", certification: "Expert" },
-      badge: "Expertise Certifiée",
-      description: "Une comptabilité bien tenue est plus qu'une obligation : c'est un outil de pilotage. Nos experts-comptables vous accompagnent dans la structuration, la supervision et l'optimisation de vos processus comptables, tout en vous apportant un éclairage stratégique sur vos performances et marges. Nous intervenons à la fois en mode externalisé ou collaboratif, selon vos besoins.",
+      badge: t('expertise.comptable.badge'),
+      description: t('expertise.comptable.description'),
       services: [
-        "Tenue comptable, supervision & reporting",
-        "Établissement des états financiers",
-        "Révision comptable & tableaux de bord",
-        "Conseil en gestion & aide à la décision",
-        "Accompagnement à la transformation digitale des fonctions financières"
+        t('expertise.comptable.service1'),
+        t('expertise.comptable.service2'),
+        t('expertise.comptable.service3'),
+        t('expertise.comptable.service4'),
+        t('expertise.comptable.service5')
       ]
     },
     {
       id: "fiscalite",
-      title: "Fiscalité & Optimisation fiscale",
+      title: t('expertise.fiscalite.title'),
       icon: PiggyBank,
       color: "text-orange-600 bg-orange-50",
       stats: { years: "15+", clients: "150+", certification: "Fiscal" },
-      badge: "Expertise Fiscale",
-      description: "Dans un environnement fiscal en constante évolution, nous vous aidons à anticiper, sécuriser et optimiser vos obligations fiscales, tout en veillant à la conformité réglementaire. Notre approche personnalisée prend en compte la structure de votre entreprise, vos flux internationaux et vos enjeux de croissance.",
+      badge: t('expertise.fiscalite.badge'),
+      description: t('expertise.fiscalite.description'),
       services: [
-        "Fiscalité marocaine & internationale",
-        "Déclarations fiscales & suivi réglementaire",
-        "Prix de transfert",
-        "Optimisation fiscale & stratégie patrimoniale",
-        "Contentieux fiscal & relations avec l'administration"
+        t('expertise.fiscalite.service1'),
+        t('expertise.fiscalite.service2'),
+        t('expertise.fiscalite.service3'),
+        t('expertise.fiscalite.service4'),
+        t('expertise.fiscalite.service5')
       ]
     },
     {
       id: "corporate",
-      title: "Corporate Finance & Transactions",
+      title: t('expertise.corporate.title'),
       icon: TrendingUp,
       color: "text-nexia-pink bg-pink-50",
       stats: { years: "10+", clients: "100+", certification: "M&A" },
-      badge: "Spécialiste M&A",
-      description: "Que ce soit pour céder, acquérir, fusionner ou lever des fonds, Nexia Fiducia Maroc vous accompagne dans vos opérations stratégiques avec discrétion, rigueur et méthode. Nos équipes expertes en finance d'entreprise vous apportent une vision claire, chiffrée et orientée résultats.",
+      badge: t('expertise.corporate.badge'),
+      description: t('expertise.corporate.description'),
       services: [
-        "Fusions & acquisitions",
-        "Levée de fonds (equity & dette)",
-        "Due diligence financière",
-        "Évaluation d'entreprise",
-        "Conseil en structuration financière"
+        t('expertise.corporate.service1'),
+        t('expertise.corporate.service2'),
+        t('expertise.corporate.service3'),
+        t('expertise.corporate.service4'),
+        t('expertise.corporate.service5')
       ]
     },
     {
       id: "outsourcing",
-      title: "Externalisation & gestion déléguée (Outsourcing)",
+      title: t('expertise.outsourcing.title'),
       icon: Users,
       color: "text-green-600 bg-green-50",
       stats: { years: "12+", clients: "250+", certification: "BPO" },
-      badge: "Expert BPO",
-      description: "Gagnez en productivité et recentrez-vous sur votre cœur de métier en nous confiant la gestion de vos fonctions support. Nos solutions d'externalisation sont flexibles, sécurisées et adaptées à votre secteur d'activité.",
+      badge: t('expertise.outsourcing.badge'),
+      description: t('expertise.outsourcing.description'),
       services: [
-        "Externalisation comptable",
-        "Externalisation de la paie et des déclarations sociales",
-        "Gestion administrative RH",
-        "Suivi des obligations légales et fiscales",
-        "Reporting financier périodique"
+        t('expertise.outsourcing.service1'),
+        t('expertise.outsourcing.service2'),
+        t('expertise.outsourcing.service3'),
+        t('expertise.outsourcing.service4'),
+        t('expertise.outsourcing.service5')
       ]
     },
     {
       id: "digital",
-      title: "Digitalisation & systèmes d'information",
+      title: t('expertise.digital.title'),
       icon: Laptop,
       color: "text-nexia-blue bg-indigo-50",
       stats: { years: "8+", clients: "80+", certification: "Digital" },
-      badge: "Innovation Tech",
-      description: "Le digital transforme en profondeur les métiers du chiffre, de la conformité et du conseil. Nous vous accompagnons dans la mise en place d'outils performants, la sécurisation de vos systèmes, la conformité RGPD et la transition vers des modèles agiles et connectés.",
+      badge: t('expertise.digital.badge'),
+      description: t('expertise.digital.description'),
       services: [
-        "Audit des systèmes d'information",
-        "Conseil en transformation digitale",
-        "Conformité RGPD & cybersécurité",
-        "Accompagnement à l'implémentation d'ERP",
-        "Stratégie de pilotage & dashboards"
+        t('expertise.digital.service1'),
+        t('expertise.digital.service2'),
+        t('expertise.digital.service3'),
+        t('expertise.digital.service4'),
+        t('expertise.digital.service5')
       ]
     },
     {
       id: "international",
-      title: "Support aux investisseurs étrangers",
+      title: t('expertise.international.title'),
       icon: Globe,
       color: "text-red-600 bg-red-50",
       stats: { years: "18+", clients: "120+", certification: "Global" },
-      badge: "Expertise Internationale",
-      description: "Vous souhaitez vous implanter, investir ou développer vos activités au Maroc ? Nous mettons à votre service notre connaissance des règles locales et notre capacité d'interface avec l'écosystème institutionnel et financier pour vous garantir un atterrissage fluide et sécurisé.",
+      badge: t('expertise.international.badge'),
+      description: t('expertise.international.description'),
       services: [
-        "Création d'entreprise & choix de structure",
-        "Fiscalité adaptée aux groupes internationaux",
-        "Gestion des obligations réglementaires locales",
-        "Services de représentation & domiciliation",
-        "Due diligence juridique & administrative"
+        t('expertise.international.service1'),
+        t('expertise.international.service2'),
+        t('expertise.international.service3'),
+        t('expertise.international.service4'),
+        t('expertise.international.service5')
       ]
     },
     {
       id: "juridique",
-      title: "Accompagnement juridique & social",
+      title: t('expertise.juridique.title'),
       icon: Scale,
       color: "text-gray-600 bg-gray-50",
       stats: { years: "22+", clients: "180+", certification: "Juridique" },
-      badge: "Conseil Juridique",
-      description: "La conformité juridique est au cœur de votre pérennité. Notre équipe vous assiste sur toutes les problématiques de droit des affaires, droit social et conformité, en lien direct avec vos enjeux opérationnels.",
+      badge: t('expertise.juridique.badge'),
+      description: t('expertise.juridique.description'),
       services: [
-        "Création & suivi juridique des sociétés",
-        "Conseil en droit du travail",
-        "Gestion des contrats commerciaux",
-        "Mise en conformité réglementaire",
-        "Assistance lors de contrôles ou litiges"
+        t('expertise.juridique.service1'),
+        t('expertise.juridique.service2'),
+        t('expertise.juridique.service3'),
+        t('expertise.juridique.service4'),
+        t('expertise.juridique.service5')
       ]
     },
     {
       id: "strategie",
-      title: "Conseil en stratégie & développement",
+      title: t('expertise.strategie.title'),
       icon: Target,
       color: "text-nexia-primary bg-blue-100",
       stats: { years: "15+", clients: "90+", certification: "Strategy" },
-      badge: "Conseil Stratégique",
-      description: "Nous vous aidons à construire une vision claire et ambitieuse, puis à la transformer en résultats concrets. Nos consultants vous accompagnent dans les grands virages stratégiques, le développement de votre activité et la structuration de votre croissance.",
+      badge: t('expertise.strategie.badge'),
+      description: t('expertise.strategie.description'),
       services: [
-        "Élaboration de plans stratégiques",
-        "Études de marché & analyses sectorielles",
-        "Développement commercial & stratégie Go-to-market",
-        "Organisation & gestion du changement",
-        "Accompagnement à l'internationalisation"
+        t('expertise.strategie.service1'),
+        t('expertise.strategie.service2'),
+        t('expertise.strategie.service3'),
+        t('expertise.strategie.service4'),
+        t('expertise.strategie.service5')
       ]
     },
     {
       id: "talent-mobility",
-      title: "Talent & Mobility Solutions",
+      title: t('expertise.talent.title'),
       icon: Users,
       color: "text-purple-600 bg-purple-50",
       stats: { years: "10+", clients: "100+", certification: "RH" },
-      badge: "Expert RH",
-      description: "Parce que le capital humain est au cœur de la réussite des entreprises, Nexia Fiducia Maroc propose une offre complète de Talent & Mobility Solutions, alliant recrutement spécialisé, accompagnement RH et services d'installation au Maroc. Notre approche repose sur l'expertise locale et la force de notre réseau international pour garantir une intégration fluide, sécurisée et performante des talents et des entreprises.",
+      badge: t('expertise.talent.badge'),
+      description: t('expertise.talent.description'),
       services: [
-        "Recrutement & Executive Search : chasse de têtes, sélection de cadres dirigeants et profils techniques rares",
-        "Programmes jeunes talents : partenariats campus, stages, alternances et graduate programs",
-        "Accompagnement RH : structuration des politiques de rémunération, benchmarks salariaux, gestion de la performance",
-        "Onboarding & intégration culturelle : formation interculturelle, accompagnement des talents étrangers et diaspora",
-        "Mobilité & Installation : démarches administratives (visas, permis de travail, cartes de séjour), recherche de logement, scolarité, mobilité familiale",
-        "Soft Landing Package : accompagnement clé en main pour l'implantation d'investisseurs et d'entreprises"
+        t('expertise.talent.service1'),
+        t('expertise.talent.service2'),
+        t('expertise.talent.service3'),
+        t('expertise.talent.service4'),
+        t('expertise.talent.service5'),
+        t('expertise.talent.service6')
       ]
     }
   ];
@@ -184,6 +184,7 @@ const expertiseDomains = [
 export default function OurServicesMenu() {
   const { t } = useSimpleLanguage();
   const location = useLocation();
+  const expertiseDomains = getExpertiseDomains(t);
   const [activeTab, setActiveTab] = useState(expertiseDomains[0]?.id || "audit");
 
   useEffect(() => {
@@ -357,11 +358,11 @@ export default function OurServicesMenu() {
                         <div className="flex gap-6 mb-4">
                           <div className="flex items-center gap-2">
                             <Clock className="h-4 w-4 text-nexia-secondary" />
-                            <span className="text-sm font-semibold text-nexia-primary">{domain.stats.years} ans d'expérience</span>
+                            <span className="text-sm font-semibold text-nexia-primary">{domain.stats.years} {t('expertise.yearsExperience')}</span>
                           </div>
                           <div className="flex items-center gap-2">
                             <Users className="h-4 w-4 text-nexia-secondary" />
-                            <span className="text-sm font-semibold text-nexia-primary">{domain.stats.clients} clients accompagnés</span>
+                            <span className="text-sm font-semibold text-nexia-primary">{domain.stats.clients} {t('expertise.clientsSupported')}</span>
                           </div>
                           <div className="flex items-center gap-2">
                             <CheckCircle className="h-4 w-4 text-nexia-secondary" />
@@ -380,7 +381,7 @@ export default function OurServicesMenu() {
                   <div className="bg-gradient-to-br from-muted/30 to-transparent rounded-xl p-6">
                     <h4 className="text-xl font-bold text-nexia-primary mb-4 flex items-center gap-2">
                       <Target className="h-5 w-5 text-nexia-secondary" />
-                      Nos Services
+                      {t('expertise.servicesTitle')}
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {domain.services.map((service, serviceIndex) => (
