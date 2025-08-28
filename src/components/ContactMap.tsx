@@ -1,10 +1,14 @@
+import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
+
 export default function ContactMap() {
+  const { t } = useSimpleLanguage();
+  
   return (
     <section className="py-16 bg-muted/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-8 text-center">
-          <h2 className="text-3xl font-bold text-nexia-primary mb-4">Localisation de nos bureaux</h2>
-          <p className="text-nexia-primary">Carte interactive avec les deux bureaux</p>
+          <h2 className="text-3xl font-bold text-nexia-primary mb-4">{t('contactMap.title')}</h2>
+          <p className="text-nexia-primary">{t('contactMap.subtitle')}</p>
         </div>
         
         <div className="rounded-lg overflow-hidden shadow-professional">
@@ -16,14 +20,14 @@ export default function ContactMap() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Localisation des bureaux Nexia Fiducia Maroc"
+            title={t('contactMap.mapTitle')}
           />
         </div>
 
         {/* Instructions pour voir les deux bureaux */}
         <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
           <p className="text-sm text-blue-800 text-center">
-            <strong>Pour localiser nos bureaux :</strong> Utilisez les liens "Voir sur Google Maps" ci-dessous pour accéder directement à chaque adresse avec géolocalisation précise.
+            <strong>{t('contactMap.instructions')}</strong> {t('contactMap.instructionsDetails')}
           </p>
         </div>
 
@@ -37,7 +41,7 @@ export default function ContactMap() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-nexia-primary mb-2">Bureau 1</h3>
+                <h3 className="text-lg font-bold text-nexia-primary mb-2">{t('contactMap.office1')}</h3>
                 <p className="text-gray-600 text-sm mb-1">3, Rue Bab El Mansour</p>
                 <p className="text-gray-600 text-sm mb-1">Résidence Imrane - RDC Bureau n°15</p>
                 <p className="text-gray-600 text-sm mb-1">Espace Porte d'Anfa</p>
@@ -56,7 +60,7 @@ export default function ContactMap() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    Voir sur Google Maps
+                    {t('contactMap.viewOnMaps')}
                   </a>
                 </div>
               </div>
@@ -72,7 +76,7 @@ export default function ContactMap() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-nexia-primary mb-2">Bureau 2</h3>
+                <h3 className="text-lg font-bold text-nexia-primary mb-2">{t('contactMap.office2')}</h3>
                 <p className="text-gray-600 text-sm mb-1">Rue des Pléaides</p>
                 <p className="text-gray-600 text-sm mb-1">Quartier des Hôpitaux</p>
                 <p className="text-gray-600 text-sm mb-3">Casablanca - Maroc</p>
@@ -90,7 +94,7 @@ export default function ContactMap() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    Voir sur Google Maps
+                    {t('contactMap.viewOnMaps')}
                   </a>
                 </div>
               </div>
@@ -101,7 +105,7 @@ export default function ContactMap() {
         {/* Légende pour aider l'utilisateur */}
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-600">
-            Pour voir les deux bureaux sur la carte, utilisez les liens individuels ci-dessus ou recherchez directement les adresses.
+            {t('contactMap.helpText')}
           </p>
         </div>
       </div>

@@ -476,6 +476,35 @@ export const translations = {
     'common.contact': 'Contact us',
     'common.minutes': 'min',
     'common.author': 'Nexia Fiducia Morocco',
+    
+    // Navigation
+    'nav.expertise': 'Our Areas of Expertise',
+    'nav.team': 'Executive Team',
+    'nav.globalPerspectives': 'Global Perspectives',
+    'nav.caseStudies': 'Case Studies',
+    
+    // Contact Map Section
+    'contactMap.title': 'Location of our offices',
+    'contactMap.subtitle': 'Interactive map with both offices',
+    'contactMap.instructions': 'To locate our offices:',
+    'contactMap.instructionsDetails': 'Use the "View on Google Maps" links below to access each address directly with precise geolocation.',
+    'contactMap.office1': 'Office 1',
+    'contactMap.office2': 'Office 2',
+    'contactMap.viewOnMaps': 'View on Google Maps',
+    'contactMap.helpText': 'To see both offices on the map, use the individual links above or search for the addresses directly.',
+    'contactMap.mapTitle': 'Nexia Fiducia Morocco offices location',
+    
+    // Contact Hero Section  
+    'contactHero.ourOffices': 'Our Offices',
+    
+    // Contact Form Section
+    'contactForm.tabContact': 'Send Message',
+    'contactForm.tabPrivacy': 'Guaranteed Privacy',
+    'contactForm.privacyTitle': 'Your data is protected',
+    'contactForm.privacyContent': 'All information shared through this form is treated with the strictest confidentiality. We are committed to protecting your personal data in accordance with applicable regulations.',
+    
+    // Team specialties in EquipeDirecteante
+    'teamPage.specialties': 'Areas of expertise',
   }
 } as const;
 

@@ -25,13 +25,13 @@ export default function ContactHero() {
           </h1>
           
           <div className="mb-6 md:mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-nexia-primary mb-4 md:mb-6 text-center">Nos Bureaux</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-nexia-primary mb-4 md:mb-6 text-center">{t('contactHero.ourOffices')}</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {/* Bureau 1 */}
             <div className="bg-gray-50 p-4 sm:p-6 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-bold text-nexia-primary mb-3 sm:mb-4">Bureau 1</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-nexia-primary mb-3 sm:mb-4">{t('contactMap.office1')}</h3>
               <div className="space-y-2">
                 <p className="text-nexia-primary text-sm sm:text-base">3, Rue Bab El Mansour</p>
                 <p className="text-nexia-primary text-sm sm:text-base">Résidence Imrane - RDC Bureau n°15</p>
@@ -45,7 +45,7 @@ export default function ContactHero() {
 
             {/* Bureau 2 */}
             <div className="bg-gray-50 p-4 sm:p-6 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-bold text-nexia-primary mb-3 sm:mb-4">Bureau 2</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-nexia-primary mb-3 sm:mb-4">{t('contactMap.office2')}</h3>
               <div className="space-y-2">
                 <p className="text-nexia-primary text-sm sm:text-base">Rue des Pléaides</p>
                 <p className="text-nexia-primary text-sm sm:text-base">Quartier des Hôpitaux</p>

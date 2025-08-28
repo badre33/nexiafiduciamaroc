@@ -13,14 +13,14 @@ import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
 
 const getNavigation = (t: (key: string) => string) => [
   { name: t('nav.home'), href: "/" },
-  { name: "Nos domaines d'expertise", href: "/domaines-expertise" },
-  { name: "Équipe dirigeante", href: "/equipe-dirigeante" },
+  { name: t('nav.expertise'), href: "/domaines-expertise" },
+  { name: t('nav.team'), href: "/equipe-dirigeante" },
   { 
     name: t('nav.insights'), 
     href: "#",
     dropdown: [
-      { name: "Perspectives Mondiales", href: "/perspectives-mondiales" },
-      { name: "Études de cas", href: "/etudes-de-cas" }
+      { name: t('nav.globalPerspectives'), href: "/perspectives-mondiales" },
+      { name: t('nav.caseStudies'), href: "/etudes-de-cas" }
     ]
   },
   { name: t('nav.about'), href: "/a-propos" },

@@ -481,7 +481,7 @@ export default function ContactForm() {
             <div className="space-y-2">
               <Label htmlFor="message" className="text-sm font-semibold text-gray-700 flex items-center gap-2">
                 <MessageSquare className="w-4 h-4 text-nexia-secondary" />
-                Message *
+                {t('contactForm.message')} *
               </Label>
               <Textarea
                 id="message"
@@ -490,7 +490,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 rows={5}
                 className={`transition-all duration-200 resize-none ${errors.message ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-nexia-secondary hover:border-gray-400'} focus:ring-2 focus:ring-nexia-secondary/20`}
-                placeholder="Décrivez votre projet ou vos besoins en détail..."
+                placeholder={t('contactForm.yourMessage')}
               />
               {errors.message && <p className="text-red-500 text-sm font-medium">{errors.message}</p>}
             </div>
@@ -500,8 +500,8 @@ export default function ContactForm() {
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-nexia-secondary mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-blue-800">
-                  <p className="font-semibold mb-1">Confidentialité garantie</p>
-                  <p className="text-blue-700">Vos informations sont traitées en toute confidentialité selon nos standards professionnels. Notre équipe s&apos;engage à vous répondre dans un délai de 24h ouvrées.</p>
+                  <p className="font-semibold mb-1">{t('contactForm.tabPrivacy')}</p>
+                  <p className="text-blue-700">{t('contactForm.privacyContent')}</p>
                 </div>
               </div>
             </div>
@@ -516,12 +516,12 @@ export default function ContactForm() {
                 {isSubmitting ? (
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
-                    Envoi en cours...
+                    {t('contactForm.sending')}
                   </>
                 ) : (
                   <>
                     <Send className="w-5 h-5" />
-                    Envoyer le message
+                    {t('contactForm.submit')}
                   </>
                 )}
               </Button>

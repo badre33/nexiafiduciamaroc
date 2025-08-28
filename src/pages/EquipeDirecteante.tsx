@@ -115,7 +115,7 @@ const EquipeDirecteante = () => {
                     <div className="mb-6">
                       <h4 className="font-semibold text-foreground mb-4 text-center">
                         <span className="bg-primary/10 px-3 py-1 rounded-full text-primary">
-                          {t('team.specialties')}
+                          {t('teamPage.specialties')}
                         </span>
                       </h4>
                       <div className="flex flex-wrap justify-center gap-2">
