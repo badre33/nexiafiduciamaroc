@@ -160,6 +160,23 @@ const expertiseDomains = [
         "Organisation & gestion du changement",
         "Accompagnement à l'internationalisation"
       ]
+    },
+    {
+      id: "talent-mobility",
+      title: "Talent & Mobility Solutions",
+      icon: Users,
+      color: "text-purple-600 bg-purple-50",
+      stats: { years: "10+", clients: "100+", certification: "RH" },
+      badge: "Expert RH",
+      description: "Parce que le capital humain est au cœur de la réussite des entreprises, Nexia Fiducia Maroc propose une offre complète de Talent & Mobility Solutions, alliant recrutement spécialisé, accompagnement RH et services d'installation au Maroc. Notre approche repose sur l'expertise locale et la force de notre réseau international pour garantir une intégration fluide, sécurisée et performante des talents et des entreprises.",
+      services: [
+        "Recrutement & Executive Search : chasse de têtes, sélection de cadres dirigeants et profils techniques rares",
+        "Programmes jeunes talents : partenariats campus, stages, alternances et graduate programs",
+        "Accompagnement RH : structuration des politiques de rémunération, benchmarks salariaux, gestion de la performance",
+        "Onboarding & intégration culturelle : formation interculturelle, accompagnement des talents étrangers et diaspora",
+        "Mobilité & Installation : démarches administratives (visas, permis de travail, cartes de séjour), recherche de logement, scolarité, mobilité familiale",
+        "Soft Landing Package : accompagnement clé en main pour l'implantation d'investisseurs et d'entreprises"
+      ]
     }
   ];
 
@@ -236,7 +253,7 @@ export default function OurServicesMenu() {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Plus de 25 ans d'expérience au service de votre croissance. 
-            <strong className="text-nexia-primary"> 9 domaines d'expertise</strong> pour accompagner tous vos projets.
+            <strong className="text-nexia-primary"> 10 domaines d'expertise</strong> pour accompagner tous vos projets.
           </p>
           
           {/* Progress indicator amélioré */}
@@ -259,7 +276,7 @@ export default function OurServicesMenu() {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 lg:grid-cols-9 gap-3 h-auto p-3 bg-white/80 backdrop-blur-sm rounded-2xl shadow-professional border border-border/50">
+          <TabsList className="grid w-full grid-cols-3 lg:grid-cols-10 gap-3 h-auto p-3 bg-white/80 backdrop-blur-sm rounded-2xl shadow-professional border border-border/50">
             {expertiseDomains.map((domain, index) => {
               const IconComponent = domain.icon;
               const isActive = activeTab === domain.id;

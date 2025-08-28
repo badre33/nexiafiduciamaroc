@@ -63,6 +63,10 @@ export default function WhyNexia() {
                   <div className="text-2xl font-bold text-nexia-primary">500+</div>
                   <div className="text-sm text-gray-600">Clients satisfaits</div>
                 </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-nexia-primary">727</div>
+                  <div className="text-sm text-gray-600">Bureaux Nexia mondial</div>
+                </div>
               </div>
 
               <div className="pt-4">

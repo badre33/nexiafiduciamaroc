@@ -90,40 +90,40 @@ export default function FactsSection() {
               <h3 className="text-lg font-semibold text-gray-800 mb-4">Récompenses et Accréditations</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-                    <span className="text-purple-600 font-bold text-sm">9th</span>
+                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                    <span className="text-purple-600 font-bold text-xs">9th</span>
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="flex-1 text-sm text-gray-600">
                     <div className="font-medium">International Accounting Bulletin Survey 2019</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">
-                    <span className="text-pink-600 font-bold text-xs">★</span>
+                  <div className="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center">
+                    <span className="text-pink-600 font-bold text-sm">★</span>
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="flex-1 text-sm text-gray-600">
                     <div className="font-medium">Prix du Réseau Étoile Montante - IAB Awards 2019</div>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
                     <span className="text-orange-600 font-bold text-xs">$</span>
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="flex-1 text-sm text-gray-600">
                     <div className="font-medium">US$ 4.3 billion</div>
-                    <div className="text-xs">4.3 milliards USD de revenus pour 2019</div>
+                    <div className="text-xs text-gray-500">4.3 milliards USD de revenus pour 2019</div>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center">
                     <span className="text-teal-600 font-bold text-xs">727</span>
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="flex-1 text-sm text-gray-600">
                     <div className="font-medium">727 bureaux dans le monde</div>
-                    <div className="text-xs">Réseau mondial étendu</div>
+                    <div className="text-xs text-gray-500">Réseau mondial étendu</div>
                   </div>
                 </div>
               </div>

@@ -15,8 +15,8 @@ const services = [
   },
   {
     icon: Users,
-    title: "Business Consulting",
-    description: "Expert business consulting to help you grow and optimize your operations.",
+    title: "Talent & Mobility Solutions",
+    description: "Recrutement spécialisé, accompagnement RH et services d'installation au Maroc.",
   },
   {
     icon: Shield,
