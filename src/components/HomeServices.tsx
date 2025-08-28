@@ -16,7 +16,7 @@ const services = [
   {
     icon: Users,
     title: "Talent & Mobility Solutions",
-    description: "Recrutement spécialisé, accompagnement RH et services d'installation au Maroc.",
+    description: "Recrutement – Accompagnement RH – Installation au Maroc. 10+ ans d'expérience, 100+ talents placés avec succès.",
   },
   {
     icon: Shield,
