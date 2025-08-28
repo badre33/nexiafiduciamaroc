@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
-// import { useLanguage } from "@/contexts/LanguageContext";
+import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
 
 export default function HomeFeaturedInsight() {
-  // const { t } = useLanguage();
+  const { t } = useSimpleLanguage();
   
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
@@ -12,10 +12,10 @@ export default function HomeFeaturedInsight() {
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-nexia-primary mb-4 lg:mb-6">
-            Perspectives Mondiales
+            {t('insights.title')}
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-nexia-primary/80 max-w-3xl mx-auto leading-relaxed px-4">
-            Découvrez nos analyses d'experts sur les tendances mondiales qui façonnent l'avenir des entreprises au Maroc et à l'international
+            {t('insights.subtitle')}
           </p>
         </div>
 

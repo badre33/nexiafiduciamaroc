@@ -9,28 +9,29 @@ import { Menu, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import SimpleLanguageToggle from "@/components/SimpleLanguageToggle";
+import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
 
-const navigation = [
-  { name: "Accueil", href: "/" },
+const getNavigation = (t: (key: string) => string) => [
+  { name: t('nav.home'), href: "/" },
   { name: "Nos domaines d'expertise", href: "/domaines-expertise" },
   { name: "Équipe dirigeante", href: "/equipe-dirigeante" },
   { 
-    name: "Insights", 
+    name: t('nav.insights'), 
     href: "#",
     dropdown: [
       { name: "Perspectives Mondiales", href: "/perspectives-mondiales" },
       { name: "Études de cas", href: "/etudes-de-cas" }
     ]
   },
-  { name: "À propos", href: "/about" },
-  { name: "Contactez-nous", href: "/contact" },
+  { name: t('nav.about'), href: "/about" },
+  { name: t('nav.contact'), href: "/contact" },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  // const { t } = useLanguage();
-  // const navigation = getNavigation(t);
+  const { t } = useSimpleLanguage();
+  const navigation = getNavigation(t);
 
   const isInsightsActive = location.pathname === "/perspectives-mondiales" || location.pathname === "/etudes-de-cas";
 
