@@ -10,13 +10,13 @@ export default function AboutSection() {
         {/* About Us Text */}
         <div className="text-center mb-16">
           <p className="text-nexia-primary font-semibold text-sm uppercase tracking-wide mb-4">
-            {t('aboutPage.tagline')}
+            {t('aboutVideo.tagline')}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-nexia-primary mb-6">
-            {t('aboutPage.title')}
+            {t('aboutVideo.title')}
           </h2>
           <p className="text-nexia-primary text-lg max-w-4xl mx-auto leading-relaxed">
-            {t('aboutPage.description')}
+            {t('aboutVideo.description')}
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export default function AboutSection() {
           <div className="aspect-video">
             <iframe
               src="https://www.youtube.com/embed/eMQr3TObNcU"
-              title={t('aboutPage.videoTitle')}
+              title={t('aboutVideo.videoTitle')}
               className="w-full h-full"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

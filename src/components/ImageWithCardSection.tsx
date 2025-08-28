@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Download } from "lucide-react";
+import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
 
 const documents = [
   {
@@ -22,6 +23,7 @@ const documents = [
 ];
 
 export default function ImageWithCardSection() {
+  const { t } = useSimpleLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {

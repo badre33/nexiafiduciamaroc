@@ -199,6 +199,14 @@ export const translations = {
     'footer.email': 'Email disclaimer',
     'footer.copyright': '© 2024 Nexia Templates. All rights reserved.',
     
+    // Case Studies Data
+    'caseStudies.study1.title': 'Due diligence financière et fiscale pour une fusion stratégique dans la santé',
+    'caseStudies.study1.description': 'Accompagnement complet dans la fusion stratégique entre PHL Group et Malling Health, incluant due diligence financière et fiscale approfondie.',
+    'caseStudies.study1.sector': 'Santé',
+    'caseStudies.study1.service1': 'Due diligence',
+    'caseStudies.study1.service2': 'Fiscalité',
+    'caseStudies.study1.service3': 'Fusion-acquisition',
+    
     // Common
     'common.readMore': 'En savoir plus',
     'common.contact': 'Nous contacter',
@@ -370,6 +378,58 @@ export const translations = {
     
     // Why Nexia Section
     'whyNexia.title': 'Why',
+    
+    // Case Studies Page
+    'caseStudiesPage.title': 'Case Studies',
+    'caseStudiesPage.subtitle': 'Discover how we support our clients in their most complex challenges through concrete missions and measurable results.',
+    'caseStudiesPage.sector': 'Sector',
+    'caseStudiesPage.duration': 'Duration',
+    'caseStudiesPage.services': 'Services mobilized:',
+    'caseStudiesPage.results': 'Key results:',
+    'caseStudiesPage.readFull': 'Read full article',
+    'caseStudiesPage.ctaTitle': 'Your project deserves a tailored approach',
+    'caseStudiesPage.ctaDescription': 'Each mission is unique. Discover how we can support you in your specific challenges.',
+    
+    // Services page - Our Capabilities
+    'ourCapabilities.title': 'Our Areas of Expertise',
+    'ourCapabilities.subtitle': 'Over 25 years of experience serving your growth. 10 areas of expertise to support all your projects.',
+    
+    // Services page - Global Perspectives
+    'servicesInsights.title': 'Global Perspectives',
+    'servicesInsights.subtitle': 'Discover our latest expert analyses on trends shaping the future of businesses in Morocco and internationally.',
+    'servicesInsights.button': 'View all insights',
+    
+    // About page - Video section (rename conflicting keys)
+    'aboutVideo.tagline': 'About Nexia Fiduciaire Maroc',
+    'aboutVideo.title': 'Nexia Fiduciaire Maroc Presentation 2025',
+    'aboutVideo.description': 'Discover our expertise and commitment to supporting Moroccan and international businesses through our comprehensive range of advisory and auditing services.',
+    'aboutVideo.videoTitle': 'Nexia Fiduciaire Maroc Presentation Video',
+    
+    // Services Section (About page)
+    'servicesSection.title': 'Nexia International Publications',
+    'servicesSection.subtitle': 'Discover our latest publications and analyses from the Nexia international network. Stay informed about market trends, regulatory developments and our sector insights.',
+    
+    // Image with Card Section
+    'imageCard.title': 'Our Moroccan Heritage',
+    'imageCard.description': 'With deep roots in Morocco and a global perspective through the Nexia International network, we combine local expertise with international standards to serve our clients.',
+    
+    // LinkedIn Posts
+    'linkedinPosts.title': 'Our News',
+    'linkedinPosts.subtitle': 'Follow our latest news and insights',
+    'linkedinPosts.viewProfile': 'View our LinkedIn profile',
+    
+    // Governance Section / Team
+    'governance.title': 'Executive Team',
+    'governance.subtitle': 'Meet our management team and discover their expertise.',
+    'governance.ceo.name': 'Yassine SQALLI HOUSSAINI',
+    'governance.ceo.title': 'Managing Partner & CEO',
+    'governance.ceo.description': 'Expert in audit, corporate finance and strategic advisory with over 20 years of experience.',
+    'governance.cfo.name': 'Jalel LAHBIB',
+    'governance.cfo.title': 'Managing Partner',
+    'governance.cfo.description': 'Specialist in taxation, corporate law and compliance with extensive international experience.',
+    'governance.ctaTitle': 'Our Partners',
+    'governance.ctaDescription': 'Our management team brings together complementary expertise to offer you comprehensive and high-quality service.',
+    'governance.ctaButton': 'Contact us',
     'whyNexia.subtitle': 'Nexia Fiducia Morocco',
     'whyNexia.description1': 'Through our membership in the Nexia international network, we combine deep local expertise of the Moroccan market with the most demanding international standards.',
     'whyNexia.description2': 'Our personalized approach and commitment to excellence enable us to effectively support our clients in their financial and strategic challenges.',
@@ -402,6 +462,14 @@ export const translations = {
     'footer.cookie': 'Cookie Policy', 
     'footer.email': 'Email disclaimer',
     'footer.copyright': '© 2024 Nexia Templates. All rights reserved.',
+    
+    // Case Studies Data
+    'caseStudies.study1.title': 'Financial and tax due diligence for a strategic healthcare merger',
+    'caseStudies.study1.description': 'Complete support in the strategic merger between PHL Group and Malling Health, including comprehensive financial and tax due diligence.',
+    'caseStudies.study1.sector': 'Healthcare',
+    'caseStudies.study1.service1': 'Due diligence',
+    'caseStudies.study1.service2': 'Taxation',
+    'caseStudies.study1.service3': 'Mergers & acquisitions',
     
     // Common
     'common.readMore': 'Learn more',

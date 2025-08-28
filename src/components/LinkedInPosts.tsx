@@ -1,4 +1,8 @@
+import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
+
 export default function LinkedInPosts() {
+  const { t } = useSimpleLanguage();
+  
   const posts = [
     {
       id: "7339350208171962369",
@@ -33,11 +37,10 @@ export default function LinkedInPosts() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-nexia-primary mb-6">
-            Nos Actualités
+            {t('linkedinPosts.title')}
           </h2>
           <p className="text-nexia-primary text-lg max-w-3xl mx-auto leading-relaxed">
-            Suivez nos dernières actualités et insights sur LinkedIn. Restez informé de nos analyses du marché, 
-            de nos événements et de notre expertise sectorielle.
+            {t('linkedinPosts.subtitle')}
           </p>
         </div>
 
@@ -85,7 +88,7 @@ export default function LinkedInPosts() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-nexia-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-nexia-primary transition-colors duration-200"
           >
-            Suivez-nous sur LinkedIn
+            {t('linkedinPosts.viewProfile')}
             <svg
               className="w-4 h-4"
               fill="none"

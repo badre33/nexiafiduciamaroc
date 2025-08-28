@@ -1,4 +1,8 @@
+import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
+
 export default function GovernanceSection() {
+  const { t } = useSimpleLanguage();
+  
   return (
     <section className="relative py-32">
       {/* Background Image */}
@@ -16,11 +20,10 @@ export default function GovernanceSection() {
         <div className="text-center">
           <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 lg:p-12 max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
-              Notre Héritage Marocain
+              {t('imageCard.title')}
             </h2>
             <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-              Ancrés dans la richesse culturelle du Maroc, nous combinons tradition et modernité 
-              pour offrir des services d'expertise comptable et de conseil de classe mondiale.
+              {t('imageCard.description')}
             </p>
           </div>
         </div>

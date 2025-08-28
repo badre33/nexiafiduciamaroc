@@ -1,3 +1,5 @@
+import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
+
 const publications = [
   {
     id: 1,
@@ -62,17 +64,18 @@ const publications = [
 ];
 
 export default function ServicesSection() {
+  const { t } = useSimpleLanguage();
+  
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h3 className="text-3xl font-bold text-nexia-primary mb-6">
-            Publications Nexia International
+            {t('servicesSection.title')}
           </h3>
           <p className="text-nexia-primary text-lg max-w-3xl mx-auto leading-relaxed">
-            Découvrez nos dernières publications et analyses du réseau international Nexia. 
-            Restez informé des tendances du marché, des évolutions réglementaires et de nos insights sectoriels.
+            {t('servicesSection.subtitle')}
           </p>
         </div>
 

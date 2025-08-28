@@ -1,14 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HowCanWeHelp from "@/components/HowCanWeHelp";
+import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
 
 const EtudesDeCas = () => {
-  const caseStudies = [
+  const { t } = useSimpleLanguage();
+  
+  const getCaseStudies = (t: (key: string) => string) => [
     {
-      title: "Due diligence financière et fiscale pour une fusion stratégique dans la santé",
-      description: "Accompagnement complet dans la fusion stratégique entre PHL Group et Malling Health, incluant due diligence financière et fiscale approfondie.",
-      sector: "Santé",
-      services: ["Due diligence", "Fiscalité", "Fusion-acquisition"],
+      title: t('caseStudies.study1.title') || "Due diligence financière et fiscale pour une fusion stratégique dans la santé",
+      description: t('caseStudies.study1.description') || "Accompagnement complet dans la fusion stratégique entre PHL Group et Malling Health, incluant due diligence financière et fiscale approfondie.",
+      sector: t('caseStudies.study1.sector') || "Santé",
+      services: [t('caseStudies.study1.service1') || "Due diligence", t('caseStudies.study1.service2') || "Fiscalité", t('caseStudies.study1.service3') || "Fusion-acquisition"],
       image: "/lovable-uploads/f9a9ffbc-dfd6-41ee-8f0a-4b081a69b3f6.png",
       duration: "6 mois",
       results: [
@@ -117,6 +120,8 @@ const EtudesDeCas = () => {
       source: "https://nexia.com/insights/tax-due-diligence-for-an-acquisition-of-a-spanish-company-in-the-food-sector/"
     }
   ];
+  
+  const caseStudies = getCaseStudies(t);
 
   return (
     <div className="min-h-screen">
@@ -126,10 +131,10 @@ const EtudesDeCas = () => {
         <section className="nexia-section-padding bg-nexia-primary text-white">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 font-poppins">
-              Études de cas
+              {t('caseStudiesPage.title')}
             </h1>
             <p className="text-xl leading-relaxed font-poppins opacity-90">
-              Découvrez comment nous accompagnons nos clients dans leurs défis les plus complexes à travers des missions concrètes et des résultats mesurables.
+              {t('caseStudiesPage.subtitle')}
             </p>
           </div>
         </section>
@@ -166,7 +171,7 @@ const EtudesDeCas = () => {
                   </p>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-nexia-primary mb-2">Services mobilisés :</h4>
+                    <h4 className="text-sm font-semibold text-nexia-primary mb-2">{t('caseStudiesPage.services')}</h4>
                     <div className="flex flex-wrap gap-2">
                       {study.services.map((service, idx) => (
                         <span key={idx} className="text-xs text-nexia-primary bg-gray-100 px-2 py-1 rounded">
@@ -177,7 +182,7 @@ const EtudesDeCas = () => {
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-nexia-primary mb-2">Résultats clés :</h4>
+                    <h4 className="text-sm font-semibold text-nexia-primary mb-2">{t('caseStudiesPage.results')}</h4>
                     <ul className="space-y-1">
                       {study.results.map((result, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-sm text-nexia-primary/80">
@@ -195,7 +200,7 @@ const EtudesDeCas = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-nexia-primary hover:text-nexia-secondary transition-colors duration-200 font-medium"
                     >
-                      <span>Lire l'article complet</span>
+                      <span>{t('caseStudiesPage.readFull')}</span>
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
@@ -211,10 +216,10 @@ const EtudesDeCas = () => {
         <section className="nexia-section-padding bg-nexia-light">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold text-nexia-primary mb-6 font-poppins">
-              Votre projet mérite une approche sur-mesure
+              {t('caseStudiesPage.ctaTitle')}
             </h2>
             <p className="text-lg text-nexia-primary mb-8 leading-relaxed font-poppins">
-              Chaque mission est unique. Découvrez comment nous pouvons vous accompagner dans vos défis spécifiques.
+              {t('caseStudiesPage.ctaDescription')}
             </p>
           </div>
         </section>
