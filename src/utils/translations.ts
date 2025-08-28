@@ -4,9 +4,12 @@ export const translations = {
   fr: {
     // Header
     'nav.home': 'Accueil',
-    'nav.about': 'À propos',
-    'nav.services': 'Services', 
+    'nav.expertise': 'Domaines d\'Expertise',
+    'nav.team': 'Équipe Dirigeante',
     'nav.insights': 'Perspectives',
+    'nav.globalPerspectives': 'Perspectives Mondiales',
+    'nav.caseStudies': 'Études de Cas',
+    'nav.about': 'À propos',
     'nav.contact': 'Contact',
     
     // Hero Section
