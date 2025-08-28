@@ -185,20 +185,33 @@ const filteredInsights = globalInsights.filter(insight => {
     const matchesSearch = insight.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          insight.description.toLowerCase().includes(searchTerm.toLowerCase());
     
-    // Map French categories to their English equivalents for filtering
-    const categoryMapping: Record<string, string[]> = {
-      'Santé publique': ['Public Health', 'Santé publique'],
-      'Commerce international': ['International Trade', 'Commerce international'],
-      'Fiscalité internationale': ['International Tax', 'Fiscalité internationale'],
-      'Ressources humaines': ['Human Resources', 'Ressources humaines'],
-      'Secteur minier': ['Mining Sector', 'Secteur minier'],
-      'Droit des sociétés': ['Corporate Law', 'Droit des sociétés'],
-      'ESG': ['ESG', 'ESG']
+    // If "All" category is selected, show all insights
+    if (selectedCategory === insightCategories[0]) {
+      return matchesSearch;
+    }
+    
+    // Map current language categories to French categories (since data is in French)
+    const getCategoryInFrench = (category: string): string => {
+      const categoryMap: Record<string, string> = {
+        'Public Health': 'Santé publique',
+        'International Trade': 'Commerce international', 
+        'International Tax': 'Fiscalité internationale',
+        'Investment': 'Investissement',
+        'Tax': 'Fiscalité',
+        'Audit': 'Audit',
+        'Strategy': 'Stratégie',
+        'Finance': 'Finance',
+        'Regulation': 'Réglementation',
+        'Human Resources': 'Ressources humaines',
+        'Mining Sector': 'Secteur minier',
+        'Corporate Law': 'Droit des sociétés',
+        'ESG': 'ESG'
+      };
+      return categoryMap[category] || category;
     };
     
-    const matchesCategory = selectedCategory === insightCategories[0] || 
-                           categoryMapping[insight.category]?.includes(selectedCategory) ||
-                           insight.category === selectedCategory;
+    const categoryToMatch = getCategoryInFrench(selectedCategory);
+    const matchesCategory = insight.category === categoryToMatch;
     return matchesSearch && matchesCategory;
   });
 
@@ -278,11 +291,11 @@ const filteredInsights = globalInsights.filter(insight => {
             <h2 className="text-2xl font-bold text-nexia-primary mb-8">{t('insightsPage.featured')}</h2>
             <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="md:flex">
-                <div className="md:w-1/2">
+                <div className="md:w-1/2 relative">
                   <img
                     src={featuredInsight.image}
                     alt={featuredInsight.title}
-                    className="w-full h-64 md:h-full object-cover object-center"
+                    className="w-full h-64 md:h-full object-cover object-[center_20%]"
                   />
                 </div>
                 <div className="md:w-1/2 p-8">
