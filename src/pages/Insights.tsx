@@ -181,10 +181,24 @@ export default function Insights() {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 9;
 
-  const filteredInsights = globalInsights.filter(insight => {
+const filteredInsights = globalInsights.filter(insight => {
     const matchesSearch = insight.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          insight.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === insightCategories[0] || insight.category === selectedCategory;
+    
+    // Map French categories to their English equivalents for filtering
+    const categoryMapping: Record<string, string[]> = {
+      'Santé publique': ['Public Health', 'Santé publique'],
+      'Commerce international': ['International Trade', 'Commerce international'],
+      'Fiscalité internationale': ['International Tax', 'Fiscalité internationale'],
+      'Ressources humaines': ['Human Resources', 'Ressources humaines'],
+      'Secteur minier': ['Mining Sector', 'Secteur minier'],
+      'Droit des sociétés': ['Corporate Law', 'Droit des sociétés'],
+      'ESG': ['ESG', 'ESG']
+    };
+    
+    const matchesCategory = selectedCategory === insightCategories[0] || 
+                           categoryMapping[insight.category]?.includes(selectedCategory) ||
+                           insight.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
@@ -268,7 +282,7 @@ export default function Insights() {
                   <img
                     src={featuredInsight.image}
                     alt={featuredInsight.title}
-                    className="w-full h-64 md:h-full object-cover"
+                    className="w-full h-64 md:h-full object-cover object-center"
                   />
                 </div>
                 <div className="md:w-1/2 p-8">
