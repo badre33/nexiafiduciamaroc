@@ -6,18 +6,19 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, User, ArrowRight, Filter } from "lucide-react";
 import { useState } from "react";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
 
-const insightCategories = [
-  "Tous",
-  "Santé publique",
-  "Réseau international",
-  "Commerce international", 
-  "Investissement international",
-  "Fiscalité internationale",
-  "Audit & conformité", 
-  "Stratégie d'entreprise",
-  "Corporate Finance",
-  "Réglementation"
+const getInsightCategories = (t: (key: string) => string) => [
+  t('insightsPage.category.all'),
+  t('insightsPage.category.health'),
+  t('insightsPage.category.international'),
+  t('insightsPage.category.trade'), 
+  t('insightsPage.category.investment'),
+  t('insightsPage.category.tax'),
+  t('insightsPage.category.audit'), 
+  t('insightsPage.category.strategy'),
+  t('insightsPage.category.finance'),
+  t('insightsPage.category.regulation')
 ];
 
 const globalInsights = [
@@ -172,15 +173,18 @@ Le coût des médicaments est à la fois un symptôme et un révélateur. Derri�
 ];
 
 export default function Insights() {
+  const { t } = useSimpleLanguage();
+  const insightCategories = getInsightCategories(t);
+  
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("Tous");
+  const [selectedCategory, setSelectedCategory] = useState(insightCategories[0]);
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 9;
 
   const filteredInsights = globalInsights.filter(insight => {
     const matchesSearch = insight.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          insight.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "Tous" || insight.category === selectedCategory;
+    const matchesCategory = selectedCategory === insightCategories[0] || insight.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
@@ -211,11 +215,10 @@ export default function Insights() {
         <div className="mx-auto max-w-[1350px] px-6 lg:px-8 xl:px-0">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Perspectives Mondiales
+              {t('insightsPage.title')}
             </h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
-              Découvrez nos analyses d'experts sur les tendances mondiales qui façonnent 
-              l'avenir des entreprises au Maroc et à l'international
+              {t('insightsPage.subtitle')}
             </p>
           </div>
         </div>
@@ -229,7 +232,7 @@ export default function Insights() {
             <div className="relative flex-1 max-w-md">
               <input
                 type="text"
-                placeholder="Rechercher un article..."
+                placeholder={t('insightsPage.search')}
                 value={searchTerm}
                 onChange={(e) => handleSearchChange(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-nexia-primary focus:border-transparent"
@@ -258,7 +261,7 @@ export default function Insights() {
       {featuredInsight && (
         <section className="py-12">
           <div className="mx-auto max-w-[1350px] px-6 lg:px-8 xl:px-0">
-            <h2 className="text-2xl font-bold text-nexia-primary mb-8">Article mis en avant</h2>
+            <h2 className="text-2xl font-bold text-nexia-primary mb-8">{t('insightsPage.featured')}</h2>
             <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="md:flex">
                 <div className="md:w-1/2">
@@ -273,7 +276,7 @@ export default function Insights() {
                     <Badge variant="secondary" className="bg-nexia-secondary text-white">
                       {featuredInsight.category}
                     </Badge>
-                    <Badge variant="outline">À la une</Badge>
+                    <Badge variant="outline">{t('insightsPage.featuredBadge')}</Badge>
                   </div>
                   <h3 className="text-2xl font-bold text-nexia-primary mb-4">
                     {featuredInsight.title}
@@ -306,7 +309,7 @@ export default function Insights() {
                          }
                        }}
                      >
-                      Lire l'article
+                       {t('insightsPage.readArticle')}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </div>

@@ -28,9 +28,70 @@ export const translations = {
     'about.service2': 'Fiscalité', 
     'about.service3': 'Conseil',
     
+    // Hero About Page
+    'aboutHero.tagline': 'À PROPOS DE NOUS',
+    'aboutHero.title': 'Expertise et proximité au service de votre réussite',
+    'aboutHero.button': 'En savoir plus',
+    
+    // About Page Section
+    'aboutPage.tagline': 'À PROPOS DE NOUS',
+    'aboutPage.title': 'Nexia Fiducia Maroc, votre partenaire de confiance',
+    'aboutPage.description': 'Nexia Fiducia Maroc est né de la fusion entre le cabinet Advisoris et Nexia Maroc en 2022, créant ainsi un acteur majeur de l\'audit, du commissariat aux comptes et du conseil au Maroc. Forts de notre expertise reconnue et de notre appartenance au réseau international Nexia, nous accompagnons nos clients dans leur développement avec une approche personnalisée et des solutions innovantes.',
+    'aboutPage.videoTitle': 'Présentation Nexia Fiducia Maroc',
+    
+    // Services Page
+    'servicesHero.tagline': 'Nos Domaines d\'Expertise',
+    'servicesHero.title': 'Un accompagnement global, une expertise locale et internationale',
+    'servicesHero.description': 'Chez Nexia Fiducia Maroc, nous offrons une palette complète de services conçus pour accompagner les entreprises à chaque étape de leur développement. Nos domaines d\'expertise couvrent l\'ensemble des enjeux stratégiques, financiers, fiscaux, réglementaires et organisationnels de nos clients.',
+    
     // Services
     'services.title': 'Nos domaines d\'expertise',
     'services.subtitle': 'Découvrez l\'ensemble de nos services professionnels conçus pour accompagner votre entreprise dans sa croissance et sa réussite.',
+    
+    // Capabilities Section
+    'capabilities.title': 'Vous avez un projet ou une problématique spécifique ?',
+    'capabilities.description': 'Nos équipes sont à votre écoute pour construire avec vous des solutions sur-mesure, efficaces et conformes aux meilleures pratiques.',
+    'capabilities.button': 'Contactez-nous',
+    
+    // Insights Page
+    'insightsPage.title': 'Perspectives Mondiales',
+    'insightsPage.subtitle': 'Découvrez nos analyses d\'experts sur les tendances mondiales qui façonnent l\'avenir des entreprises au Maroc et à l\'international',
+    'insightsPage.search': 'Rechercher un article...',
+    'insightsPage.featured': 'Article mis en avant',
+    'insightsPage.featuredBadge': 'À la une',
+    'insightsPage.readArticle': 'Lire l\'article',
+    'insightsPage.category.all': 'Tous',
+    'insightsPage.category.health': 'Santé publique',
+    'insightsPage.category.international': 'Réseau international',
+    'insightsPage.category.trade': 'Commerce international',
+    'insightsPage.category.investment': 'Investissement international',
+    'insightsPage.category.tax': 'Fiscalité internationale',
+    'insightsPage.category.audit': 'Audit & conformité',
+    'insightsPage.category.strategy': 'Stratégie d\'entreprise',
+    'insightsPage.category.finance': 'Corporate Finance',
+    'insightsPage.category.regulation': 'Réglementation',
+    
+    // Contact Page
+    'contactHero.title': 'Contactez-nous',
+    'contact.form.title': 'Contactez nos experts',
+    'contact.form.description': 'Parlez-nous de votre projet. Notre équipe d\'experts vous accompagnera dans toutes vos démarches comptables et fiscales.',
+    'contact.form.firstName': 'Prénom',
+    'contact.form.lastName': 'Nom',
+    'contact.form.email': 'Email',
+    'contact.form.company': 'Entreprise',
+    'contact.form.phone': 'Téléphone',
+    'contact.form.service': 'Service souhaité',
+    'contact.form.message': 'Message',
+    'contact.form.submit': 'Envoyer le message',
+    'contact.form.required': 'requis',
+    'contact.form.success': 'Message envoyé avec succès !',
+    'contact.form.successDesc': 'Nous vous répondrons dans les plus brefs délais.',
+    'contact.form.errors.firstName': 'Le prénom est requis',
+    'contact.form.errors.lastName': 'Le nom est requis',
+    'contact.form.errors.email': 'L\'email est requis',
+    'contact.form.errors.emailInvalid': 'Format email invalide',
+    'contact.form.errors.phone': 'Le téléphone est requis',
+    'contact.form.errors.message': 'Le message est requis',
     
     // Insights
     'insights.title': 'Perspectives Mondiales',
@@ -100,7 +161,7 @@ export const translations = {
     'hero.slide3.subtitle': 'Discover the profiles and expertise of the partners who carry the vision of Nexia Fiducia Morocco and support our clients on a daily basis.',
     'hero.slide3.button': 'Meet our team',
     
-    // About Section
+    // About Section  
     'about.title': 'About us',
     'about.description': 'At Nexia Fiducia Morocco, our mission is to support Moroccan and international companies in all stages of their growth, structuring and compliance. Thanks to our strong local roots, combined with the power of the Nexia International network, we offer multidisciplinary, rigorous expertise adapted to your real challenges.',
     'about.link': 'Learn more about us',
@@ -108,9 +169,70 @@ export const translations = {
     'about.service2': 'Taxation', 
     'about.service3': 'Advisory',
     
+    // Hero About Page
+    'aboutHero.tagline': 'ABOUT US',
+    'aboutHero.title': 'Expertise and proximity at the service of your success',
+    'aboutHero.button': 'Learn more',
+    
+    // About Page Section
+    'aboutPage.tagline': 'ABOUT US',
+    'aboutPage.title': 'Nexia Fiducia Morocco, your trusted partner',
+    'aboutPage.description': 'Nexia Fiducia Morocco was born from the merger between Advisoris and Nexia Morocco in 2022, creating a major player in audit, statutory audit and advisory in Morocco. With our recognized expertise and membership in the Nexia international network, we support our clients in their development with a personalized approach and innovative solutions.',
+    'aboutPage.videoTitle': 'Nexia Fiducia Morocco Presentation',
+    
+    // Services Page
+    'servicesHero.tagline': 'Our Areas of Expertise',
+    'servicesHero.title': 'Global support, local and international expertise',
+    'servicesHero.description': 'At Nexia Fiducia Morocco, we offer a complete range of services designed to support companies at every stage of their development. Our areas of expertise cover all strategic, financial, tax, regulatory and organizational challenges of our clients.',
+    
     // Services
     'services.title': 'Our areas of expertise',
     'services.subtitle': 'Discover our comprehensive range of professional services designed to support your business growth and success.',
+    
+    // Capabilities Section
+    'capabilities.title': 'Do you have a specific project or issue?',
+    'capabilities.description': 'Our teams are here to work with you to build tailor-made, effective solutions that comply with best practices.',
+    'capabilities.button': 'Contact us',
+    
+    // Insights Page
+    'insightsPage.title': 'Global Perspectives',
+    'insightsPage.subtitle': 'Discover our expert analyses on global trends shaping the future of businesses in Morocco and internationally',
+    'insightsPage.search': 'Search for an article...',
+    'insightsPage.featured': 'Featured article',
+    'insightsPage.featuredBadge': 'Featured',
+    'insightsPage.readArticle': 'Read article',
+    'insightsPage.category.all': 'All',
+    'insightsPage.category.health': 'Public health',
+    'insightsPage.category.international': 'International network',
+    'insightsPage.category.trade': 'International trade',
+    'insightsPage.category.investment': 'International investment',
+    'insightsPage.category.tax': 'International taxation',
+    'insightsPage.category.audit': 'Audit & compliance',
+    'insightsPage.category.strategy': 'Business strategy',
+    'insightsPage.category.finance': 'Corporate Finance',
+    'insightsPage.category.regulation': 'Regulation',
+    
+    // Contact Page
+    'contactHero.title': 'Contact us',
+    'contact.form.title': 'Contact our experts',
+    'contact.form.description': 'Tell us about your project. Our team of experts will support you in all your accounting and tax procedures.',
+    'contact.form.firstName': 'First name',
+    'contact.form.lastName': 'Last name',
+    'contact.form.email': 'Email',
+    'contact.form.company': 'Company',
+    'contact.form.phone': 'Phone',
+    'contact.form.service': 'Desired service',
+    'contact.form.message': 'Message',
+    'contact.form.submit': 'Send message',
+    'contact.form.required': 'required',
+    'contact.form.success': 'Message sent successfully!',
+    'contact.form.successDesc': 'We will respond to you as soon as possible.',
+    'contact.form.errors.firstName': 'First name is required',
+    'contact.form.errors.lastName': 'Last name is required',
+    'contact.form.errors.email': 'Email is required',
+    'contact.form.errors.emailInvalid': 'Invalid email format',
+    'contact.form.errors.phone': 'Phone is required',
+    'contact.form.errors.message': 'Message is required',
     
     // Insights
     'insights.title': 'Global Perspectives',

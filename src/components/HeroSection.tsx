@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
-// import heroBackground from "@/assets/hero-background.jpg";
+import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
 
 export default function HeroSection() {
+  const { t } = useSimpleLanguage();
+  
   return (
     <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -18,13 +20,13 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-2xl bg-white/95 backdrop-blur-sm p-8 rounded-lg shadow-professional">
           <p className="text-nexia-primary font-semibold text-sm uppercase tracking-wide mb-4">
-            À PROPOS DE NOUS
+            {t('aboutHero.tagline')}
           </p>
           <h1 className="text-4xl lg:text-5xl font-bold text-nexia-primary mb-6 leading-tight">
-            Expertise et proximité au service de votre réussite
+            {t('aboutHero.title')}
           </h1>
           <Button variant="professional" size="lg" className="mt-4">
-            En savoir plus
+            {t('aboutHero.button')}
           </Button>
         </div>
       </div>
