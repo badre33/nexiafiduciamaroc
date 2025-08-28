@@ -23,7 +23,8 @@ export default function HomeFeaturedInsight() {
               <img
                 src="/lovable-uploads/cef4902e-b1e7-4925-9e79-9a625447ce65.png"
                 alt="Le coût des médicaments au Maroc"
-                className="w-full h-64 md:h-full object-cover object-center"
+                className="w-full h-64 md:h-full object-cover"
+                style={{ objectPosition: '70% center' }}
               />
             </div>
             <div className="md:w-1/2 p-8">
@@ -58,11 +59,15 @@ export default function HomeFeaturedInsight() {
                     12 min
                   </div>
                 </div>
-                <Button asChild className="bg-nexia-primary hover:bg-nexia-primary/90">
-                  <Link to="/perspectives-mondiales/cout-medicaments-maroc">
-                    Lire l'article
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+                <Button 
+                  className="bg-nexia-primary hover:bg-nexia-primary/90"
+                  onClick={() => {
+                    window.location.href = '/perspectives-mondiales/cout-medicaments-maroc';
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  Lire l'article
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
             </div>
@@ -71,11 +76,16 @@ export default function HomeFeaturedInsight() {
 
         {/* CTA to all insights */}
         <div className="text-center mt-12">
-          <Button asChild variant="outline" size="lg">
-            <Link to="/perspectives-mondiales">
-              Voir Toutes Nos Perspectives
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+          <Button 
+            variant="outline" 
+            size="lg"
+            onClick={() => {
+              window.location.href = '/perspectives-mondiales';
+              window.scrollTo(0, 0);
+            }}
+          >
+            Voir Toutes Nos Perspectives
+            <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
         </div>
       </div>
