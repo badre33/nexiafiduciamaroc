@@ -99,8 +99,9 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
+          {/* Mobile menu button and language toggle */}
+          <div className="lg:hidden flex items-center gap-2">
+            <SimpleLanguageToggle />
             <Button
               variant="ghost"
               size="icon"
@@ -117,6 +118,7 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-nexia-primary border-t border-white/10">
           <div className="px-4 sm:px-6 py-4 space-y-2">
+            {/* Language toggle for mobile - moved to top right near burger */}
             {navigation.map((item) => {
               if (item.dropdown) {
                 return (
