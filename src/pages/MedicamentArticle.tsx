@@ -3,8 +3,48 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
+
+const articleContent = {
+  fr: {
+    backLink: "Retour aux Perspectives Mondiales",
+    title: "Le coût des médicaments au Maroc : un enjeu économique et stratégique qui persiste",
+    author: "Nexia Fiducia Maroc",
+    date: "28 août 2025",
+    readTime: "12 min de lecture",
+    content: {
+      intro: "Casablanca, 28 août 2025 – Plus de deux ans après l'annonce de mesures visant à réduire les prix des médicaments, la question reste d'une brûlante actualité. Malgré certains ajustements réglementaires et l'introduction progressive de génériques, les prix de nombreux traitements demeurent élevés, parfois trois à quatre fois supérieurs à ceux pratiqués dans des pays comparables.",
+      subtitle1: "Un constat partagé, des causes multiples",
+      subtitle2: "Des réformes nécessaires pour une industrie compétitive",
+      subtitle3: "L'accompagnement de Nexia Fiducia Maroc",
+      subtitle4: "Une opportunité à saisir",
+      ctaTitle: "Besoin d'accompagnement dans le secteur pharmaceutique ?",
+      ctaDescription: "Contactez nos experts pour une consultation personnalisée sur vos projets d'investissement, vos stratégies d'implantation ou vos besoins en optimisation fiscale et réglementaire.",
+      ctaButton: "Nous contacter"
+    }
+  },
+  en: {
+    backLink: "Back to Global Perspectives",
+    title: "The cost of medicines in Morocco: a persistent economic and strategic challenge",
+    author: "Nexia Fiducia Morocco",
+    date: "August 28, 2025",
+    readTime: "12 min read",
+    content: {
+      intro: "Casablanca, August 28, 2025 – More than two years after the announcement of measures aimed at reducing drug prices, the issue remains of burning relevance. Despite some regulatory adjustments and the gradual introduction of generics, the prices of many treatments remain high, sometimes three to four times higher than those practiced in comparable countries.",
+      subtitle1: "A shared observation, multiple causes",
+      subtitle2: "Necessary reforms for a competitive industry",
+      subtitle3: "Nexia Fiducia Morocco's support",
+      subtitle4: "An opportunity to seize",
+      ctaTitle: "Need support in the pharmaceutical sector?",
+      ctaDescription: "Contact our experts for personalized consultation on your investment projects, implementation strategies or your fiscal and regulatory optimization needs.",
+      ctaButton: "Contact us"
+    }
+  }
+};
 
 export default function MedicamentArticle() {
+  const { language } = useSimpleLanguage();
+  const content = articleContent[language] || articleContent.fr;
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -14,23 +54,23 @@ export default function MedicamentArticle() {
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <Link to="/perspectives-mondiales" className="inline-flex items-center text-white/80 hover:text-white mb-6">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Retour aux Perspectives Mondiales
+            {content.backLink}
           </Link>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Le coût des médicaments au Maroc : un enjeu économique et stratégique qui persiste
+            {content.title}
           </h1>
           <div className="flex items-center gap-6 text-white/80">
             <div className="flex items-center gap-2">
               <User className="w-4 h-4" />
-              <span>Nexia Fiducia Maroc</span>
+              <span>{content.author}</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              <span>28 août 2025</span>
+              <span>{content.date}</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
-              <span>12 min de lecture</span>
+              <span>{content.readTime}</span>
             </div>
           </div>
         </div>
@@ -51,10 +91,7 @@ export default function MedicamentArticle() {
           {/* Article Body */}
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 mb-8 font-medium">
-              Casablanca, 28 août 2025 – Plus de deux ans après l'annonce de mesures visant à réduire les prix des médicaments, 
-              la question reste d'une brûlante actualité. Malgré certains ajustements réglementaires et l'introduction progressive 
-              de génériques, les prix de nombreux traitements demeurent élevés, parfois trois à quatre fois supérieurs à ceux 
-              pratiqués dans des pays comparables.
+              {content.content.intro}
             </p>
 
             <p className="mb-6">

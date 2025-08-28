@@ -24,15 +24,31 @@ const getInsightCategories = (t: (key: string) => string) => [
 const globalInsights = [
   {
     id: 1,
-    title: "Le coût des médicaments au Maroc : un enjeu économique et stratégique qui persiste",
-    description: "Plus de deux ans après l'annonce de mesures visant à réduire les prix des médicaments, la question reste d'une brûlante actualité. Ce décalage n'est pas uniquement une problématique budgétaire pour les ménages. Il s'agit d'un enjeu systémique qui concerne la souveraineté sanitaire du Maroc, la compétitivité de son industrie pharmaceutique et la soutenabilité des politiques publiques de santé.",
-    category: "Santé publique",
+    title: {
+      fr: "Le coût des médicaments au Maroc : un enjeu économique et stratégique qui persiste",
+      en: "The cost of medicines in Morocco: a persistent economic and strategic challenge"
+    },
+    description: {
+      fr: "Plus de deux ans après l'annonce de mesures visant à réduire les prix des médicaments, la question reste d'une brûlante actualité. Ce décalage n'est pas uniquement une problématique budgétaire pour les ménages. Il s'agit d'un enjeu systémique qui concerne la souveraineté sanitaire du Maroc, la compétitivité de son industrie pharmaceutique et la soutenabilité des politiques publiques de santé.",
+      en: "More than two years after the announcement of measures aimed at reducing drug prices, the issue remains of burning relevance. This gap is not only a budgetary problem for households. It is a systemic issue that concerns Morocco's health sovereignty, the competitiveness of its pharmaceutical industry and the sustainability of public health policies."
+    },
+    category: {
+      fr: "Santé publique",
+      en: "Public Health"
+    },
     author: "Nexia Fiducia Maroc",
-    date: "Août 2025",
-    readTime: "12 min",
+    date: {
+      fr: "Août 2025",
+      en: "August 2025"
+    },
+    readTime: {
+      fr: "12 min",
+      en: "12 min"
+    },
     image: "/lovable-uploads/cef4902e-b1e7-4925-9e79-9a625447ce65.png",
     featured: true,
-    content: `Casablanca, 28 août 2025 – Plus de deux ans après l'annonce de mesures visant à réduire les prix des médicaments, la question reste d'une brûlante actualité. Malgré certains ajustements réglementaires et l'introduction progressive de génériques, les prix de nombreux traitements demeurent élevés, parfois trois à quatre fois supérieurs à ceux pratiqués dans des pays comparables.
+    content: {
+      fr: `Casablanca, 28 août 2025 – Plus de deux ans après l'annonce de mesures visant à réduire les prix des médicaments, la question reste d'une brûlante actualité. Malgré certains ajustements réglementaires et l'introduction progressive de génériques, les prix de nombreux traitements demeurent élevés, parfois trois à quatre fois supérieurs à ceux pratiqués dans des pays comparables.
 
 Ce décalage n'est pas uniquement une problématique budgétaire pour les ménages. Il s'agit d'un enjeu systémique qui concerne la souveraineté sanitaire du Maroc, la compétitivité de son industrie pharmaceutique et la soutenabilité des politiques publiques de santé.
 
@@ -72,16 +88,73 @@ Une opportunité à saisir
 
 Le Maroc dispose d'atouts considérables : une position géographique stratégique, un marché en croissance et une volonté politique affirmée de renforcer la souveraineté sanitaire. Mais pour transformer ce potentiel en résultats tangibles, il est indispensable d'adopter une approche cohérente et intégrée, où l'ensemble des parties prenantes travaillent de concert.
 
-Le coût des médicaments est à la fois un symptôme et un révélateur. Derrière lui se joue une question essentielle : celle de la place du Maroc dans la nouvelle cartographie mondiale de l'industrie pharmaceutique. C'est à ce défi que nous contribuons chaque jour, en plaçant l'expertise et l'innovation au service d'un objectif commun : rendre les soins plus accessibles et renforcer la compétitivité du pays.`
+Le coût des médicaments est à la fois un symptôme et un révélateur. Derrière lui se joue une question essentielle : celle de la place du Maroc dans la nouvelle cartographie mondiale de l'industrie pharmaceutique. C'est à ce défi que nous contribuons chaque jour, en plaçant l'expertise et l'innovation au service d'un objectif commun : rendre les soins plus accessibles et renforcer la compétitivité du pays.`,
+      en: `Casablanca, August 28, 2025 – More than two years after the announcement of measures aimed at reducing drug prices, the issue remains of burning relevance. Despite some regulatory adjustments and the gradual introduction of generics, the prices of many treatments remain high, sometimes three to four times higher than those practiced in comparable countries.
+
+This gap is not only a budgetary problem for households. It is a systemic issue that concerns Morocco's health sovereignty, the competitiveness of its pharmaceutical industry and the sustainability of public health policies.
+
+A shared observation, multiple causes
+
+Recent advances, notably the establishment of an incentive framework for generics and some local production initiatives, have not been sufficient to fundamentally change the cost structure. Several factors continue to weigh on the market:
+
+A strong dependence on imports: nearly 80% of the pharmaceutical raw materials used are imported. Exchange rate fluctuations and tensions on international logistics chains directly impact prices.
+
+Still limited industrial capacities: although investments have been made, national production does not cover all needs, particularly in strategic segments such as oncology or biotechnology.
+
+A constraining fiscal and regulatory framework: the margin structure and taxation applied to pharmaceutical products continue to increase the cost for the final consumer.
+
+Insufficient penetration of generics: despite awareness campaigns, confidence among the general public and prescribers remains low, limiting their market share.
+
+Necessary reforms for a competitive industry
+
+The question of drug prices goes beyond the simple economic equation. It questions Morocco's ability to develop a true industrial and health strategy, capable of guaranteeing equitable access to care while strengthening the country's attractiveness for investors.
+
+Several avenues are emerging:
+
+consolidate investments in local production, particularly through public-private partnerships,
+
+promote upgrading to biotechnology and clinical research,
+
+revise the tax structure and distribution margins to make the market more competitive,
+
+strengthen education and confidence around generics.
+
+Nexia Fiducia Morocco's support
+
+Faced with these challenges, Nexia Fiducia Morocco supports sector players – industrialists, investors, public decision-makers – in the design and implementation of adapted solutions. Our expertise covers supply chain optimization, investment project structuring, the implementation of fiscal and regulatory strategies, as well as the development of innovative financing models.
+
+Our role is to provide a clear and operational vision, combining strategic analysis and concrete support, in order to contribute to the emergence of a more competitive, sustainable and accessible Moroccan pharmaceutical sector.
+
+An opportunity to seize
+
+Morocco has considerable assets: a strategic geographical position, a growing market and a stated political will to strengthen health sovereignty. But to transform this potential into tangible results, it is essential to adopt a coherent and integrated approach, where all stakeholders work together.
+
+The cost of medicines is both a symptom and a revealer. Behind it lies an essential question: that of Morocco's place in the new global map of the pharmaceutical industry. This is the challenge we contribute to every day, by placing expertise and innovation at the service of a common objective: making care more accessible and strengthening the country's competitiveness.`
+    }
   },
   {
     id: 2,
-    title: "Nexia Experts discuss the current Global Tariffs from the USA",
-    description: "Dans ce podcast, nous abordons l'importance pour les entreprises de se tenir au courant des changements fréquents de tarifs dans le monde. Nous examinons les récents changements tarifaires américains et leur impact sur différentes industries, ainsi que les tactiques que les entreprises peuvent utiliser pour réduire le fardeau tarifaire.",
-    category: "Commerce international",
+    title: {
+      fr: "Nexia Experts discuss the current Global Tariffs from the USA",
+      en: "Nexia Experts discuss the current Global Tariffs from the USA"
+    },
+    description: {
+      fr: "Dans ce podcast, nous abordons l'importance pour les entreprises de se tenir au courant des changements fréquents de tarifs dans le monde. Nous examinons les récents changements tarifaires américains et leur impact sur différentes industries, ainsi que les tactiques que les entreprises peuvent utiliser pour réduire le fardeau tarifaire.",
+      en: "In this podcast, we discuss the importance for businesses to keep up with frequent tariff changes around the world. We examine recent US tariff changes and their impact on different industries, as well as tactics businesses can use to reduce the tariff burden."
+    },
+    category: {
+      fr: "Commerce international",
+      en: "International Trade"
+    },
     author: "Christina Lee, Nick Carofano, Harold Grunfeld",
-    date: "Juillet 2025",
-    readTime: "8 min",
+    date: {
+      fr: "Juillet 2025",
+      en: "July 2025"
+    },
+    readTime: {
+      fr: "8 min",
+      en: "8 min"
+    },
     image: "/lovable-uploads/e819835e-38b7-425e-917b-276faa067599.png",
     featured: false,
     source: "https://nexia.com/insights/nexia-experts-discuss-the-current-global-tariffs-from-the-usa/"
@@ -173,7 +246,7 @@ Le coût des médicaments est à la fois un symptôme et un révélateur. Derri�
 ];
 
 export default function Insights() {
-  const { t } = useSimpleLanguage();
+  const { t, language } = useSimpleLanguage();
   const insightCategories = getInsightCategories(t);
   
   const [searchTerm, setSearchTerm] = useState("");
@@ -182,17 +255,12 @@ export default function Insights() {
   const articlesPerPage = 9;
 
 const filteredInsights = globalInsights.filter(insight => {
-    const matchesSearch = insight.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         insight.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const currentTitle = typeof insight.title === 'object' ? insight.title[language] || insight.title.fr : insight.title;
+    const currentDescription = typeof insight.description === 'object' ? insight.description[language] || insight.description.fr : insight.description;
     
-    // Always show all insights if "All" category is selected
-    const allCategoryFr = 'Toutes les catégories';
-    const allCategoryEn = 'All Categories';
-    if (selectedCategory === allCategoryFr || selectedCategory === allCategoryEn) {
-      return matchesSearch;
-    }
+    const matchesSearch = currentTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         currentDescription.toLowerCase().includes(searchTerm.toLowerCase());
     
-    // Direct match for category (works for both languages since we're not filtering by translated categories)
     return matchesSearch;
   });
 
@@ -275,22 +343,22 @@ const filteredInsights = globalInsights.filter(insight => {
                 <div className="md:w-1/2 relative overflow-hidden">
                   <img
                     src={featuredInsight.image}
-                    alt={featuredInsight.title}
-                    className="w-full h-64 md:h-full object-cover object-[35%_center]"
+                    alt={typeof featuredInsight.title === 'object' ? featuredInsight.title[language] || featuredInsight.title.fr : featuredInsight.title}
+                    className="w-full h-64 md:h-full object-cover object-[25%_center]"
                   />
                 </div>
                 <div className="md:w-1/2 p-8">
                   <div className="flex items-center gap-4 mb-4">
                     <Badge variant="secondary" className="bg-nexia-secondary text-white">
-                      {featuredInsight.category}
+                      {typeof featuredInsight.category === 'object' ? featuredInsight.category[language] || featuredInsight.category.fr : featuredInsight.category}
                     </Badge>
                     <Badge variant="outline">{t('insightsPage.featuredBadge')}</Badge>
                   </div>
                   <h3 className="text-2xl font-bold text-nexia-primary mb-4">
-                    {featuredInsight.title}
+                    {typeof featuredInsight.title === 'object' ? featuredInsight.title[language] || featuredInsight.title.fr : featuredInsight.title}
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    {featuredInsight.description}
+                    {typeof featuredInsight.description === 'object' ? featuredInsight.description[language] || featuredInsight.description.fr : featuredInsight.description}
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-gray-500">
@@ -300,11 +368,11 @@ const filteredInsights = globalInsights.filter(insight => {
                       </div>
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
-                        {featuredInsight.date}
+                        {typeof featuredInsight.date === 'object' ? featuredInsight.date[language] || featuredInsight.date.fr : featuredInsight.date}
                       </div>
                       <div className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
-                        {featuredInsight.readTime}
+                        {typeof featuredInsight.readTime === 'object' ? featuredInsight.readTime[language] || featuredInsight.readTime.fr : featuredInsight.readTime}
                       </div>
                     </div>
                      <Button 
@@ -341,23 +409,23 @@ const filteredInsights = globalInsights.filter(insight => {
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={insight.image}
-                    alt={insight.title}
+                    alt={typeof insight.title === 'object' ? insight.title[language] || insight.title.fr : insight.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
                     <Badge variant="secondary" className="bg-nexia-secondary text-white">
-                      {insight.category}
+                      {typeof insight.category === 'object' ? insight.category[language] || insight.category.fr : insight.category}
                     </Badge>
                   </div>
                   <CardTitle className="text-lg text-nexia-primary line-clamp-2">
-                    {insight.title}
+                    {typeof insight.title === 'object' ? insight.title[language] || insight.title.fr : insight.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="mb-4 line-clamp-3">
-                    {insight.description}
+                    {typeof insight.description === 'object' ? insight.description[language] || insight.description.fr : insight.description}
                   </CardDescription>
                   
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
@@ -367,13 +435,13 @@ const filteredInsights = globalInsights.filter(insight => {
                     </div>
                     <div className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
-                      {insight.readTime}
+                      {typeof insight.readTime === 'object' ? insight.readTime[language] || insight.readTime.fr : insight.readTime}
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-1 text-sm text-gray-500 mb-4">
                     <Calendar className="w-4 h-4" />
-                    {insight.date}
+                    {typeof insight.date === 'object' ? insight.date[language] || insight.date.fr : insight.date}
                   </div>
 
                    <Button 
