@@ -299,12 +299,81 @@ export const translations = {
     'expertise.yearsExperience': 'ans d\'expérience',
     'expertise.clientsSupported': 'clients accompagnés',
     'expertise.servicesTitle': 'Nos Services',
+    
+    // Case Studies
     'caseStudies.study1.title': 'Due diligence financière et fiscale pour une fusion stratégique dans la santé',
     'caseStudies.study1.description': 'Accompagnement complet dans la fusion stratégique entre PHL Group et Malling Health, incluant due diligence financière et fiscale approfondie.',
     'caseStudies.study1.sector': 'Santé',
     'caseStudies.study1.service1': 'Due diligence',
     'caseStudies.study1.service2': 'Fiscalité',
     'caseStudies.study1.service3': 'Fusion-acquisition',
+    
+    // Case Studies Page
+    'caseStudiesPage.title': 'Nos Études de Cas',
+    'caseStudiesPage.subtitle': 'Découvrez comment nous avons aidé nos clients à surmonter leurs défis',
+    'caseStudiesPage.sector': 'Secteur',
+    'caseStudiesPage.duration': 'Durée',
+    'caseStudiesPage.services': 'Services mobilisés :',
+    'caseStudiesPage.results': 'Résultats obtenus',
+    'caseStudiesPage.readFull': 'Lire l\'article complet',
+    'caseStudiesPage.ctaTitle': 'Votre projet mérite une approche sur-mesure',
+    'caseStudiesPage.ctaDescription': 'Chaque mission est unique. Découvrez comment nous pouvons vous accompagner dans vos défis spécifiques.',
+    
+    // Services page - Our Capabilities
+    'ourCapabilities.title': 'Nos Domaines d\'Expertise',
+    'ourCapabilities.subtitle': 'Plus de 25 ans d\'expérience au service de votre croissance. 10 domaines d\'expertise pour accompagner tous vos projets.',
+    
+    // Services page - Global Perspectives
+    'servicesInsights.title': 'Nos Dernières Perspectives',
+    'servicesInsights.subtitle': 'Découvrez nos derniers articles et analyses sur les enjeux business contemporains',
+    'servicesInsights.button': 'Voir toutes les perspectives',
+    
+    // About page - Video section
+    'aboutVideo.tagline': 'DÉCOUVRIR NEXIA',
+    'aboutVideo.title': 'Nexia - Notre monde en chiffres 2024',
+    'aboutVideo.description': 'Découvrez les performances et l\'impact global du réseau Nexia International dans le monde.',
+    'aboutVideo.videoTitle': 'Vidéo de présentation Nexia Fiducia Maroc',
+    
+    // Services Section (About page)
+    'servicesSection.title': 'Nos Domaines d\'Expertise',
+    'servicesSection.subtitle': 'Une gamme complète de services pour accompagner votre croissance',
+    
+    // Image with Card Section
+    'imageCard.title': 'Excellence & Gouvernance',
+    'imageCard.description': 'Chez Nexia Fiducia Maroc, nous nous engageons à maintenir les plus hauts standards de gouvernance et d\'excellence professionnelle, conformément aux valeurs du réseau international Nexia.',
+    
+    // LinkedIn Posts
+    'linkedinPosts.title': 'Actualités LinkedIn',
+    'linkedinPosts.subtitle': 'Suivez nos dernières publications et actualités sur LinkedIn',
+    'linkedinPosts.viewProfile': 'Voir le profil LinkedIn',
+    
+    // Governance Section / Team
+    'governance.title': 'Équipe Dirigeante',
+    'governance.subtitle': 'Rencontrez notre équipe de direction et découvrez leur expertise.',
+    'governance.ceo.name': 'Yassine SQALLI HOUSSAINI',
+    'governance.ceo.title': 'Associé Directeur Général',
+    'governance.ceo.description': 'Expert en audit, corporate finance et conseil stratégique avec plus de 20 ans d\'expérience.',
+    'governance.partner1.name': 'Mourad OUBELLA',
+    'governance.partner1.title': 'Associé',
+    'governance.partner1.description': 'Spécialisé en fiscalité et droit des affaires avec une expertise approfondie du marché marocain.',
+    'governance.partner2.name': 'Ahmed BERRADA',
+    'governance.partner2.title': 'Associé',
+    'governance.partner2.description': 'Expert en audit et commissariat aux comptes, garant de la qualité et de la méthodologie.',
+    'governance.partner3.name': 'Sarah BENNANI',
+    'governance.partner3.title': 'Directrice Générale Adjointe',
+    'governance.partner3.description': 'Responsable du développement commercial et des relations clients.',
+    'governance.viewTeam': 'Voir l\'équipe complète',
+    
+    // Contact Map Section
+    'contactMap.title': 'Nos Bureaux',
+    'contactMap.subtitle': 'Retrouvez-nous dans nos bureaux à Casablanca et Rabat',
+    'contactMap.instructions': 'Pour localiser nos bureaux :',
+    'contactMap.instructionsDetails': 'Utilisez les liens "Voir sur Google Maps" ci-dessous pour accéder directement à chaque adresse avec géolocalisation précise.',
+    'contactMap.office1': 'Bureau Casablanca',
+    'contactMap.office2': 'Bureau Rabat',
+    'contactMap.viewOnMaps': 'Voir sur Google Maps',
+    'contactMap.helpText': 'Pour voir les deux bureaux sur la carte, utilisez les liens individuels ci-dessus ou recherchez directement les adresses.',
+    'contactMap.mapTitle': 'Localisation des bureaux Nexia Fiducia Maroc',
     
     // Common
     'common.readMore': 'En savoir plus',
