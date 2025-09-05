@@ -129,10 +129,6 @@ export const translations = {
     'insightsPage.category.finance': 'Corporate Finance',
     'insightsPage.category.regulation': 'Réglementation',
     
-    // Contact Hero
-    'contactHero.title': 'Contactez-nous',
-    'contactHero.managerContact': 'Contact Direct Manager',
-    
     // Contact Form
     'contactForm.title': 'Contactez nos experts',
     'contactForm.description': 'Parlez-nous de votre projet. Notre équipe d\'experts vous accompagnera dans toutes vos démarches comptables et fiscales.',
@@ -366,14 +362,19 @@ export const translations = {
     
     // Contact Map Section
     'contactMap.title': 'Nos Bureaux',
-    'contactMap.subtitle': 'Retrouvez-nous dans nos bureaux à Casablanca et Rabat',
+    'contactMap.subtitle': 'Retrouvez-nous dans nos bureaux à Casablanca',
     'contactMap.instructions': 'Pour localiser nos bureaux :',
     'contactMap.instructionsDetails': 'Utilisez les liens "Voir sur Google Maps" ci-dessous pour accéder directement à chaque adresse avec géolocalisation précise.',
-    'contactMap.office1': 'Bureau Casablanca',
-    'contactMap.office2': 'Bureau Rabat',
+    'contactMap.office1': 'Bureau Casablanca 1',
+    'contactMap.office2': 'Bureau Casablanca 2',
     'contactMap.viewOnMaps': 'Voir sur Google Maps',
     'contactMap.helpText': 'Pour voir les deux bureaux sur la carte, utilisez les liens individuels ci-dessus ou recherchez directement les adresses.',
     'contactMap.mapTitle': 'Localisation des bureaux Nexia Fiducia Maroc',
+    
+    // Contact Hero Section
+    'contactHero.title': 'Contactez-nous',
+    'contactHero.ourOffices': 'Nos Bureaux',
+    'contactHero.managerContact': 'Contact Manager Direct',
     
     // Common
     'common.readMore': 'En savoir plus',
@@ -505,10 +506,6 @@ export const translations = {
     'insightsPage.category.strategy': 'Business strategy',
     'insightsPage.category.finance': 'Corporate Finance',
     'insightsPage.category.regulation': 'Regulation',
-    
-    // Contact Hero
-    'contactHero.title': 'Contact us',
-    'contactHero.managerContact': 'Direct Manager Contact',
     
     // Contact Form
     'contactForm.title': 'Contact our experts',
@@ -653,17 +650,19 @@ export const translations = {
     
     // Contact Map Section
     'contactMap.title': 'Our Offices',
-    'contactMap.subtitle': 'Find us in our offices in Casablanca and Rabat',
+    'contactMap.subtitle': 'Find us in our offices in Casablanca',
     'contactMap.instructions': 'To locate our offices:',
     'contactMap.instructionsDetails': 'Use the "View on Google Maps" links below to access each address directly with precise geolocation.',
-    'contactMap.office1': 'Casablanca Office',
-    'contactMap.office2': 'Rabat Office',
+    'contactMap.office1': 'Casablanca Office 1',
+    'contactMap.office2': 'Casablanca Office 2',
     'contactMap.viewOnMaps': 'View on Google Maps',
     'contactMap.helpText': 'To see both offices on the map, use the individual links above or search for the addresses directly.',
     'contactMap.mapTitle': 'Nexia Fiducia Morocco offices location',
     
     // Contact Hero Section  
+    'contactHero.title': 'Contact us',
     'contactHero.ourOffices': 'Our Offices',
+    'contactHero.managerContact': 'Direct Manager Contact',
     
     // Contact Form Section
     'contactForm.tabContact': 'Send Message',
