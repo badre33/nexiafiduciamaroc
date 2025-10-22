@@ -278,8 +278,9 @@ export default function OurServicesMenu() {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-2 md:gap-3 h-auto p-2 md:p-3 bg-white/80 backdrop-blur-sm rounded-2xl shadow-professional border border-border/50">
-            {expertiseDomains.map((domain, index) => {
+          <div className="overflow-x-auto pb-4 -mx-4 px-4">
+            <TabsList className="inline-flex w-max min-w-full gap-2 md:gap-3 h-auto p-2 md:p-3 bg-white/80 backdrop-blur-sm rounded-2xl shadow-professional border border-border/50">
+              {expertiseDomains.map((domain, index) => {
               const IconComponent = domain.icon;
               const isActive = activeTab === domain.id;
               return (
@@ -287,7 +288,7 @@ export default function OurServicesMenu() {
                   key={domain.id} 
                   value={domain.id}
                   className={`
-                    group relative flex flex-col items-center p-2 md:p-4 min-h-[90px] md:min-h-[110px] 
+                    group relative flex flex-col items-center p-3 md:p-4 min-h-[90px] md:min-h-[110px] min-w-[100px] md:min-w-[120px]
                     transition-all duration-300 ease-out rounded-xl border-0
                     hover:scale-105 hover:shadow-hover hover:-translate-y-2
                     ${isActive 
@@ -321,6 +322,7 @@ export default function OurServicesMenu() {
               );
             })}
           </TabsList>
+          </div>
 
           {expertiseDomains.map((domain, index) => {
             const IconComponent = domain.icon;
