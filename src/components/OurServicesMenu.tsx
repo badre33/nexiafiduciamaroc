@@ -332,17 +332,17 @@ export default function OurServicesMenu() {
                 value={domain.id} 
                 className="mt-8 animate-fade-in"
               >
-                <div className="bg-white rounded-2xl p-4 md:p-8 shadow-professional hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 border border-border/20 nexia-card-rounded">
+                <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-3xl p-4 md:p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-border/30 nexia-card-rounded">
                   {/* Header avec badge et stats */}
                   <div className="flex flex-col md:flex-row items-start justify-between mb-6 gap-4">
                     <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 w-full">
                       <div className={`
-                        relative p-4 md:p-6 rounded-2xl transition-all duration-300 hover:scale-105
-                        bg-gradient-to-br from-nexia-primary to-nexia-blue text-white shadow-professional
+                        relative p-4 md:p-6 rounded-2xl transition-all duration-500 hover:scale-105 hover:rotate-3
+                        ${domain.color.replace('text-', 'bg-').replace('bg-bg-', 'bg-')} shadow-lg
                       `}>
-                        <IconComponent className="h-8 w-8 md:h-12 md:w-12" />
-                        <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-nexia-yellow rounded-full flex items-center justify-center">
-                          <CheckCircle className="h-3 w-3 text-nexia-primary" />
+                        <IconComponent className={`h-8 w-8 md:h-12 md:w-12 ${domain.color.split(' ')[0]} transition-all duration-500`} />
+                        <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-nexia-yellow rounded-full flex items-center justify-center animate-pulse">
+                          <CheckCircle className="h-3 w-3 text-white" />
                         </div>
                       </div>
                       <div className="flex-1 w-full">
@@ -379,28 +379,39 @@ export default function OurServicesMenu() {
                     {domain.description}
                   </p>
                   
-                  {/* Séparateur visuel */}
-                  <div className="w-full h-px bg-gradient-to-r from-transparent via-nexia-secondary/30 to-transparent mb-6 md:mb-8"></div>
+                  {/* Séparateur visuel avec dégradé dynamique */}
+                  <div className={`relative w-full h-1 rounded-full mb-6 md:mb-8 overflow-hidden`}>
+                    <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-current to-transparent opacity-30 ${domain.color.split(' ')[0]}`}></div>
+                  </div>
                   
-                  {/* Services avec design amélioré */}
-                  <div className="bg-gradient-to-br from-nexia-secondary/10 via-nexia-primary/5 to-nexia-secondary/10 rounded-xl p-4 md:p-6 border-2 border-nexia-secondary/20 shadow-md">
-                    <h4 className="text-lg md:text-xl font-bold text-nexia-primary mb-4 flex items-center gap-2">
-                      <Target className="h-4 w-4 md:h-5 md:w-5 text-nexia-secondary" />
-                      {t('expertise.servicesTitle')}
-                    </h4>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
-                      {domain.services.map((service, serviceIndex) => (
-                        <div 
-                          key={serviceIndex} 
-                          className="group flex items-start gap-2 md:gap-3 p-3 md:p-4 rounded-lg bg-white hover:bg-gradient-to-r hover:from-nexia-secondary/5 hover:to-nexia-primary/5 transition-all duration-300 hover:shadow-sm hover:scale-[1.02] border border-transparent hover:border-nexia-secondary/20"
-                          style={{ animationDelay: `${serviceIndex * 100}ms` }}
-                        >
-                          <div className="w-2 h-2 md:w-3 md:h-3 bg-gradient-to-r from-nexia-secondary to-nexia-primary rounded-full transition-transform duration-300 group-hover:scale-125 flex-shrink-0 mt-1.5 md:mt-1"></div>
-                          <span className="text-sm md:text-base text-nexia-primary font-poppins font-medium group-hover:text-nexia-secondary transition-colors duration-300 group-hover:font-semibold">
-                            {service}
-                          </span>
+                  {/* Services avec design amélioré et couleurs dynamiques */}
+                  <div className={`relative bg-gradient-to-br ${domain.color.split(' ')[1].replace('bg-', 'from-')}/20 to-white/50 rounded-2xl p-5 md:p-7 border-2 ${domain.color.split(' ')[0].replace('text-', 'border-')}/20 shadow-lg backdrop-blur-sm overflow-hidden`}>
+                    {/* Effet de fond animé */}
+                    <div className={`absolute top-0 right-0 w-32 h-32 ${domain.color.split(' ')[1]} opacity-5 rounded-full blur-3xl`}></div>
+                    
+                    <div className="relative z-10">
+                      <h4 className={`text-xl md:text-2xl font-bold mb-6 flex items-center gap-3 ${domain.color.split(' ')[0]}`}>
+                        <div className={`p-2 rounded-lg ${domain.color.split(' ')[1]}`}>
+                          <Target className="h-5 w-5 md:h-6 md:w-6" />
                         </div>
-                      ))}
+                        {t('expertise.servicesTitle')}
+                      </h4>
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
+                        {domain.services.map((service, serviceIndex) => (
+                          <div 
+                            key={serviceIndex} 
+                            className={`group flex items-start gap-3 p-4 md:p-5 rounded-xl bg-white/80 backdrop-blur-sm hover:bg-white hover:shadow-md transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 border-2 border-transparent hover:${domain.color.split(' ')[0].replace('text-', 'border-')}/30 animate-fade-in`}
+                            style={{ animationDelay: `${serviceIndex * 50}ms` }}
+                          >
+                            <div className={`flex-shrink-0 w-6 h-6 rounded-lg ${domain.color.split(' ')[1]} flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12`}>
+                              <CheckCircle className={`w-4 h-4 ${domain.color.split(' ')[0]}`} />
+                            </div>
+                            <span className="text-sm md:text-base text-nexia-primary font-poppins font-medium group-hover:text-nexia-secondary transition-all duration-300 leading-relaxed">
+                              {service}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
