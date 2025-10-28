@@ -379,8 +379,11 @@ export default function OurServicesMenu() {
                     {domain.description}
                   </p>
                   
+                  {/* Séparateur visuel */}
+                  <div className="w-full h-px bg-gradient-to-r from-transparent via-nexia-secondary/30 to-transparent mb-6 md:mb-8"></div>
+                  
                   {/* Services avec design amélioré */}
-                  <div className="bg-gradient-to-br from-muted/30 to-transparent rounded-xl p-4 md:p-6">
+                  <div className="bg-gradient-to-br from-nexia-secondary/10 via-nexia-primary/5 to-nexia-secondary/10 rounded-xl p-4 md:p-6 border-2 border-nexia-secondary/20 shadow-md">
                     <h4 className="text-lg md:text-xl font-bold text-nexia-primary mb-4 flex items-center gap-2">
                       <Target className="h-4 w-4 md:h-5 md:w-5 text-nexia-secondary" />
                       {t('expertise.servicesTitle')}
