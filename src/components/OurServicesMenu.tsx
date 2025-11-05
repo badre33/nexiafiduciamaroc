@@ -25,7 +25,7 @@ const getExpertiseDomains = (t: (key: string) => string) => [
       title: t('expertise.audit.title'),
       icon: ShieldCheck,
       color: "text-nexia-blue bg-blue-50",
-      stats: { years: "25+", clients: "200+", certification: "IFRS" },
+      stats: { years: "34+", clients: "400+", certification: "IFRS" },
       badge: t('expertise.audit.badge'),
       description: t('expertise.audit.description'),
       services: [
@@ -41,7 +41,7 @@ const getExpertiseDomains = (t: (key: string) => string) => [
       title: t('expertise.comptable.title'),
       icon: BookOpen,
       color: "text-nexia-yellow bg-yellow-50",
-      stats: { years: "20+", clients: "300+", certification: "Expert" },
+      stats: { years: "34+", clients: "400+", certification: "Expert" },
       badge: t('expertise.comptable.badge'),
       description: t('expertise.comptable.description'),
       services: [
@@ -57,7 +57,7 @@ const getExpertiseDomains = (t: (key: string) => string) => [
       title: t('expertise.fiscalite.title'),
       icon: PiggyBank,
       color: "text-orange-600 bg-orange-50",
-      stats: { years: "15+", clients: "150+", certification: "Fiscal" },
+      stats: { years: "34+", clients: "400+", certification: "Fiscal" },
       badge: t('expertise.fiscalite.badge'),
       description: t('expertise.fiscalite.description'),
       services: [
@@ -73,7 +73,7 @@ const getExpertiseDomains = (t: (key: string) => string) => [
       title: t('expertise.corporate.title'),
       icon: TrendingUp,
       color: "text-nexia-pink bg-pink-50",
-      stats: { years: "10+", clients: "100+", certification: "M&A" },
+      stats: { years: "34+", clients: "400+", certification: "M&A" },
       badge: t('expertise.corporate.badge'),
       description: t('expertise.corporate.description'),
       services: [
@@ -89,7 +89,7 @@ const getExpertiseDomains = (t: (key: string) => string) => [
       title: t('expertise.outsourcing.title'),
       icon: Users,
       color: "text-green-600 bg-green-50",
-      stats: { years: "12+", clients: "250+", certification: "BPO" },
+      stats: { years: "34+", clients: "400+", certification: "BPO" },
       badge: t('expertise.outsourcing.badge'),
       description: t('expertise.outsourcing.description'),
       services: [
@@ -105,7 +105,7 @@ const getExpertiseDomains = (t: (key: string) => string) => [
       title: t('expertise.digital.title'),
       icon: Laptop,
       color: "text-nexia-blue bg-indigo-50",
-      stats: { years: "8+", clients: "80+", certification: "Digital" },
+      stats: { years: "5", clients: "50", certification: "Digital" },
       badge: t('expertise.digital.badge'),
       description: t('expertise.digital.description'),
       services: [
@@ -121,7 +121,7 @@ const getExpertiseDomains = (t: (key: string) => string) => [
       title: t('expertise.international.title'),
       icon: Globe,
       color: "text-red-600 bg-red-50",
-      stats: { years: "18+", clients: "120+", certification: "Global" },
+      stats: { years: "34+", clients: "400+", certification: "Global" },
       badge: t('expertise.international.badge'),
       description: t('expertise.international.description'),
       services: [
@@ -137,7 +137,7 @@ const getExpertiseDomains = (t: (key: string) => string) => [
       title: t('expertise.juridique.title'),
       icon: Scale,
       color: "text-gray-600 bg-gray-50",
-      stats: { years: "22+", clients: "180+", certification: "Juridique" },
+      stats: { years: "34+", clients: "400+", certification: "Juridique" },
       badge: t('expertise.juridique.badge'),
       description: t('expertise.juridique.description'),
       services: [
@@ -153,7 +153,7 @@ const getExpertiseDomains = (t: (key: string) => string) => [
       title: t('expertise.strategie.title'),
       icon: Lightbulb,
       color: "text-amber-600 bg-amber-50",
-      stats: { years: "15+", clients: "90+", certification: "Strategy" },
+      stats: { years: "34+", clients: "400+", certification: "Strategy" },
       badge: t('expertise.strategie.badge'),
       description: t('expertise.strategie.description'),
       services: [
@@ -169,7 +169,7 @@ const getExpertiseDomains = (t: (key: string) => string) => [
       title: t('expertise.talent.title'),
       icon: HeartHandshake,
       color: "text-purple-600 bg-purple-50",
-      stats: { years: "10+", clients: "100+", certification: "RH" },
+      stats: { years: "5+", clients: "30+", certification: "RH" },
       badge: t('expertise.talent.badge'),
       description: t('expertise.talent.description'),
       services: [
