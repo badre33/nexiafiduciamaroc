@@ -7,7 +7,7 @@ const documents = [
   {
     id: 1,
     category: "PRÉSENTATION",
-    title: "Nexia Fiducia Maroc 2025",
+    title: "Nexia Morocco 2025",
     description: "Notre présentation institutionnelle détaillant nos services, notre expertise et notre vision pour accompagner votre croissance.",
     downloadUrl: "https://fltpndxdtovgjuqarfsh.supabase.co/storage/v1/object/public/nexia-files//Presentation%20Nexia%202025.pdf",
     buttonText: "Télécharger la présentation"
@@ -15,7 +15,7 @@ const documents = [
   {
     id: 2,
     category: "PRÉSENTATION",
-    title: "Nexia Fiducia Maroc 2025 (English Version)",
+    title: "Nexia Morocco 2025 (English Version)",
     description: "Our institutional presentation in English detailing our services, expertise and vision to support your growth internationally.",
     downloadUrl: "https://fltpndxdtovgjuqarfsh.supabase.co/storage/v1/object/public/nexia-files//Nexia%202025%20Presentation%20(English%20Version).pdf",
     buttonText: "Download presentation"

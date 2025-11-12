@@ -17,15 +17,15 @@ export const translations = {
     'hero.slide1.subtitle': 'Audit, fiscalité, stratégie, conformité, corporate finance… Nos domaines d\'expertise s\'adaptent à vos enjeux au Maroc et à l\'international.',
     'hero.slide1.button': 'Découvrir nos domaines d\'expertise',
     'hero.slide2.title': 'Une signature locale, un réseau mondial',
-    'hero.slide2.subtitle': 'Nexia Fiducia Maroc, membre du réseau Nexia International, accompagne les entreprises marocaines et étrangères avec un engagement d\'excellence, d\'éthique et de proximité.',
-    'hero.slide2.button': 'En savoir plus sur Nexia Fiducia Maroc',
+    'hero.slide2.subtitle': 'Nexia Morocco, membre du réseau Nexia International, accompagne les entreprises marocaines et étrangères avec un engagement d\'excellence, d\'éthique et de proximité.',
+    'hero.slide2.button': 'En savoir plus sur Nexia Morocco',
     'hero.slide3.title': 'Une équipe dirigeante engagée à vos côtés',
-    'hero.slide3.subtitle': 'Découvrez les profils et expertises des associés qui portent la vision de Nexia Fiducia Maroc et accompagnent nos clients au quotidien.',
+    'hero.slide3.subtitle': 'Découvrez les profils et expertises des associés qui portent la vision de Nexia Morocco et accompagnent nos clients au quotidien.',
     'hero.slide3.button': 'Rencontrer notre équipe',
     
     // About Section
     'about.title': 'À propos de nous',
-    'about.description': 'Chez Nexia Fiducia Maroc, notre mission est d\'accompagner les entreprises marocaines et internationales dans toutes les étapes de leur croissance, de leur structuration et de leur mise en conformité. Grâce à notre ancrage local fort, allié à la puissance du réseau Nexia International, nous offrons des expertises pluridisciplinaires, rigoureuses et adaptées à vos enjeux réels.',
+    'about.description': 'Chez Nexia Morocco, notre mission est d\'accompagner les entreprises marocaines et internationales dans toutes les étapes de leur croissance, de leur structuration et de leur mise en conformité. Grâce à notre ancrage local fort, allié à la puissance du réseau Nexia International, nous offrons des expertises pluridisciplinaires, rigoureuses et adaptées à vos enjeux réels.',
     'about.link': 'En savoir plus sur nous',
     'about.service1': 'Audit',
     'about.service2': 'Fiscalité', 
@@ -38,14 +38,14 @@ export const translations = {
     
     // About Page Section
     'aboutPage.tagline': 'À PROPOS DE NOUS',
-    'aboutPage.title': 'Nexia Fiducia Maroc, votre partenaire de confiance',
-    'aboutPage.description': 'Nexia Fiducia Maroc est né de la fusion entre le cabinet Advisoris et Nexia Maroc en 2022, créant ainsi un acteur majeur de l\'audit, du commissariat aux comptes et du conseil au Maroc. Forts de notre expertise reconnue et de notre appartenance au réseau international Nexia, nous accompagnons nos clients dans leur développement avec une approche personnalisée et des solutions innovantes.',
-    'aboutPage.videoTitle': 'Présentation Nexia Fiducia Maroc',
+    'aboutPage.title': 'Nexia Morocco, votre partenaire de confiance',
+    'aboutPage.description': 'Nexia Morocco est né de la fusion entre le cabinet Advisoris et Nexia Maroc en 2022, créant ainsi un acteur majeur de l\'audit, du commissariat aux comptes et du conseil au Maroc. Forts de notre expertise reconnue et de notre appartenance au réseau international Nexia, nous accompagnons nos clients dans leur développement avec une approche personnalisée et des solutions innovantes.',
+    'aboutPage.videoTitle': 'Présentation Nexia Morocco',
     
     // Services Page
     'servicesHero.tagline': 'Nos Domaines d\'Expertise',
     'servicesHero.title': 'Un accompagnement global, une expertise locale et internationale',
-    'servicesHero.description': 'Chez Nexia Fiducia Maroc, nous offrons une palette complète de services conçus pour accompagner les entreprises à chaque étape de leur développement. Nos domaines d\'expertise couvrent l\'ensemble des enjeux stratégiques, financiers, fiscaux, réglementaires et organisationnels de nos clients.',
+    'servicesHero.description': 'Chez Nexia Morocco, nous offrons une palette complète de services conçus pour accompagner les entreprises à chaque étape de leur développement. Nos domaines d\'expertise couvrent l\'ensemble des enjeux stratégiques, financiers, fiscaux, réglementaires et organisationnels de nos clients.',
     
     // Services
     'services.title': 'Nos domaines d\'expertise',
@@ -58,7 +58,7 @@ export const translations = {
     
     // Team Page
     'team.heroTitle': 'Notre Équipe Dirigeante',
-    'team.heroSubtitle': 'Découvrez les profils et expertises des associés qui portent la vision de Nexia Fiducia Maroc et accompagnent nos clients au quotidien.',
+    'team.heroSubtitle': 'Découvrez les profils et expertises des associés qui portent la vision de Nexia Morocco et accompagnent nos clients au quotidien.',
     'team.partnersTitle': 'Nos Associés',
     'team.partnersSubtitle': 'Une expertise reconnue au service de votre succès',
     'team.specialties': 'Domaines d\'expertise',
@@ -165,7 +165,7 @@ export const translations = {
     
     // Why Nexia Section
     'whyNexia.title': 'Pourquoi',
-    'whyNexia.subtitle': 'Nexia Fiducia Maroc',
+    'whyNexia.subtitle': 'Nexia Morocco',
     'whyNexia.description1': 'Fort de notre appartenance au réseau international Nexia, nous combinons l\'expertise locale approfondie du marché marocain avec les standards internationaux les plus exigeants.',
     'whyNexia.description2': 'Notre approche personnalisée et notre engagement envers l\'excellence nous permettent d\'accompagner efficacement nos clients dans leurs défis financiers et stratégiques.',
     'whyNexia.stats.experience': 'Années d\'expérience',
@@ -191,7 +191,7 @@ export const translations = {
     'service.talent.title': 'Talent & Mobility',
     
     // Footer
-    'footer.description': 'Nexia Fiducia Maroc est membre de Nexia, un réseau mondial de premier plan de cabinets indépendants de comptabilité et de conseil.',
+    'footer.description': 'Nexia Morocco est membre de Nexia, un réseau mondial de premier plan de cabinets indépendants de comptabilité et de conseil.',
     'footer.disclaimer': 'Member firm disclaimer',
     'footer.privacy': 'Privacy policy', 
     'footer.cookie': 'Cookie Policy',
@@ -229,7 +229,7 @@ export const translations = {
     
     'expertise.corporate.title': 'Corporate Finance & Transactions',
     'expertise.corporate.badge': 'Spécialiste M&A',
-    'expertise.corporate.description': 'Que ce soit pour céder, acquérir, fusionner ou lever des fonds, Nexia Fiducia Maroc vous accompagne dans vos opérations stratégiques avec discrétion, rigueur et méthode. Nos équipes expertes en finance d\'entreprise vous apportent une vision claire, chiffrée et orientée résultats.',
+    'expertise.corporate.description': 'Que ce soit pour céder, acquérir, fusionner ou lever des fonds, Nexia Morocco vous accompagne dans vos opérations stratégiques avec discrétion, rigueur et méthode. Nos équipes expertes en finance d\'entreprise vous apportent une vision claire, chiffrée et orientée résultats.',
     'expertise.corporate.service1': 'Fusions & acquisitions',
     'expertise.corporate.service2': 'Levée de fonds (equity & dette)',
     'expertise.corporate.service3': 'Due diligence financière',
@@ -283,7 +283,7 @@ export const translations = {
     
     'expertise.talent.title': 'Talent & Mobility Solutions',
     'expertise.talent.badge': 'Expert RH',
-    'expertise.talent.description': 'Parce que le capital humain est au cœur de la réussite des entreprises, Nexia Fiducia Maroc propose une offre complète de Talent & Mobility Solutions, alliant recrutement spécialisé, accompagnement RH et services d\'installation au Maroc. Notre approche repose sur l\'expertise locale et la force de notre réseau international pour garantir une intégration fluide, sécurisée et performante des talents et des entreprises.',
+    'expertise.talent.description': 'Parce que le capital humain est au cœur de la réussite des entreprises, Nexia Morocco propose une offre complète de Talent & Mobility Solutions, alliant recrutement spécialisé, accompagnement RH et services d\'installation au Maroc. Notre approche repose sur l\'expertise locale et la force de notre réseau international pour garantir une intégration fluide, sécurisée et performante des talents et des entreprises.',
     'expertise.talent.service1': 'Recrutement & Executive Search : chasse de têtes, sélection de cadres dirigeants et profils techniques rares',
     'expertise.talent.service2': 'Programmes jeunes talents : partenariats campus, stages, alternances et graduate programs',
     'expertise.talent.service3': 'Accompagnement RH : structuration des politiques de rémunération, benchmarks salariaux, gestion de la performance',
@@ -332,7 +332,7 @@ export const translations = {
     'aboutVideo.tagline': 'DÉCOUVRIR NEXIA',
     'aboutVideo.title': 'Nexia - Notre monde en chiffres 2024',
     'aboutVideo.description': 'Découvrez les performances et l\'impact global du réseau Nexia International dans le monde.',
-    'aboutVideo.videoTitle': 'Vidéo de présentation Nexia Fiducia Maroc',
+    'aboutVideo.videoTitle': 'Vidéo de présentation Nexia Morocco',
     
     // Services Section (About page)
     'servicesSection.title': 'Nos Domaines d\'Expertise',
@@ -340,7 +340,7 @@ export const translations = {
     
     // Image with Card Section
     'imageCard.title': 'Excellence & Gouvernance',
-    'imageCard.description': 'Chez Nexia Fiducia Maroc, nous nous engageons à maintenir les plus hauts standards de gouvernance et d\'excellence professionnelle, conformément aux valeurs du réseau international Nexia.',
+    'imageCard.description': 'Chez Nexia Morocco, nous nous engageons à maintenir les plus hauts standards de gouvernance et d\'excellence professionnelle, conformément aux valeurs du réseau international Nexia.',
     
     // LinkedIn Posts
     'linkedinPosts.title': 'Actualités LinkedIn',
@@ -376,7 +376,7 @@ export const translations = {
     'contactMap.office2': 'Bureau Casablanca 2',
     'contactMap.viewOnMaps': 'Voir sur Google Maps',
     'contactMap.helpText': 'Pour voir les deux bureaux sur la carte, utilisez les liens individuels ci-dessus ou recherchez directement les adresses.',
-    'contactMap.mapTitle': 'Localisation des bureaux Nexia Fiducia Maroc',
+    'contactMap.mapTitle': 'Localisation des bureaux Nexia Morocco',
     
     // Contact Hero Section
     'contactHero.title': 'Contactez-nous',
@@ -387,7 +387,7 @@ export const translations = {
     'common.readMore': 'En savoir plus',
     'common.contact': 'Nous contacter',
     'common.minutes': 'min',
-    'common.author': 'Nexia Fiducia Maroc',
+    'common.author': 'Nexia Morocco',
   },
   en: {
     // Header
@@ -402,15 +402,15 @@ export const translations = {
     'hero.slide1.subtitle': 'Audit, taxation, strategy, compliance, corporate finance... Our areas of expertise adapt to your challenges in Morocco and internationally.',
     'hero.slide1.button': 'Discover our areas of expertise',
     'hero.slide2.title': 'A local signature, a global network',
-    'hero.slide2.subtitle': 'Nexia Fiducia Morocco, member of the Nexia International network, supports Moroccan and foreign companies with a commitment to excellence, ethics and proximity.',
-    'hero.slide2.button': 'Learn more about Nexia Fiducia Morocco',
+    'hero.slide2.subtitle': 'Nexia Morocco, member of the Nexia International network, supports Moroccan and foreign companies with a commitment to excellence, ethics and proximity.',
+    'hero.slide2.button': 'Learn more about Nexia Morocco',
     'hero.slide3.title': 'A management team committed to your side',
-    'hero.slide3.subtitle': 'Discover the profiles and expertise of the partners who carry the vision of Nexia Fiducia Morocco and support our clients on a daily basis.',
+    'hero.slide3.subtitle': 'Discover the profiles and expertise of the partners who carry the vision of Nexia Morocco and support our clients on a daily basis.',
     'hero.slide3.button': 'Meet our team',
     
     // About Section  
     'about.title': 'About us',
-    'about.description': 'At Nexia Fiducia Morocco, our mission is to support Moroccan and international companies in all stages of their growth, structuring and compliance. Thanks to our strong local roots, combined with the power of the Nexia International network, we offer multidisciplinary, rigorous expertise adapted to your real challenges.',
+    'about.description': 'At Nexia Morocco, our mission is to support Moroccan and international companies in all stages of their growth, structuring and compliance. Thanks to our strong local roots, combined with the power of the Nexia International network, we offer multidisciplinary, rigorous expertise adapted to your real challenges.',
     'about.link': 'Learn more about us',
     'about.service1': 'Audit',
     'about.service2': 'Taxation', 
@@ -423,14 +423,14 @@ export const translations = {
     
     // About Page Section
     'aboutPage.tagline': 'ABOUT US',
-    'aboutPage.title': 'Nexia Fiducia Morocco, your trusted partner',
-    'aboutPage.description': 'Nexia Fiducia Morocco was born from the merger between Advisoris and Nexia Morocco in 2022, creating a major player in audit, statutory audit and advisory in Morocco. With our recognized expertise and membership in the Nexia international network, we support our clients in their development with a personalized approach and innovative solutions.',
-    'aboutPage.videoTitle': 'Nexia Fiducia Morocco Presentation',
+    'aboutPage.title': 'Nexia Morocco, your trusted partner',
+    'aboutPage.description': 'Nexia Morocco was born from the merger between Advisoris and Nexia Morocco in 2022, creating a major player in audit, statutory audit and advisory in Morocco. With our recognized expertise and membership in the Nexia international network, we support our clients in their development with a personalized approach and innovative solutions.',
+    'aboutPage.videoTitle': 'Nexia Morocco Presentation',
     
     // Services Page
     'servicesHero.tagline': 'Our Areas of Expertise',
     'servicesHero.title': 'Global support, local and international expertise',
-    'servicesHero.description': 'At Nexia Fiducia Morocco, we offer a complete range of services designed to support companies at every stage of their development. Our areas of expertise cover all strategic, financial, tax, regulatory and organizational challenges of our clients.',
+    'servicesHero.description': 'At Nexia Morocco, we offer a complete range of services designed to support companies at every stage of their development. Our areas of expertise cover all strategic, financial, tax, regulatory and organizational challenges of our clients.',
     
     // Services
     'services.title': 'Our areas of expertise',
@@ -443,7 +443,7 @@ export const translations = {
     
     // Team Page
     'team.heroTitle': 'Our Leadership Team',
-    'team.heroSubtitle': 'Discover the profiles and expertise of the partners who carry the vision of Nexia Fiducia Morocco and support our clients on a daily basis.',
+    'team.heroSubtitle': 'Discover the profiles and expertise of the partners who carry the vision of Nexia Morocco and support our clients on a daily basis.',
     'team.partnersTitle': 'Our Partners',
     'team.partnersSubtitle': 'Recognized expertise at the service of your success',
     'team.specialties': 'Areas of expertise',
@@ -579,7 +579,7 @@ export const translations = {
     'aboutVideo.tagline': 'DISCOVER NEXIA',
     'aboutVideo.title': 'Nexia - Our world in numbers 2024',
     'aboutVideo.description': 'Discover the global performance and impact of the Nexia International network worldwide.',
-    'aboutVideo.videoTitle': 'Nexia Fiduciaire Maroc Presentation Video',
+    'aboutVideo.videoTitle': 'Nexia Morocco Presentation Video',
     
     // Services Section (About page)
     'servicesSection.title': 'Our Areas of Expertise',
@@ -587,7 +587,7 @@ export const translations = {
     
     // Image with Card Section
     'imageCard.title': 'Excellence & Governance',
-    'imageCard.description': 'At Nexia Fiducia Morocco, we are committed to maintaining the highest standards of governance and professional excellence, in line with the values of the Nexia international network.',
+    'imageCard.description': 'At Nexia Morocco, we are committed to maintaining the highest standards of governance and professional excellence, in line with the values of the Nexia international network.',
     
     // LinkedIn Posts
     'linkedinPosts.title': 'LinkedIn News',
@@ -606,7 +606,7 @@ export const translations = {
     'governance.ctaTitle': 'Our Partners',
     'governance.ctaDescription': 'Our management team brings together complementary expertise to offer you comprehensive and high-quality service.',
     'governance.ctaButton': 'Contact us',
-    'whyNexia.subtitle': 'Nexia Fiducia Morocco',
+    'whyNexia.subtitle': 'Nexia Morocco',
     'whyNexia.description1': 'Through our membership in the Nexia international network, we combine deep local expertise of the Moroccan market with the most demanding international standards.',
     'whyNexia.description2': 'Our personalized approach and commitment to excellence enable us to effectively support our clients in their financial and strategic challenges.',
     'whyNexia.stats.experience': 'Years of experience',
@@ -632,7 +632,7 @@ export const translations = {
     'service.talent.title': 'Talent & Mobility',
     
     // Footer
-    'footer.description': 'Nexia Fiducia Morocco is a member of Nexia, a leading global network of independent accounting and advisory firms.',
+    'footer.description': 'Nexia Morocco is a member of Nexia, a leading global network of independent accounting and advisory firms.',
     'footer.disclaimer': 'Member firm disclaimer',
     'footer.privacy': 'Privacy policy',
     'footer.cookie': 'Cookie Policy', 
@@ -651,7 +651,7 @@ export const translations = {
     'common.readMore': 'Learn more',
     'common.contact': 'Contact us',
     'common.minutes': 'min',
-    'common.author': 'Nexia Fiducia Morocco',
+    'common.author': 'Nexia Morocco',
     
     // Navigation
     'nav.expertise': 'Our Areas of Expertise',
@@ -671,7 +671,7 @@ export const translations = {
     'contactMap.office2': 'Casablanca Office 2',
     'contactMap.viewOnMaps': 'View on Google Maps',
     'contactMap.helpText': 'To see both offices on the map, use the individual links above or search for the addresses directly.',
-    'contactMap.mapTitle': 'Nexia Fiducia Morocco offices location',
+    'contactMap.mapTitle': 'Nexia Morocco offices location',
     
     // Contact Hero Section  
     'contactHero.title': 'Contact us',
@@ -714,7 +714,7 @@ export const translations = {
     
     'expertise.corporate.title': 'Corporate Finance & Transactions',
     'expertise.corporate.badge': 'M&A Specialist',
-    'expertise.corporate.description': 'Whether to sell, acquire, merge or raise funds, Nexia Fiducia Morocco supports you in your strategic operations with discretion, rigor and method. Our teams of corporate finance experts provide you with a clear, quantified and results-oriented vision.',
+    'expertise.corporate.description': 'Whether to sell, acquire, merge or raise funds, Nexia Morocco supports you in your strategic operations with discretion, rigor and method. Our teams of corporate finance experts provide you with a clear, quantified and results-oriented vision.',
     'expertise.corporate.service1': 'Mergers & acquisitions',
     'expertise.corporate.service2': 'Fundraising (equity & debt)',
     'expertise.corporate.service3': 'Financial due diligence',
@@ -768,7 +768,7 @@ export const translations = {
     
     'expertise.talent.title': 'Talent & Mobility Solutions',
     'expertise.talent.badge': 'HR Expert',
-    'expertise.talent.description': 'Because human capital is at the heart of business success, Nexia Fiducia Morocco offers a complete range of Talent & Mobility Solutions, combining specialized recruitment, HR support and installation services in Morocco. Our approach is based on local expertise and the strength of our international network to guarantee smooth, secure and efficient integration of talents and companies.',
+    'expertise.talent.description': 'Because human capital is at the heart of business success, Nexia Morocco offers a complete range of Talent & Mobility Solutions, combining specialized recruitment, HR support and installation services in Morocco. Our approach is based on local expertise and the strength of our international network to guarantee smooth, secure and efficient integration of talents and companies.',
     'expertise.talent.service1': 'Recruitment & Executive Search: headhunting, selection of executives and rare technical profiles',
     'expertise.talent.service2': 'Young talent programs: campus partnerships, internships, work-study programs and graduate programs',
     'expertise.talent.service3': 'HR support: structuring compensation policies, salary benchmarks, performance management',

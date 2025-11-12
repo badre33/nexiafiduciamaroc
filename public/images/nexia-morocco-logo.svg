@@ -1,0 +1,35 @@
+<svg width="320" height="120" viewBox="0 0 320 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo circulaire Nexia -->
+  <g transform="translate(20, 25)">
+    <!-- Élément principal circulaire avec dégradé turquoise -->
+    <circle cx="35" cy="35" r="35" fill="url(#nexiaGradient)"/>
+    
+    <!-- Éléments entrelacés intérieurs -->
+    <path d="M20 15 C30 10, 45 15, 50 30 C45 20, 35 15, 30 18 C25 20, 20 25, 18 30 C20 25, 20 15, 20 15 Z" fill="#00E5E5" opacity="0.8"/>
+    <path d="M15 40 C15 50, 20 55, 30 58 C25 55, 20 50, 20 45 C20 40, 25 35, 30 33 C25 35, 15 38, 15 40 Z" fill="#00E5E5" opacity="0.7"/>
+    <path d="M50 33 C55 35, 58 40, 58 45 C58 50, 55 55, 50 58 C53 55, 55 50, 55 45 C55 40, 53 35, 50 33 Z" fill="#00E5E5" opacity="0.6"/>
+    
+    <!-- Éléments de connexion centraux -->
+    <ellipse cx="28" cy="28" rx="8" ry="6" fill="#FFFFFF" opacity="0.4" transform="rotate(45 28 28)"/>
+    <ellipse cx="42" cy="42" rx="8" ry="6" fill="#FFFFFF" opacity="0.4" transform="rotate(-45 42 42)"/>
+    <path d="M25 25 Q35 35, 45 45" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.5"/>
+  </g>
+  
+  <!-- Dégradé pour le logo -->
+  <defs>
+    <linearGradient id="nexiaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00A8A8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Texte NEXIA -->
+  <text x="110" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#FFFFFF" letter-spacing="3px">
+    Nexia
+  </text>
+  
+  <!-- Texte Morocco -->
+  <text x="110" y="90" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#FFFFFF" letter-spacing="1px">
+    Morocco
+  </text>
+</svg>

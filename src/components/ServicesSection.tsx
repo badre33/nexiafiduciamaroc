@@ -3,14 +3,14 @@ import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
 const publications = [
   {
     id: 1,
-    title: "Présentation Nexia Fiducia Maroc 2025",
+    title: "Présentation Nexia Morocco 2025",
     description: "Découvrez notre cabinet, nos services et notre expertise à travers cette présentation complète.",
     category: "Présentation",
-    author: "Nexia Fiducia Maroc",
+    author: "Nexia Morocco",
     date: "2025",
     readTime: "10 min",
-    image: "/lovable-uploads/nexia-fiducia-maroc-logo.png",
-    excerpt: "Présentation officielle de Nexia Fiducia Maroc pour l'année 2025...",
+    image: "/lovable-uploads/nexia-morocco-logo.png",
+    excerpt: "Présentation officielle de Nexia Morocco pour l'année 2025...",
     link: "https://fltpndxdtovgjuqarfsh.supabase.co/storage/v1/object/public/nexia-files//Presentation%20Nexia%202025.pdf"
   },
   {

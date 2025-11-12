@@ -36,7 +36,7 @@ const globalInsights = [
       fr: "Santé publique",
       en: "Public Health"
     },
-    author: "Nexia Fiducia Maroc",
+    author: "Nexia Morocco",
     date: {
       fr: "Août 2025",
       en: "August 2025"
@@ -78,9 +78,9 @@ réviser la structure fiscale et les marges de distribution afin de rendre le ma
 
 renforcer la pédagogie et la confiance autour des génériques.
 
-L'accompagnement de Nexia Fiducia Maroc
+L'accompagnement de Nexia Morocco
 
-Face à ces défis, Nexia Fiducia Maroc accompagne les acteurs du secteur – industriels, investisseurs, décideurs publics – dans la conception et la mise en œuvre de solutions adaptées. Notre expertise couvre l'optimisation de la chaîne d'approvisionnement, la structuration de projets d'investissement, la mise en place de stratégies fiscales et réglementaires, ainsi que le développement de modèles de financement innovants.
+Face à ces défis, Nexia Morocco accompagne les acteurs du secteur – industriels, investisseurs, décideurs publics – dans la conception et la mise en œuvre de solutions adaptées. Notre expertise couvre l'optimisation de la chaîne d'approvisionnement, la structuration de projets d'investissement, la mise en place de stratégies fiscales et réglementaires, ainsi que le développement de modèles de financement innovants.
 
 Notre rôle est d'apporter une vision claire et opérationnelle, en alliant analyse stratégique et accompagnement concret, afin de contribuer à l'émergence d'un secteur pharmaceutique marocain plus compétitif, durable et accessible.
 
@@ -119,9 +119,9 @@ revise the tax structure and distribution margins to make the market more compet
 
 strengthen education and confidence around generics.
 
-Nexia Fiducia Morocco's support
+Nexia Morocco's support
 
-Faced with these challenges, Nexia Fiducia Morocco supports sector players – industrialists, investors, public decision-makers – in the design and implementation of adapted solutions. Our expertise covers supply chain optimization, investment project structuring, the implementation of fiscal and regulatory strategies, as well as the development of innovative financing models.
+Faced with these challenges, Nexia Morocco supports sector players – industrialists, investors, public decision-makers – in the design and implementation of adapted solutions. Our expertise covers supply chain optimization, investment project structuring, the implementation of fiscal and regulatory strategies, as well as the development of innovative financing models.
 
 Our role is to provide a clear and operational vision, combining strategic analysis and concrete support, in order to contribute to the emergence of a more competitive, sustainable and accessible Moroccan pharmaceutical sector.
 

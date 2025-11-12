@@ -20,11 +20,10 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <div className="flex flex-col items-center md:items-start">
               <img 
-                src="/lovable-uploads/02c5e586-5b91-4d8e-a8d2-237890777f70.png" 
-                alt="Nexia" 
+                src="/images/nexia-morocco-logo.png" 
+                alt="Nexia Morocco" 
                 className="h-6 w-auto"
               />
-              <span className="text-white text-sm font-bold mt-2">Fiducia Maroc</span>
             </div>
           </div>
         </div>
@@ -58,7 +57,7 @@ export default function Footer() {
           {/* Social Icons and WhatsApp */}
           <div className="flex space-x-4 lg:justify-end">
             <a
-              href="https://www.linkedin.com/company/nexia-fiducia-maroc/?viewAsMember=true"
+              href="https://www.linkedin.com/company/nexia-morocco/?viewAsMember=true"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 bg-white/10 hover:bg-nexia-secondary rounded-full flex items-center justify-center transition-colors duration-200"

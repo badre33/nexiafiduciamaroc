@@ -12,7 +12,7 @@ const teamMembers = [
     specialties: ["Audit & Commissariat aux comptes", "Expertise comptable", "Présidence de l'ordre des Experts-Comptables"],
     description: "Une longue carrière à son actif, depuis 1998, chez ORSIA Finance, KPMG International puis DARLY & CO AUDITING. Yassine EL MAGUIRI est expert comptable – commissaire aux comptes, mais également le Président de l'ordre des Experts-Comptables, Conseil Région de Casablanca et Sud. Yassine est l'associé-fondateur du cabinet Advisoris à Casablanca, avant l'opération de regroupement avec NEXIA, donnant naissance à un nouveau géant marocain du métier de l'audit, commissariat aux comptes et du conseil.",
     image: "/lovable-uploads/0e997ed8-ef54-4573-a7e6-0b1be1b3bb22.png",
-    email: "y.elmaguiri@nexiafiducia.ma",
+    email: "y.elmaguiri@nexiamorocco.ma",
     phone: "+212 (0) 661 909 901"
   },
   {
@@ -22,7 +22,7 @@ const teamMembers = [
     specialties: ["Expertise comptable", "Commissariat aux comptes", "Analyses économiques et financières", "Gestion déléguée"],
     description: "Ancien directeur de mission au sein de AETD Paris, et directeur du bureau d'AETD au Maroc, Jalal BENSAID est expert-comptable – commissaire aux comptes diplômé, titulaire d'un DESCF à l'ISEM Montpellier. Il possède une expertise dans la distribution, l'industrie, la gestion déléguée, les études de marché ainsi que les analyses économiques et financières. Jalal est l'associé historique dans le cabinet NEXIA, avant le regroupement avec ADVISORIS en 2022, où il a pu pérenniser la firme, et renforcer progressivement sa présence sur le marché marocain.",
     image: "/lovable-uploads/340c2c11-0db9-4dda-8759-2bbe8cc749c7.png",
-    email: "J.bensaid@nexiafiducia.ma",
+    email: "J.bensaid@nexiamorocco.ma",
     phone: "+212 (0) 662 188 875"
   }
 ];
