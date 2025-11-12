@@ -20,10 +20,11 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <div className="flex flex-col items-center md:items-start">
               <img 
-                src="/images/nexia-morocco-logo.png" 
-                alt="Nexia Morocco" 
+                src="/lovable-uploads/02c5e586-5b91-4d8e-a8d2-237890777f70.png" 
+                alt="Nexia" 
                 className="h-6 w-auto"
               />
+              <span className="text-white text-sm font-bold mt-2">Morocco</span>
             </div>
           </div>
         </div>
