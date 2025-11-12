@@ -5,6 +5,11 @@ export default function LinkedInPosts() {
   
   const posts = [
     {
+      id: "7392603637279055872",
+      type: "activity",
+      height: 600,
+    },
+    {
       id: "7339350208171962369",
       type: "ugcPost",
       height: 896,
@@ -23,11 +28,6 @@ export default function LinkedInPosts() {
       id: "7308097941490024450",
       type: "activity",
       height: 600,
-    },
-    {
-      id: "7293563000186155009",
-      type: "activity", 
-      height: 580,
     },
   ];
 
