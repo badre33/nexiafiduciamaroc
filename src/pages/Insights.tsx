@@ -371,7 +371,7 @@ const filteredInsights = globalInsights.filter(insight => {
                   <img
                     src={featuredInsight.image}
                     alt={typeof featuredInsight.title === 'object' ? featuredInsight.title[language] || featuredInsight.title.fr : featuredInsight.title}
-                    className="w-full h-64 md:h-full object-cover object-[25%_center]"
+                    className="w-full h-64 md:h-[400px] object-cover"
                   />
                 </div>
                 <div className="md:w-1/2 p-8">
