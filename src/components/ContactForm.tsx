@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, User, Building2, MessageSquare, Send, CheckCircle, ChevronDown } from "lucide-react";
 import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
+import { supabase } from "@/integrations/supabase/client";
 
 const countryCodes = [
   { code: "+1", country: "États-Unis/Canada", flag: "🇺🇸" },
@@ -276,10 +277,34 @@ export default function ContactForm() {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
+    // Persist to Supabase `contact_requests`.
+    // RLS allows anonymous INSERT but blocks SELECT for anyone outside the staff roles.
+    const { error } = await (supabase as unknown as {
+      from: (t: string) => { insert: (v: object) => Promise<{ error: { message: string } | null }> };
+    })
+      .from("contact_requests")
+      .insert({
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email: formData.email,
+        company: formData.company || null,
+        country_code: formData.countryCode,
+        phone: formData.phone,
+        service: formData.service || null,
+        message: formData.message,
+      });
+
+    if (error) {
+      toast({
+        title: "Erreur",
+        description: error.message,
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
     toast({
       title: t('contactForm.success'),
       description: t('contactForm.successDesc'),
@@ -296,7 +321,7 @@ export default function ContactForm() {
       service: "",
       message: ""
     });
-    
+
     setIsSubmitting(false);
   };
 

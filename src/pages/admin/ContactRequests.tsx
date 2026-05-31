@@ -1,0 +1,191 @@
+import { useEffect, useState } from 'react';
+import BackOfficeLayout from '@/components/back-office/BackOfficeLayout';
+import { supabase } from '@/integrations/supabase/client';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
+import { Mail, Phone, Building2, Calendar } from 'lucide-react';
+
+interface ContactRequest {
+  id: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+  company: string | null;
+  country_code: string | null;
+  phone: string | null;
+  service: string | null;
+  message: string;
+  status: string;
+  notes: string | null;
+  created_at: string;
+}
+
+const STATUS_LABELS: Record<string, { label: string; color: string }> = {
+  new: { label: 'Nouveau', color: 'bg-blue-100 text-blue-700' },
+  in_review: { label: 'En cours', color: 'bg-yellow-100 text-yellow-700' },
+  replied: { label: 'Répondu', color: 'bg-green-100 text-green-700' },
+  archived: { label: 'Archivé', color: 'bg-gray-100 text-gray-600' },
+};
+
+export default function ContactRequests() {
+  const { toast } = useToast();
+  const [requests, setRequests] = useState<ContactRequest[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+
+  const load = async () => {
+    setLoading(true);
+    const { data, error } = await (supabase as unknown as {
+      from: (t: string) => {
+        select: (c: string) => {
+          order: (c: string, o: { ascending: boolean }) => Promise<{
+            data: ContactRequest[] | null;
+            error: { message: string } | null;
+          }>;
+        };
+      };
+    })
+      .from('contact_requests')
+      .select('*')
+      .order('created_at', { ascending: false });
+    if (error) {
+      toast({ title: 'Erreur de chargement', description: error.message, variant: 'destructive' });
+    } else {
+      setRequests(data ?? []);
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    void load();
+  }, []);
+
+  const updateStatus = async (id: string, status: string) => {
+    const { error } = await (supabase as unknown as {
+      from: (t: string) => {
+        update: (v: object) => { eq: (c: string, v: string) => Promise<{ error: { message: string } | null }> };
+      };
+    })
+      .from('contact_requests')
+      .update({ status })
+      .eq('id', id);
+    if (error) {
+      toast({ title: 'Erreur', description: error.message, variant: 'destructive' });
+    } else {
+      toast({ title: 'Mis à jour', description: 'Statut modifié.' });
+      void load();
+    }
+  };
+
+  const selected = requests.find((r) => r.id === selectedId);
+
+  return (
+    <BackOfficeLayout title="Demandes de contact">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Liste */}
+        <div className="lg:col-span-2 bg-white rounded-xl border border-gray-200 overflow-hidden">
+          {loading ? (
+            <div className="p-8 text-center text-gray-500">Chargement…</div>
+          ) : requests.length === 0 ? (
+            <div className="p-8 text-center text-gray-500">Aucune demande pour le moment.</div>
+          ) : (
+            <ul className="divide-y divide-gray-100">
+              {requests.map((r) => {
+                const status = STATUS_LABELS[r.status] ?? STATUS_LABELS.new;
+                return (
+                  <li
+                    key={r.id}
+                    onClick={() => setSelectedId(r.id)}
+                    className={`p-4 cursor-pointer hover:bg-gray-50 transition-colors ${
+                      selectedId === r.id ? 'bg-nexia-secondary/5 border-l-4 border-nexia-secondary' : ''
+                    }`}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0">
+                        <p className="font-semibold text-gray-900 truncate">
+                          {r.first_name} {r.last_name}
+                        </p>
+                        <p className="text-sm text-gray-500 truncate">{r.email}</p>
+                        {r.company && (
+                          <p className="text-xs text-gray-400 truncate">{r.company}</p>
+                        )}
+                      </div>
+                      <span
+                        className={`text-xs px-2 py-0.5 rounded-full font-semibold whitespace-nowrap ${status.color}`}
+                      >
+                        {status.label}
+                      </span>
+                    </div>
+                    <p className="text-xs text-gray-400 mt-1">
+                      {new Date(r.created_at).toLocaleString('fr-FR')}
+                    </p>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </div>
+
+        {/* Détail */}
+        <div className="bg-white rounded-xl border border-gray-200 p-6 h-fit sticky top-6">
+          {!selected ? (
+            <p className="text-gray-500 text-sm">Sélectionnez une demande pour voir les détails.</p>
+          ) : (
+            <>
+              <h3 className="font-semibold text-gray-900 mb-1">
+                {selected.first_name} {selected.last_name}
+              </h3>
+              <div className="space-y-2 text-sm text-gray-700 mb-4">
+                <p className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-nexia-secondary" />
+                  <a href={`mailto:${selected.email}`} className="text-nexia-secondary hover:underline">
+                    {selected.email}
+                  </a>
+                </p>
+                {selected.phone && (
+                  <p className="flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-nexia-secondary" />
+                    {selected.country_code} {selected.phone}
+                  </p>
+                )}
+                {selected.company && (
+                  <p className="flex items-center gap-2">
+                    <Building2 className="w-4 h-4 text-nexia-secondary" /> {selected.company}
+                  </p>
+                )}
+                <p className="flex items-center gap-2 text-xs text-gray-500">
+                  <Calendar className="w-4 h-4" />
+                  {new Date(selected.created_at).toLocaleString('fr-FR')}
+                </p>
+                {selected.service && (
+                  <p className="text-xs">
+                    Service&nbsp;: <strong className="text-gray-900">{selected.service}</strong>
+                  </p>
+                )}
+              </div>
+              <div className="bg-gray-50 rounded-lg p-3 text-sm text-gray-800 whitespace-pre-wrap mb-4">
+                {selected.message}
+              </div>
+              <div className="space-y-2">
+                <p className="text-xs uppercase tracking-wider text-gray-500 font-semibold">Statut</p>
+                <div className="flex flex-wrap gap-2">
+                  {Object.entries(STATUS_LABELS).map(([key, val]) => (
+                    <Button
+                      key={key}
+                      size="sm"
+                      variant={selected.status === key ? 'default' : 'outline'}
+                      onClick={() => updateStatus(selected.id, key)}
+                      className={selected.status === key ? 'bg-nexia-primary' : ''}
+                    >
+                      {val.label}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </BackOfficeLayout>
+  );
+}
