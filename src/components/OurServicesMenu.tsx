@@ -11,178 +11,145 @@ import {
 import { useSimpleLanguage } from "@/hooks/useSimpleLanguage";
 
 /**
- * Nexia Website Guidelines 2023 (p.16) :
+ * Nexia Website Guidelines 2023 (p.16-17) :
+ *   "Our primary colour palette only allows certain colour combinations for typography"
  *   "Never use more than one secondary colour within a single layout."
  *
- * Tous les domaines utilisent donc la même palette : Nexia Light Teal #00B9B9
- * (couleur d'accent du primary set) sur fond clair. Les icônes sont les icônes
- * officielles Nexia stockées dans /public/icons/.
+ * Option B — chaque domaine reçoit une **tint** différente de la palette PRIMAIRE
+ * Nexia (Dark Teal 100/80/60/40/20% + Light Teal 100/80/60/40/20%) = 10 tints
+ * exactement pour 10 domaines. Cela respecte strictement la charte tout en
+ * donnant une identité visuelle distincte à chaque domaine.
+ *
+ * Combinaisons typographiques accessibles (charte p.18) :
+ *  - Tints sombres (Dark Teal 100/80/60, Light Teal 100) → texte/icône blanc (AAA / AA)
+ *  - Tints claires → texte Dark Teal (AAA)
  */
-const NEXIA_DOMAIN_COLOR = "text-nexia-secondary bg-nexia-secondary/10";
+type DomainTint = {
+  /** classe Tailwind background du fond de carte (active state) */
+  bgClass: string;
+  /** hex pour les fonds qui n'ont pas de classe Tailwind (utilisé via style inline) */
+  bgHex: string;
+  /** Si vrai, l'icône et le titre sont blancs (fond sombre). Sinon Dark Teal (fond clair). */
+  invertContent: boolean;
+};
 
-const getExpertiseDomains = (t: (key: string) => string) => [
+const TINTS: DomainTint[] = [
+  // Dark Teal scale (du plus foncé au plus clair)
+  { bgClass: "",                bgHex: "#00323C", invertContent: true  }, // 100% Dark Teal
+  { bgClass: "",                bgHex: "#335B63", invertContent: true  }, // 80%
+  { bgClass: "",                bgHex: "#66848A", invertContent: true  }, // 60%
+  { bgClass: "",                bgHex: "#99ADB1", invertContent: false }, // 40%
+  { bgClass: "",                bgHex: "#CCD6D8", invertContent: false }, // 20%
+  // Light Teal scale (du plus foncé au plus clair)
+  { bgClass: "",                bgHex: "#00B9B9", invertContent: true  }, // 100% Light Teal
+  { bgClass: "",                bgHex: "#33C7C7", invertContent: false }, // 80%
+  { bgClass: "",                bgHex: "#66D5D5", invertContent: false }, // 60%
+  { bgClass: "",                bgHex: "#ADE9E9", invertContent: false }, // 40%
+  { bgClass: "",                bgHex: "#CCF1F1", invertContent: false }, // 20%
+];
+
+const getExpertiseDomains = (t: (key: string) => string) => {
+  const raw = [
     {
       id: "audit",
-      title: t('expertise.audit.title'),
       iconSrc: "/icons/audit.png",
-      color: NEXIA_DOMAIN_COLOR,
       stats: { years: "34+", clients: "400+", certification: "IFRS" },
-      badge: t('expertise.audit.badge'),
-      description: t('expertise.audit.description'),
-      services: [
-        t('expertise.audit.service1'),
-        t('expertise.audit.service2'),
-        t('expertise.audit.service3'),
-        t('expertise.audit.service4'),
-        t('expertise.audit.service5')
-      ]
+      titleKey: 'expertise.audit.title',
+      badgeKey: 'expertise.audit.badge',
+      descriptionKey: 'expertise.audit.description',
+      serviceKeys: ['expertise.audit.service1','expertise.audit.service2','expertise.audit.service3','expertise.audit.service4','expertise.audit.service5'],
     },
     {
       id: "comptable",
-      title: t('expertise.comptable.title'),
       iconSrc: "/icons/books.png",
-      color: NEXIA_DOMAIN_COLOR,
       stats: { years: "34+", clients: "400+", certification: "Expert" },
-      badge: t('expertise.comptable.badge'),
-      description: t('expertise.comptable.description'),
-      services: [
-        t('expertise.comptable.service1'),
-        t('expertise.comptable.service2'),
-        t('expertise.comptable.service3'),
-        t('expertise.comptable.service4'),
-        t('expertise.comptable.service5')
-      ]
+      titleKey: 'expertise.comptable.title',
+      badgeKey: 'expertise.comptable.badge',
+      descriptionKey: 'expertise.comptable.description',
+      serviceKeys: ['expertise.comptable.service1','expertise.comptable.service2','expertise.comptable.service3','expertise.comptable.service4','expertise.comptable.service5'],
     },
     {
       id: "fiscalite",
-      title: t('expertise.fiscalite.title'),
       iconSrc: "/icons/piggy-bank.png",
-      color: NEXIA_DOMAIN_COLOR,
       stats: { years: "34+", clients: "400+", certification: "Fiscal" },
-      badge: t('expertise.fiscalite.badge'),
-      description: t('expertise.fiscalite.description'),
-      services: [
-        t('expertise.fiscalite.service1'),
-        t('expertise.fiscalite.service2'),
-        t('expertise.fiscalite.service3'),
-        t('expertise.fiscalite.service4'),
-        t('expertise.fiscalite.service5')
-      ]
+      titleKey: 'expertise.fiscalite.title',
+      badgeKey: 'expertise.fiscalite.badge',
+      descriptionKey: 'expertise.fiscalite.description',
+      serviceKeys: ['expertise.fiscalite.service1','expertise.fiscalite.service2','expertise.fiscalite.service3','expertise.fiscalite.service4','expertise.fiscalite.service5'],
     },
     {
       id: "corporate",
-      title: t('expertise.corporate.title'),
       iconSrc: "/icons/graph.png",
-      color: NEXIA_DOMAIN_COLOR,
       stats: { years: "34+", clients: "400+", certification: "M&A" },
-      badge: t('expertise.corporate.badge'),
-      description: t('expertise.corporate.description'),
-      services: [
-        t('expertise.corporate.service1'),
-        t('expertise.corporate.service2'),
-        t('expertise.corporate.service3'),
-        t('expertise.corporate.service4'),
-        t('expertise.corporate.service5')
-      ]
+      titleKey: 'expertise.corporate.title',
+      badgeKey: 'expertise.corporate.badge',
+      descriptionKey: 'expertise.corporate.description',
+      serviceKeys: ['expertise.corporate.service1','expertise.corporate.service2','expertise.corporate.service3','expertise.corporate.service4','expertise.corporate.service5'],
     },
     {
       id: "outsourcing",
-      title: t('expertise.outsourcing.title'),
       iconSrc: "/icons/people.png",
-      color: NEXIA_DOMAIN_COLOR,
       stats: { years: "34+", clients: "400+", certification: "BPO" },
-      badge: t('expertise.outsourcing.badge'),
-      description: t('expertise.outsourcing.description'),
-      services: [
-        t('expertise.outsourcing.service1'),
-        t('expertise.outsourcing.service2'),
-        t('expertise.outsourcing.service3'),
-        t('expertise.outsourcing.service4'),
-        t('expertise.outsourcing.service5')
-      ]
+      titleKey: 'expertise.outsourcing.title',
+      badgeKey: 'expertise.outsourcing.badge',
+      descriptionKey: 'expertise.outsourcing.description',
+      serviceKeys: ['expertise.outsourcing.service1','expertise.outsourcing.service2','expertise.outsourcing.service3','expertise.outsourcing.service4','expertise.outsourcing.service5'],
     },
     {
       id: "digital",
-      title: t('expertise.digital.title'),
       iconSrc: "/icons/computer.png",
-      color: NEXIA_DOMAIN_COLOR,
       stats: { years: "5", clients: "50", certification: "Digital" },
-      badge: t('expertise.digital.badge'),
-      description: t('expertise.digital.description'),
-      services: [
-        t('expertise.digital.service1'),
-        t('expertise.digital.service2'),
-        t('expertise.digital.service3'),
-        t('expertise.digital.service4'),
-        t('expertise.digital.service5')
-      ]
+      titleKey: 'expertise.digital.title',
+      badgeKey: 'expertise.digital.badge',
+      descriptionKey: 'expertise.digital.description',
+      serviceKeys: ['expertise.digital.service1','expertise.digital.service2','expertise.digital.service3','expertise.digital.service4','expertise.digital.service5'],
     },
     {
       id: "international",
-      title: t('expertise.international.title'),
       iconSrc: "/icons/globe.png",
-      color: NEXIA_DOMAIN_COLOR,
       stats: { years: "34+", clients: "400+", certification: "Global" },
-      badge: t('expertise.international.badge'),
-      description: t('expertise.international.description'),
-      services: [
-        t('expertise.international.service1'),
-        t('expertise.international.service2'),
-        t('expertise.international.service3'),
-        t('expertise.international.service4'),
-        t('expertise.international.service5')
-      ]
+      titleKey: 'expertise.international.title',
+      badgeKey: 'expertise.international.badge',
+      descriptionKey: 'expertise.international.description',
+      serviceKeys: ['expertise.international.service1','expertise.international.service2','expertise.international.service3','expertise.international.service4','expertise.international.service5'],
     },
     {
       id: "juridique",
-      title: t('expertise.juridique.title'),
       iconSrc: "/icons/briefcase.png",
-      color: NEXIA_DOMAIN_COLOR,
       stats: { years: "34+", clients: "400+", certification: "Juridique" },
-      badge: t('expertise.juridique.badge'),
-      description: t('expertise.juridique.description'),
-      services: [
-        t('expertise.juridique.service1'),
-        t('expertise.juridique.service2'),
-        t('expertise.juridique.service3'),
-        t('expertise.juridique.service4'),
-        t('expertise.juridique.service5')
-      ]
+      titleKey: 'expertise.juridique.title',
+      badgeKey: 'expertise.juridique.badge',
+      descriptionKey: 'expertise.juridique.description',
+      serviceKeys: ['expertise.juridique.service1','expertise.juridique.service2','expertise.juridique.service3','expertise.juridique.service4','expertise.juridique.service5'],
     },
     {
       id: "strategie",
-      title: t('expertise.strategie.title'),
       iconSrc: "/icons/lightbulb.png",
-      color: NEXIA_DOMAIN_COLOR,
       stats: { years: "34+", clients: "400+", certification: "Strategy" },
-      badge: t('expertise.strategie.badge'),
-      description: t('expertise.strategie.description'),
-      services: [
-        t('expertise.strategie.service1'),
-        t('expertise.strategie.service2'),
-        t('expertise.strategie.service3'),
-        t('expertise.strategie.service4'),
-        t('expertise.strategie.service5')
-      ]
+      titleKey: 'expertise.strategie.title',
+      badgeKey: 'expertise.strategie.badge',
+      descriptionKey: 'expertise.strategie.description',
+      serviceKeys: ['expertise.strategie.service1','expertise.strategie.service2','expertise.strategie.service3','expertise.strategie.service4','expertise.strategie.service5'],
     },
     {
       id: "talent-mobility",
-      title: t('expertise.talent.title'),
       iconSrc: "/icons/handshake.png",
-      color: NEXIA_DOMAIN_COLOR,
       stats: { years: "5+", clients: "30+", certification: "RH" },
-      badge: t('expertise.talent.badge'),
-      description: t('expertise.talent.description'),
-      services: [
-        t('expertise.talent.service1'),
-        t('expertise.talent.service2'),
-        t('expertise.talent.service3'),
-        t('expertise.talent.service4'),
-        t('expertise.talent.service5'),
-        t('expertise.talent.service6')
-      ]
-    }
+      titleKey: 'expertise.talent.title',
+      badgeKey: 'expertise.talent.badge',
+      descriptionKey: 'expertise.talent.description',
+      serviceKeys: ['expertise.talent.service1','expertise.talent.service2','expertise.talent.service3','expertise.talent.service4','expertise.talent.service5','expertise.talent.service6'],
+    },
   ];
+  return raw.map((d, i) => ({
+    ...d,
+    title: t(d.titleKey),
+    badge: t(d.badgeKey),
+    description: t(d.descriptionKey),
+    services: d.serviceKeys.map((k) => t(k)),
+    tint: TINTS[i],
+  }));
+};
 
 export default function OurServicesMenu() {
   const { t } = useSimpleLanguage();
@@ -283,46 +250,44 @@ export default function OurServicesMenu() {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <div className="overflow-x-auto pb-4 -mx-4 px-4">
             <TabsList className="inline-flex w-max min-w-full gap-2 md:gap-3 h-auto p-2 md:p-3 bg-white/80 backdrop-blur-sm rounded-2xl shadow-professional border border-border/50">
-              {expertiseDomains.map((domain, index) => {
+              {expertiseDomains.map((domain) => {
               const isActive = activeTab === domain.id;
+              const tint = domain.tint;
               return (
                 <TabsTrigger
                   key={domain.id}
                   value={domain.id}
+                  style={isActive ? { backgroundColor: tint.bgHex } : undefined}
                   className={`
                     group relative flex flex-col items-center p-3 md:p-4 min-h-[90px] md:min-h-[110px] min-w-[100px] md:min-w-[120px]
                     transition-all duration-300 ease-out rounded-xl border-0
                     hover:scale-105 hover:shadow-hover hover:-translate-y-2
                     ${isActive
-                      ? 'bg-gradient-to-br from-nexia-primary to-nexia-secondary text-white shadow-hover transform scale-105 -translate-y-2'
-                      : 'bg-white text-nexia-primary hover:bg-gradient-to-br hover:from-gray-50 hover:to-white hover:text-nexia-secondary'
+                      ? `shadow-hover transform scale-105 -translate-y-2 ${tint.invertContent ? 'text-white' : 'text-nexia-primary'}`
+                      : 'bg-white text-nexia-primary hover:bg-gray-50'
                     }
                   `}
                 >
-                  <div className={`
-                    relative p-2 md:p-3 rounded-xl mb-1 md:mb-2 transition-all duration-300
-                    ${isActive
-                      ? 'bg-white/20 backdrop-blur-sm'
-                      : `${domain.color} group-hover:scale-110 group-hover:rotate-3`
-                    }
-                  `}>
+                  <div
+                    style={!isActive ? { backgroundColor: tint.bgHex } : undefined}
+                    className={`
+                      relative p-2 md:p-3 rounded-xl mb-1 md:mb-2 transition-all duration-300
+                      ${isActive ? 'bg-white/20 backdrop-blur-sm' : 'group-hover:scale-110'}
+                    `}
+                  >
                     <img
                       src={domain.iconSrc}
                       alt={domain.title}
-                      className={`h-5 w-5 md:h-7 md:w-7 transition-all duration-300 group-hover:scale-110 object-contain ${isActive ? 'brightness-0 invert' : ''}`}
+                      className={`h-5 w-5 md:h-7 md:w-7 transition-all duration-300 group-hover:scale-110 object-contain ${
+                        tint.invertContent ? 'brightness-0 invert' : ''
+                      }`}
                     />
-                    {isActive && (
-                      <div className="absolute inset-0 rounded-xl bg-white/10 animate-pulse" />
-                    )}
                   </div>
                   <span className="text-[10px] md:text-xs font-bold text-center leading-tight transition-all duration-300 group-hover:scale-105 px-1">
                     {domain.title}
                   </span>
                   {isActive && (
-                    <>
-                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-white rounded-full shadow-sm" />
-                      <div className="absolute top-2 right-2 w-2 h-2 bg-nexia-yellow rounded-full animate-pulse" />
-                    </>
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-white rounded-full shadow-sm" />
                   )}
                 </TabsTrigger>
               );
@@ -330,53 +295,54 @@ export default function OurServicesMenu() {
           </TabsList>
           </div>
 
-          {expertiseDomains.map((domain, index) => {
+          {expertiseDomains.map((domain) => {
+            const tint = domain.tint;
             return (
               <TabsContent
                 key={domain.id}
                 value={domain.id}
                 className="mt-8 animate-fade-in"
               >
-                <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-3xl p-4 md:p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-border/30 nexia-card-rounded">
-                  {/* Header avec badge et stats */}
+                <div className="bg-white rounded-3xl p-4 md:p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 nexia-card-rounded">
+                  {/* Header avec badge et stats — bandeau couleur du domaine */}
                   <div className="flex flex-col md:flex-row items-start justify-between mb-6 gap-4">
                     <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 w-full">
-                      <div className={`
-                        relative p-4 md:p-6 rounded-2xl transition-all duration-500 hover:scale-105 hover:rotate-3
-                        ${domain.color.split(' ')[1]} shadow-lg
-                      `}>
+                      <div
+                        style={{ backgroundColor: tint.bgHex }}
+                        className="relative p-4 md:p-6 rounded-2xl transition-all duration-500 hover:scale-105 hover:rotate-3 shadow-lg"
+                      >
                         <img
                           src={domain.iconSrc}
                           alt={domain.title}
-                          className="h-8 w-8 md:h-12 md:w-12 transition-all duration-500 object-contain"
+                          className={`h-8 w-8 md:h-12 md:w-12 transition-all duration-500 object-contain ${tint.invertContent ? 'brightness-0 invert' : ''}`}
                         />
-                        <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-nexia-secondary rounded-full flex items-center justify-center animate-pulse">
+                        <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-nexia-primary rounded-full flex items-center justify-center">
                           <CheckCircle className="h-3 w-3 text-white" />
                         </div>
                       </div>
                       <div className="flex-1 w-full">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3">
-                          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-nexia-primary font-poppins hover:text-nexia-secondary transition-colors duration-300">
+                          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-nexia-primary font-poppins">
                             {domain.title}
                           </h3>
-                          <span className="inline-flex items-center gap-1 px-2 md:px-3 py-1 bg-nexia-secondary/10 text-nexia-secondary rounded-full text-xs md:text-sm font-semibold w-fit">
+                          <span className="inline-flex items-center gap-1 px-2 md:px-3 py-1 bg-nexia-secondary/10 text-nexia-primary rounded-full text-xs md:text-sm font-semibold w-fit">
                             <Award className="h-3 w-3" />
                             {domain.badge}
                           </span>
                         </div>
-                        
+
                         {/* Statistiques percutantes */}
                         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 md:gap-6 mb-4">
                           <div className="flex items-center gap-2">
-                            <Clock className="h-4 w-4 text-nexia-secondary flex-shrink-0" />
+                            <Clock className="h-4 w-4 text-nexia-primary flex-shrink-0" />
                             <span className="text-xs md:text-sm font-semibold text-nexia-primary">{domain.stats.years} {t('expertise.yearsExperience')}</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Users className="h-4 w-4 text-nexia-secondary flex-shrink-0" />
+                            <Users className="h-4 w-4 text-nexia-primary flex-shrink-0" />
                             <span className="text-xs md:text-sm font-semibold text-nexia-primary">{domain.stats.clients} {t('expertise.clientsSupported')}</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-nexia-secondary flex-shrink-0" />
+                            <CheckCircle className="h-4 w-4 text-nexia-primary flex-shrink-0" />
                             <span className="text-xs md:text-sm font-semibold text-nexia-primary">Certification {domain.stats.certification}</span>
                           </div>
                         </div>
@@ -387,35 +353,36 @@ export default function OurServicesMenu() {
                   <p className="text-sm md:text-base lg:text-lg text-nexia-primary/80 mb-6 md:mb-8 leading-relaxed font-poppins">
                     {domain.description}
                   </p>
-                  
-                  {/* Séparateur visuel avec dégradé dynamique */}
-                  <div className={`relative w-full h-1 rounded-full mb-6 md:mb-8 overflow-hidden`}>
-                    <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-current to-transparent opacity-30 ${domain.color.split(' ')[0]}`}></div>
-                  </div>
-                  
-                  {/* Services avec design amélioré et couleurs dynamiques */}
-                  <div className={`relative bg-gradient-to-br ${domain.color.split(' ')[1].replace('bg-', 'from-')}/20 to-white/50 rounded-2xl p-5 md:p-7 border-2 ${domain.color.split(' ')[0].replace('text-', 'border-')}/20 shadow-lg backdrop-blur-sm overflow-hidden`}>
-                    {/* Effet de fond animé */}
-                    <div className={`absolute top-0 right-0 w-32 h-32 ${domain.color.split(' ')[1]} opacity-5 rounded-full blur-3xl`}></div>
-                    
+
+                  {/* Séparateur fin dans la teinte du domaine */}
+                  <div style={{ backgroundColor: tint.bgHex }} className="w-16 h-1 rounded-full mb-6 md:mb-8" />
+
+                  {/* Liste des services — fond très clair de la teinte du domaine */}
+                  <div
+                    style={{ backgroundColor: tint.invertContent ? `${tint.bgHex}10` : `${tint.bgHex}30` }}
+                    className="relative rounded-2xl p-5 md:p-7 shadow-sm border border-gray-100"
+                  >
                     <div className="relative z-10">
-                      <h4 className={`text-xl md:text-2xl font-bold mb-6 flex items-center gap-3 ${domain.color.split(' ')[0]}`}>
-                        <div className={`p-2 rounded-lg ${domain.color.split(' ')[1]}`}>
-                          <Target className="h-5 w-5 md:h-6 md:w-6" />
+                      <h4 className="text-xl md:text-2xl font-bold mb-6 flex items-center gap-3 text-nexia-primary">
+                        <div style={{ backgroundColor: tint.bgHex }} className="p-2 rounded-lg">
+                          <Target className={`h-5 w-5 md:h-6 md:w-6 ${tint.invertContent ? 'text-white' : 'text-nexia-primary'}`} />
                         </div>
                         {t('expertise.servicesTitle')}
                       </h4>
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
                         {domain.services.map((service, serviceIndex) => (
-                          <div 
-                            key={serviceIndex} 
-                            className={`group flex items-start gap-3 p-4 md:p-5 rounded-xl bg-white/80 backdrop-blur-sm hover:bg-white hover:shadow-md transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 border-2 border-transparent hover:${domain.color.split(' ')[0].replace('text-', 'border-')}/30 animate-fade-in`}
+                          <div
+                            key={serviceIndex}
+                            className="group flex items-start gap-3 p-4 md:p-5 rounded-xl bg-white hover:shadow-md transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 border border-gray-100 animate-fade-in"
                             style={{ animationDelay: `${serviceIndex * 50}ms` }}
                           >
-                            <div className={`flex-shrink-0 w-6 h-6 rounded-lg ${domain.color.split(' ')[1]} flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12`}>
-                              <CheckCircle className={`w-4 h-4 ${domain.color.split(' ')[0]}`} />
+                            <div
+                              style={{ backgroundColor: tint.bgHex }}
+                              className="flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+                            >
+                              <CheckCircle className={`w-4 h-4 ${tint.invertContent ? 'text-white' : 'text-nexia-primary'}`} />
                             </div>
-                            <span className="text-sm md:text-base text-nexia-primary font-poppins font-medium group-hover:text-nexia-secondary transition-all duration-300 leading-relaxed">
+                            <span className="text-sm md:text-base text-nexia-primary font-poppins font-medium leading-relaxed">
                               {service}
                             </span>
                           </div>
