@@ -12,12 +12,17 @@ All colors MUST be HSL.
     --background: 0 0% 100%;
     --foreground: 184 100% 12%;
 
-    /* Nexia brand colors */
-    --nexia-primary: 184 100% 12%; /* #00323C - Deep navy */
-    --nexia-secondary: 180 100% 36%; /* #00B9B9 - Vibrant teal */
-    --nexia-blue: 220 57% 40%; /* #2E53A1 - Professional blue */
-    --nexia-yellow: 48 95% 53%; /* #FBC311 - Accent yellow */
-    --nexia-pink: 335 70% 45%; /* #CA1C66 - Accent pink */
+    /* Nexia brand colors — strict alignment with Nexia Website Guidelines 2023 (p.16-17) */
+    /* Primary palette */
+    --nexia-primary: 184 100% 12%; /* #00323C - Nexia Dark Teal */
+    --nexia-secondary: 180 100% 36%; /* #00B9B9 - Nexia Light Teal */
+    /* Secondary palette — use ONLY ONE secondary colour per layout (guide p.16) */
+    --nexia-blue: 204 56% 55%;      /* #479DCF - Nexia Blue */
+    --nexia-dark-blue: 220 33% 53%; /* #5775B3 - Nexia Dark Blue */
+    --nexia-purple: 326 41% 43%;    /* #9C4181 - Nexia Purple */
+    --nexia-pink: 334 60% 56%;      /* #D44984 - Nexia Pink */
+    --nexia-orange: 27 81% 65%;     /* #F0A65C - Nexia Orange */
+    --nexia-yellow: 45 96% 62%;     /* #FBCF40 - Nexia Yellow */
 
     /* Component colors */
     --card: 0 0% 100%;

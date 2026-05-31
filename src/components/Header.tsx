@@ -40,17 +40,14 @@ export default function Header() {
       {/* Desktop Header */}
       <div className="mx-auto max-w-[1350px] px-4 sm:px-6 lg:px-8 xl:px-0">
         <div className="flex items-end justify-between py-4 md:py-6 lg:py-[30px] border-none">
-          {/* Logo */}
+          {/* Logo (official Nexia Morocco logo — inverted to white via CSS for dark header) */}
           <div className="flex items-center">
-            <Link to="/" className="block">
-              <div className="flex flex-col items-center">
-                <img 
-                  src="/lovable-uploads/02c5e586-5b91-4d8e-a8d2-237890777f70.png" 
-                  alt="Nexia" 
-                  className="h-6 md:h-8 w-auto"
-                />
-                <span className="text-white text-xs md:text-sm font-bold mt-1">Morocco</span>
-              </div>
+            <Link to="/" className="block" aria-label="Nexia Morocco — Accueil">
+              <img
+                src="/nexia-morocco-logo.png"
+                alt="Nexia Morocco"
+                className="h-10 md:h-12 lg:h-14 w-auto brightness-0 invert"
+              />
             </Link>
           </div>
 

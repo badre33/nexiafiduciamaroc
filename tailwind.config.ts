@@ -56,11 +56,14 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				nexia: {
-					primary: 'hsl(var(--nexia-primary))',
-					secondary: 'hsl(var(--nexia-secondary))',
-					blue: 'hsl(var(--nexia-blue))',
-					yellow: 'hsl(var(--nexia-yellow))',
-					pink: 'hsl(var(--nexia-pink))'
+					primary: 'hsl(var(--nexia-primary))',     // #00323C Dark Teal
+					secondary: 'hsl(var(--nexia-secondary))', // #00B9B9 Light Teal
+					blue: 'hsl(var(--nexia-blue))',           // #479DCF
+					darkBlue: 'hsl(var(--nexia-dark-blue))',  // #5775B3
+					purple: 'hsl(var(--nexia-purple))',       // #9C4181
+					pink: 'hsl(var(--nexia-pink))',           // #D44984
+					orange: 'hsl(var(--nexia-orange))',       // #F0A65C
+					yellow: 'hsl(var(--nexia-yellow))'        // #FBCF40
 				}
 			},
 			backgroundImage: {

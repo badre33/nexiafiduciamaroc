@@ -190,13 +190,14 @@ export const translations = {
     'service.strategy.title': 'Conseil en stratégie & développement',
     'service.talent.title': 'Talent & Mobility',
     
-    // Footer
-    'footer.description': 'Nexia Morocco est membre de Nexia, un réseau mondial de premier plan de cabinets indépendants de comptabilité et de conseil.',
+    // Footer — disclaimer officiel Nexia (Website Guidelines 2023, p.26)
+    'footer.description': 'Nexia Fiducia Maroc est membre de Nexia, un réseau mondial de premier plan de cabinets indépendants de comptabilité et de conseil. Pour plus de détails, voir le « Member firm disclaimer ».',
     'footer.disclaimer': 'Member firm disclaimer',
-    'footer.privacy': 'Privacy policy', 
-    'footer.cookie': 'Cookie Policy',
-    'footer.email': 'Email disclaimer',
-    'footer.copyright': '© 2024 Nexia Templates. All rights reserved.',
+    'footer.privacy': 'Politique de confidentialité',
+    'footer.cookie': 'Politique des cookies',
+    'footer.email': 'Avis de non-responsabilité des e-mails',
+    'footer.copyright': '© 2026 Nexia Fiducia Maroc. Tous droits réservés.',
+    'footer.legalName': 'Nexia Fiducia Maroc — Membre du réseau Nexia International',
     
     
     // Detailed Expertise Domains
@@ -631,13 +632,14 @@ export const translations = {
     'service.strategy.title': 'Strategy & Development Advisory',
     'service.talent.title': 'Talent & Mobility',
     
-    // Footer
-    'footer.description': 'Nexia Morocco is a member of Nexia, a leading global network of independent accounting and advisory firms.',
+    // Footer — official Nexia disclaimer (Website Guidelines 2023, p.26, verbatim)
+    'footer.description': 'Nexia Fiducia Maroc is a member of Nexia, a leading, global network of independent accounting and consulting firms. Please see the "Member firm disclaimer" for further details.',
     'footer.disclaimer': 'Member firm disclaimer',
     'footer.privacy': 'Privacy policy',
-    'footer.cookie': 'Cookie Policy', 
+    'footer.cookie': 'Cookie Policy',
     'footer.email': 'Email disclaimer',
-    'footer.copyright': '© 2024 Nexia Templates. All rights reserved.',
+    'footer.copyright': '© 2026 Nexia Fiducia Maroc. All rights reserved.',
+    'footer.legalName': 'Nexia Fiducia Maroc — Member firm of Nexia International',
     
     // Case Studies Data
     'caseStudies.study1.title': 'Financial and tax due diligence for a strategic healthcare merger',

@@ -15,18 +15,13 @@ export default function Footer() {
   return (
     <footer className="bg-nexia-primary text-white py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Logo */}
-        <div className="mb-12">
-          <div className="text-center md:text-left">
-            <div className="flex flex-col items-center md:items-start">
-              <img 
-                src="/lovable-uploads/02c5e586-5b91-4d8e-a8d2-237890777f70.png" 
-                alt="Nexia" 
-                className="h-6 w-auto"
-              />
-              <span className="text-white text-sm font-bold mt-2">Morocco</span>
-            </div>
-          </div>
+        {/* Logo (official Nexia Morocco logo, inverted to white on dark teal background) */}
+        <div className="mb-12 text-center md:text-left">
+          <img
+            src="/nexia-morocco-logo.png"
+            alt="Nexia Morocco"
+            className="h-12 md:h-14 w-auto inline-block brightness-0 invert"
+          />
         </div>
 
         {/* Disclaimer */}
@@ -79,8 +74,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-white/20 text-center">
+        {/* Legal name + Copyright */}
+        <div className="mt-12 pt-8 border-t border-white/20 text-center space-y-1">
+          <p className="text-white/70 text-sm font-medium">
+            {t('footer.legalName')}
+          </p>
           <p className="text-white/60 text-sm">
             {t('footer.copyright')}
           </p>
