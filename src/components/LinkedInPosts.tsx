@@ -16,7 +16,7 @@ interface LinkedInPost {
  * Fallback : `FALLBACK_POSTS` ci-dessous — utilisés si Supabase est indisponible.
  *
  * Les IDs FALLBACK ont été récupérés le 31/05/2026 depuis la page LinkedIn
- * officielle Nexia Morocco (linkedin.com/company/nexia-fiducia-maroc), top 7
+ * officielle Nexia Morocco (slug historique de l'URL conservé), top 7
  * publications visibles dans l'admin dashboard.
  *
  * Pour gérer la liste : /admin/linkedin (rôle admin ou collaborator).

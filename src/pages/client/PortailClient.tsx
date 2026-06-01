@@ -53,7 +53,7 @@ export default function PortailClient() {
   return (
     <BackOfficeLayout title="Mes documents">
       <p className="text-sm text-gray-600 mb-6">
-        Retrouvez ici les documents que Nexia Fiducia Maroc partage avec vous (factures, rapports,
+        Retrouvez ici les documents que Nexia Morocco partage avec vous (factures, rapports,
         contrats…).
       </p>
 

@@ -1,6 +1,6 @@
-# Nexia Fiducia Maroc — Site officiel + Back-office
+# Nexia Morocco — Site officiel + Back-office
 
-Site web vitrine et back-office privé pour Nexia Fiducia Maroc, membre du réseau Nexia
+Site web vitrine et back-office privé pour Nexia Morocco, membre du réseau Nexia
 International. Migré depuis Lovable vers une stack contrôlée et déployable sur Netlify ou Vercel.
 
 ## Stack

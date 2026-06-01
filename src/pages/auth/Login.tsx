@@ -39,7 +39,7 @@ export default function Login() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link to="/" className="inline-block">
-            <h1 className="text-3xl font-bold text-nexia-primary">Nexia Fiducia Maroc</h1>
+            <h1 className="text-3xl font-bold text-nexia-primary">Nexia Morocco</h1>
           </Link>
           <p className="text-sm text-gray-600 mt-2">Connexion à l'espace privé</p>
         </div>

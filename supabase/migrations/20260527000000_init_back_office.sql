@@ -1,5 +1,5 @@
 -- =====================================================================
--- Nexia Fiducia Maroc — Back-office schema (initial migration)
+-- Nexia Morocco — Back-office schema (initial migration)
 -- =====================================================================
 -- Run this once in Supabase SQL Editor, or via the Supabase CLI:
 --   supabase db push

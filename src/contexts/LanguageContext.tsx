@@ -21,7 +21,7 @@ const translations = {
     
     // Hero Section
     'hero.title': 'Votre partenaire de confiance pour une expertise comptable et financière de premier plan',
-    'hero.subtitle': 'Nexia Fiducia Maroc accompagne les entreprises dans leur développement avec des solutions sur mesure, une expertise reconnue et un service client d\'exception.',
+    'hero.subtitle': 'Nexia Morocco accompagne les entreprises dans leur développement avec des solutions sur mesure, une expertise reconnue et un service client d\'exception.',
     'hero.cta': 'Découvrir nos services',
     'hero.contact': 'Nous contacter',
     
@@ -49,7 +49,7 @@ const translations = {
     
     // About
     'about.title': 'Qui sommes-nous ?',
-    'about.subtitle': 'Nexia Fiducia Maroc est un cabinet d\'expertise comptable et de conseil reconnu, membre du réseau international Nexia.',
+    'about.subtitle': 'Nexia Morocco est un cabinet d\'expertise comptable et de conseil reconnu, membre du réseau international Nexia.',
     
     // Contact
     'contact.title': 'Contactez-nous',
@@ -59,7 +59,7 @@ const translations = {
     'common.readMore': 'En savoir plus',
     'common.contact': 'Nous contacter',
     'common.minutes': 'min',
-    'common.author': 'Nexia Fiducia Maroc',
+    'common.author': 'Nexia Morocco',
   },
   en: {
     // Header

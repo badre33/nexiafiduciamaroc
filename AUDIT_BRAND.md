@@ -24,7 +24,7 @@ Globalement le site **respecte la palette primaire et la police de fallback**, m
 ### 1. Mention de la raison sociale légale complète manquante dans le footer
 **Guide p.3** : *"Please include in your footer or homepage disclaimer your **legal firm name in full**, especially if you are using the Nexia brand as your marketing name."*
 
-**État actuel** : le footer affiche "Nexia / Morocco" comme marque, mais aucune mention type *"Nexia Fiducia Maroc SARL — RC XXXXX, ICE YYYY, Casablanca"*.
+**État actuel** : le footer affiche "Nexia / Morocco" comme marque, mais aucune mention type *"Nexia Morocco SARL — RC XXXXX, ICE YYYY, Casablanca"*.
 
 **Action** : ajouter en bas de footer la raison sociale légale complète (RC, ICE, capital social, siège social) — à fournir par toi.
 
