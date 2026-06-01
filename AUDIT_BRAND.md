@@ -1,7 +1,7 @@
 # Audit conformité — Nexia Website Guidelines 2023
 
 **Source de référence** : `Nexia website guidelines.pdf` (16 pages, Nexia International, 2023) + templates HTML officiels (`nexia-html-templates/`).
-**Cible auditée** : code du site `nexiafiduciamaroc` au commit `db56ce4` (sur main).
+**Cible auditée** : code du site `nexiamorocco` au commit `db56ce4` (sur main).
 **Date** : 2026-05-31.
 
 ---

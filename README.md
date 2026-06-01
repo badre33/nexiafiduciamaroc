@@ -45,8 +45,8 @@ supabase/
 
 ```bash
 # 1. Cloner et installer
-git clone https://github.com/badre33/nexiafiduciamaroc.git
-cd nexiafiduciamaroc
+git clone https://github.com/badre33/nexiamorocco.git
+cd nexiamorocco
 npm install
 
 # 2. Configurer l'environnement
@@ -105,7 +105,7 @@ depuis **Authentication → Users → Add user**.
 ### Option A — Netlify (recommandé pour ce projet)
 
 1. [app.netlify.com](https://app.netlify.com/) → **Add new site → Import from Git → GitHub**
-2. Sélectionner `badre33/nexiafiduciamaroc`
+2. Sélectionner `badre33/nexiamorocco`
 3. Netlify détecte automatiquement `netlify.toml` (commande `npm run build`, publish `dist`)
 4. **Site settings → Environment variables**, ajouter :
    - `VITE_SUPABASE_URL`
