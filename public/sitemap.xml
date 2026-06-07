@@ -18,6 +18,20 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Page pilier AEO : expertise comptable & audit Casablanca -->
+  <url>
+    <loc>https://nexiamorocco.com/expertise-comptable-audit-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Page pilier AEO : créer une société au Maroc -->
+  <url>
+    <loc>https://nexiamorocco.com/creer-societe-maroc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- À propos -->
   <url>
     <loc>https://nexiamorocco.com/a-propos</loc>
